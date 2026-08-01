@@ -42,12 +42,3 @@ concatenating multiple package declarations into one invalid standard-output
 source file.
 Invalid Go source is reported on standard error and produces a non-zero exit
 status. No partial formatted source is emitted for an invalid input.
-
-## Go API
-
-```go
-formatted, err := gostructfmt.Format("example.go", source)
-```
-
-The API applies `FormatStructLiterals` and then prints the result using the Go
-formatter. Calling it repeatedly with the same input produces the same output.

@@ -81,7 +81,7 @@ func formatReader(filename string, input io.Reader, output, stderr io.Writer) er
 		return fmt.Errorf("gostructfmt: %s: read: %w", filename, err)
 	}
 
-	formatted, err := gostructfmt.Format(filename, source)
+	formatted, err := formatSource(filename, source)
 	if err != nil {
 		return fmt.Errorf("gostructfmt: %s: %w", filename, err)
 	}
@@ -99,7 +99,7 @@ func formatFile(filename string, writeFiles bool, stdout io.Writer) error {
 		return fmt.Errorf("read: %w", err)
 	}
 
-	formatted, err := gostructfmt.Format(filename, source)
+	formatted, err := formatSource(filename, source)
 	if err != nil {
 		return err
 	}
@@ -119,6 +119,19 @@ func formatFile(filename string, writeFiles bool, stdout io.Writer) error {
 	}
 
 	return nil
+}
+
+func formatSource(filename string, source []byte) ([]byte, error) {
+	file, err := gostructfmt.Parse(filename, source)
+	if err != nil {
+		return nil, err
+	}
+
+	if err := gostructfmt.FormatStructLiterals(file); err != nil {
+		return nil, err
+	}
+
+	return file.Print()
 }
 
 func expandPackagePatterns(paths []string) ([]string, error) {
