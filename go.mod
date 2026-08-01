@@ -3,8 +3,10 @@ module github.com/goropikari/gostructfmt
 go 1.26
 
 require (
+	github.com/golangci/plugin-module-register v0.1.1
 	github.com/spf13/cobra v1.8.1
 	github.com/stretchr/testify v1.9.0
+	golang.org/x/tools v0.31.0
 )
 
 require (

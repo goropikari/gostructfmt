@@ -49,3 +49,16 @@ concatenating multiple package declarations into one invalid standard-output
 source file.
 Invalid Go source is reported on standard error and produces a non-zero exit
 status. No partial formatted source is emitted for an invalid input.
+
+## golangci-lint
+
+The repository includes a golangci-lint module plugin. Build a custom
+golangci-lint binary and run it with the bundled plugin configuration:
+
+```sh
+golangci-lint custom
+./custom-gcl run --config .golangci-gostructfmt.yml ./...
+```
+
+The plugin reports populated struct literals that need formatting. Apply the
+changes with `gostructfmt --diff -w`.
