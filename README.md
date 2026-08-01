@@ -20,14 +20,17 @@ gostructfmt < input.go > output.go
 ```
 
 Files may be passed directly. Without `-w`, the result is written to standard
-output; with `-w`, each file is replaced only after successful parsing and
-formatting:
+output for one file; with `-w`, each file is atomically replaced only after
+successful parsing and formatting:
 
 ```sh
 gostructfmt file.go
 gostructfmt -w file.go
 ```
 
+`-w` requires at least one file. Multiple files also require `-w`; this avoids
+concatenating multiple package declarations into one invalid standard-output
+source file.
 Invalid Go source is reported on standard error and produces a non-zero exit
 status. No partial formatted source is emitted for an invalid input.
 
