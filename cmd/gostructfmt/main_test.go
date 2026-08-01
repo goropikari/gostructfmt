@@ -59,7 +59,7 @@ func TestRun(t *testing.T) {
 
 		// Assert
 		require.Equal(t, 0, status)
-		require.Contains(t, errors.String(), "Usage of gostructfmt")
+		require.Contains(t, errors.String(), "Usage:")
 	})
 
 	t.Run("writes one file atomically when requested", func(t *testing.T) {
@@ -115,5 +115,34 @@ func TestRun(t *testing.T) {
 		require.Equal(t, 2, status)
 		require.Empty(t, output.String())
 		require.Contains(t, errors.String(), "multiple files require -w")
+	})
+
+	t.Run("formats every Go file below the current directory for ./...", func(t *testing.T) {
+		// Arrange
+		directory := t.TempDir()
+		require.NoError(t, os.Mkdir(filepath.Join(directory, "nested"), 0o750))
+		require.NoError(t, os.WriteFile(filepath.Join(directory, "main.go"), []byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"Alice\"}\n"), 0o600))
+		nestedFilename := filepath.Join(directory, "nested", "nested.go")
+		require.NoError(t, os.WriteFile(nestedFilename, []byte("package nested\ntype User struct { Name string }\nvar _ = User{Name: \"Bob\"}\n"), 0o600))
+		t.Chdir(directory)
+
+		var (
+			output bytes.Buffer
+			errors bytes.Buffer
+		)
+
+		// Act
+		status := run([]string{"-w", "./..."}, bytes.NewBuffer(nil), &output, &errors)
+		mainSource, mainErr := os.ReadFile(filepath.Join(directory, "main.go"))
+		nestedSource, nestedErr := os.ReadFile(nestedFilename)
+
+		// Assert
+		require.Equal(t, 0, status)
+		require.NoError(t, mainErr)
+		require.NoError(t, nestedErr)
+		require.Empty(t, output.String())
+		require.Empty(t, errors.String())
+		require.Contains(t, string(mainSource), "User{\n")
+		require.Contains(t, string(nestedSource), "User{\n")
 	})
 }

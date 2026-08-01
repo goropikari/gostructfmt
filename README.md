@@ -28,6 +28,15 @@ gostructfmt file.go
 gostructfmt -w file.go
 ```
 
+To format all Go files recursively under the current directory, use:
+
+```sh
+gostructfmt -w ./...
+```
+
+Hidden directories, `vendor`, `testdata`, and underscore-prefixed directories
+are skipped.
+
 `-w` requires at least one file. Multiple files also require `-w`; this avoids
 concatenating multiple package declarations into one invalid standard-output
 source file.
