@@ -8,7 +8,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/goropikari/gostructfmt"
+	"github.com/goropikari/gostructfmt/internal/formatter"
 	"github.com/spf13/cobra"
 )
 
@@ -25,8 +25,22 @@ func NewCommand(stdin io.Reader, stdout, stderr io.Writer) *cobra.Command {
 	writeFiles := false
 
 	command := &cobra.Command{
-		Use:           "gostructfmt [files...]",
-		Short:         "format Go struct literals",
+		Use:   "gostructfmt [files...]",
+		Short: "format Go struct literals",
+		Long: "Format populated Go struct literals as deterministic, gofmt-compatible " +
+			"multi-line literals. With no files, source is read from standard input. " +
+			"Use -w to update files in place; multiple files and ./... require -w.",
+		Example: `  # Format standard input and print the result
+  gostructfmt < input.go
+
+  # Format one file and print the result
+  gostructfmt input.go
+
+  # Format one or more files in place
+  gostructfmt -w input.go other.go
+
+  # Format all Go files below the current directory in place
+  gostructfmt -w ./...`,
 		SilenceErrors: true,
 		SilenceUsage:  true,
 		RunE: func(command *cobra.Command, args []string) error {
@@ -134,12 +148,12 @@ func formatFile(filename string, writeFiles bool, stdout io.Writer) error {
 }
 
 func formatSource(filename string, source []byte) ([]byte, error) {
-	file, err := gostructfmt.Parse(filename, source)
+	file, err := formatter.Parse(filename, source)
 	if err != nil {
 		return nil, err
 	}
 
-	if err := gostructfmt.FormatStructLiterals(file); err != nil {
+	if err := formatter.FormatStructLiterals(file); err != nil {
 		return nil, err
 	}
 

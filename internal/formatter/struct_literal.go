@@ -1,4 +1,4 @@
-package gostructfmt
+package formatter
 
 import (
 	"bytes"

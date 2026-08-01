@@ -60,6 +60,9 @@ func TestRun(t *testing.T) {
 		// Assert
 		require.Equal(t, 0, status)
 		require.Contains(t, errors.String(), "Usage:")
+		require.Contains(t, errors.String(), "Format populated Go struct literals")
+		require.Contains(t, errors.String(), "gostructfmt -w ./...")
+		require.Contains(t, errors.String(), "-w, --write")
 	})
 
 	t.Run("writes one file atomically when requested", func(t *testing.T) {

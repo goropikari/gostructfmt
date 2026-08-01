@@ -1,4 +1,4 @@
-package gostructfmt_test
+package formatter_test
 
 import (
 	"errors"
@@ -6,7 +6,7 @@ import (
 	"go/token"
 	"testing"
 
-	"github.com/goropikari/gostructfmt"
+	"github.com/goropikari/gostructfmt/internal/formatter"
 	"github.com/stretchr/testify/require"
 )
 
@@ -16,7 +16,7 @@ func TestParse(t *testing.T) {
 		source := []byte("package example\n\n// User comment\ntype User struct { Name string }\n")
 
 		// Act
-		file, err := gostructfmt.Parse("user.go", source)
+		file, err := formatter.Parse("user.go", source)
 
 		// Assert
 		require.NoError(t, err)
@@ -33,7 +33,7 @@ func TestParse(t *testing.T) {
 		source := []byte("package example\nfunc broken(\n")
 
 		// Act
-		file, err := gostructfmt.Parse("broken.go", source)
+		file, err := formatter.Parse("broken.go", source)
 
 		// Assert
 		require.Error(t, err)
@@ -46,7 +46,7 @@ func TestParse(t *testing.T) {
 		source := []byte("package example\n")
 
 		// Act
-		file, err := gostructfmt.Parse("", source)
+		file, err := formatter.Parse("", source)
 
 		// Assert
 		require.NoError(t, err)
@@ -58,7 +58,7 @@ func TestFilePrint(t *testing.T) {
 	t.Run("prints formatted source with comments", func(t *testing.T) {
 		// Arrange
 		source := []byte("package example\n// comment\nvar value=1\n")
-		file, err := gostructfmt.Parse("example.go", source)
+		file, err := formatter.Parse("example.go", source)
 		require.NoError(t, err)
 
 		// Act
@@ -72,7 +72,7 @@ func TestFilePrint(t *testing.T) {
 	t.Run("prints imports functions and nested struct literals", func(t *testing.T) {
 		// Arrange
 		source := []byte("package example\nimport \"fmt\"\ntype Config struct { Name string }\nfunc build() Config { return Config{Name: fmt.Sprint(\"x\")} }\n")
-		file, err := gostructfmt.Parse("example.go", source)
+		file, err := formatter.Parse("example.go", source)
 		require.NoError(t, err)
 
 		// Act
@@ -85,7 +85,7 @@ func TestFilePrint(t *testing.T) {
 
 	t.Run("prints after a reachable AST mutation using the original file set", func(t *testing.T) {
 		// Arrange
-		file, err := gostructfmt.Parse("example.go", []byte("package example\n"))
+		file, err := formatter.Parse("example.go", []byte("package example\n"))
 		require.NoError(t, err)
 		require.NoError(t, file.MutateAST(func(parsed *ast.File) error {
 			parsed.Decls = []ast.Decl{&ast.GenDecl{
@@ -105,7 +105,7 @@ func TestFilePrint(t *testing.T) {
 
 	t.Run("rejects nil receiver", func(t *testing.T) {
 		// Arrange
-		var file *gostructfmt.File
+		var file *formatter.File
 
 		// Act
 		output, err := file.Print()
@@ -123,7 +123,7 @@ func TestParseAndPrint(t *testing.T) {
 		source := []byte("package example\nimport \"fmt\"\ntype Config struct { DB struct { Host string } }\nfunc build() Config { return Config{DB: struct { Host string }{Host: fmt.Sprint(\"localhost\")}} }\n")
 
 		// Act
-		output, err := gostructfmt.ParseAndPrint("example.go", source)
+		output, err := formatter.ParseAndPrint("example.go", source)
 
 		// Assert
 		require.NoError(t, err)
@@ -137,7 +137,7 @@ func TestParseAndPrint(t *testing.T) {
 		source := []byte("package example\nvar value =\n")
 
 		// Act
-		output, err := gostructfmt.ParseAndPrint("broken.go", source)
+		output, err := formatter.ParseAndPrint("broken.go", source)
 
 		// Assert
 		require.Error(t, err)
@@ -149,7 +149,7 @@ func TestParseAndPrint(t *testing.T) {
 		source := []byte("package example\n\n// doc comment\n// second doc comment\ntype User struct {\n\tName string /* field block */\n}\n\nfunc build() User {\n\t// before literal\n\treturn User{ // trailing literal\n\t\tName: \"Alice\", // field trailing\n\t}\n}\n")
 
 		// Act
-		output, err := gostructfmt.ParseAndPrint("comments.go", source)
+		output, err := formatter.ParseAndPrint("comments.go", source)
 
 		// Assert
 		require.NoError(t, err)
@@ -164,7 +164,7 @@ func TestParseAndPrint(t *testing.T) {
 func TestFileAccessorsAndMutation(t *testing.T) {
 	t.Run("keeps file metadata stable while allowing AST mutation", func(t *testing.T) {
 		// Arrange
-		file, err := gostructfmt.Parse("example.go", []byte("package example\nvar value = 1\n"))
+		file, err := formatter.Parse("example.go", []byte("package example\nvar value = 1\n"))
 		require.NoError(t, err)
 
 		originalFileSet := file.FileSet()
@@ -188,7 +188,7 @@ func TestFileAccessorsAndMutation(t *testing.T) {
 
 	t.Run("rejects a nil AST edit function", func(t *testing.T) {
 		// Arrange
-		file, err := gostructfmt.Parse("example.go", []byte("package example\n"))
+		file, err := formatter.Parse("example.go", []byte("package example\n"))
 		require.NoError(t, err)
 
 		// Act
@@ -201,7 +201,7 @@ func TestFileAccessorsAndMutation(t *testing.T) {
 
 	t.Run("propagates an AST edit error without printing", func(t *testing.T) {
 		// Arrange
-		file, err := gostructfmt.Parse("example.go", []byte("package example\n"))
+		file, err := formatter.Parse("example.go", []byte("package example\n"))
 		require.NoError(t, err)
 
 		expectedErr := errors.New("edit rejected")
@@ -217,7 +217,7 @@ func TestFileAccessorsAndMutation(t *testing.T) {
 
 	t.Run("nil accessors are safe", func(t *testing.T) {
 		// Arrange
-		var file *gostructfmt.File
+		var file *formatter.File
 
 		// Act
 		astFile := file.AST()

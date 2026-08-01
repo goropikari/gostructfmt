@@ -1,5 +1,5 @@
-// Package gostructfmt provides the building blocks for formatting Go source.
-package gostructfmt
+// Package formatter contains the implementation used by the gostructfmt CLI.
+package formatter
 
 import (
 	"bytes"
