@@ -8,7 +8,7 @@
   },
   "mounts": [
     {
-      "source": "gomut-codex-home",
+      "source": "gostructfmt-codex-home",
       "target": "/home/vscode/.codex",
       "type": "volume"
     }
