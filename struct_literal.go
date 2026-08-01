@@ -104,12 +104,21 @@ func addLiteralEdits(edits *[]sourceEdit, literal *ast.CompositeLit, file *token
 	multiline := bytes.Contains(source[lbrace:rbrace], []byte{'\n'})
 
 	if !multiline {
-		*edits = append(*edits, sourceEdit{offset: lbrace + 1, text: "\n"})
+		*edits = append(*edits, sourceEdit{
+			offset: lbrace + 1,
+			text:   "\n",
+		})
 		for _, element := range literal.Elts[1:] {
-			*edits = append(*edits, sourceEdit{offset: file.Offset(element.Pos()), text: "\n"})
+			*edits = append(*edits, sourceEdit{
+				offset: file.Offset(element.Pos()),
+				text:   "\n",
+			})
 		}
 
-		*edits = append(*edits, sourceEdit{offset: rbrace, text: "\n"})
+		*edits = append(*edits, sourceEdit{
+			offset: rbrace,
+			text:   "\n",
+		})
 	}
 
 	for index, element := range literal.Elts {
@@ -120,7 +129,10 @@ func addLiteralEdits(edits *[]sourceEdit, literal *ast.CompositeLit, file *token
 
 		start := file.Offset(element.End())
 		if !hasCommaBefore(source, start, end) {
-			*edits = append(*edits, sourceEdit{offset: start, text: ","})
+			*edits = append(*edits, sourceEdit{
+				offset: start,
+				text:   ",",
+			})
 		}
 	}
 }

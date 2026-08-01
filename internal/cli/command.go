@@ -43,19 +43,28 @@ func NewCommand(stdin io.Reader, stdout, stderr io.Writer) *cobra.Command {
 func execute(command *cobra.Command, args []string, stdin io.Reader, stdout, stderr io.Writer, writeFiles bool) error {
 	filenames, err := expandPackagePatterns(args)
 	if err != nil {
-		return &ExitError{Code: 2, Err: err}
+		return &ExitError{
+			Code: 2,
+			Err:  err,
+		}
 	}
 
 	if len(filenames) == 0 {
 		if writeFiles {
-			return &ExitError{Code: 2, Err: fmt.Errorf("-w requires at least one file")}
+			return &ExitError{
+				Code: 2,
+				Err:  fmt.Errorf("-w requires at least one file"),
+			}
 		}
 
 		return formatReader("<stdin>", stdin, stdout, stderr)
 	}
 
 	if len(filenames) > 1 && !writeFiles {
-		return &ExitError{Code: 2, Err: fmt.Errorf("multiple files require -w")}
+		return &ExitError{
+			Code: 2,
+			Err:  fmt.Errorf("multiple files require -w"),
+		}
 	}
 
 	status := 0
@@ -69,7 +78,10 @@ func execute(command *cobra.Command, args []string, stdin io.Reader, stdout, std
 	}
 
 	if status != 0 {
-		return &ExitError{Code: status, Err: fmt.Errorf("formatting failed")}
+		return &ExitError{
+			Code: status,
+			Err:  fmt.Errorf("formatting failed"),
+		}
 	}
 
 	return nil

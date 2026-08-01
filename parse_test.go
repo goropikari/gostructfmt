@@ -88,7 +88,10 @@ func TestFilePrint(t *testing.T) {
 		file, err := gostructfmt.Parse("example.go", []byte("package example\n"))
 		require.NoError(t, err)
 		require.NoError(t, file.MutateAST(func(parsed *ast.File) error {
-			parsed.Decls = []ast.Decl{&ast.GenDecl{Tok: token.VAR}}
+			parsed.Decls = []ast.Decl{&ast.GenDecl{
+				Tok: token.VAR,
+			}}
+
 			return nil
 		}))
 
@@ -169,7 +172,10 @@ func TestFileAccessorsAndMutation(t *testing.T) {
 
 		// Act
 		err = file.MutateAST(func(parsed *ast.File) error {
-			parsed.Decls = append(parsed.Decls, &ast.GenDecl{Tok: token.VAR})
+			parsed.Decls = append(parsed.Decls, &ast.GenDecl{
+				Tok: token.VAR,
+			})
+
 			return nil
 		})
 
