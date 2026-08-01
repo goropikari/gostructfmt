@@ -17,14 +17,22 @@ type File struct {
 	ast      *ast.File
 	fileSet  *token.FileSet
 	filename string
+	source   []byte
+	// sourceValid is false after an arbitrary AST mutation because the
+	// original source can no longer be used as the transformation base.
+	sourceValid bool
 }
 
 // AST returns the parsed syntax tree for this file. The returned tree may be
-// edited by a formatter; its positions remain associated with FileSet.
+// edited by a formatter; its positions remain associated with FileSet. Calling
+// AST marks the source snapshot stale so a subsequent source-based formatter
+// first synchronizes it from the current tree.
 func (f *File) AST() *ast.File {
 	if f == nil {
 		return nil
 	}
+
+	f.sourceValid = false
 
 	return f.ast
 }
@@ -65,7 +73,12 @@ func (f *File) MutateAST(edit func(*ast.File) error) error {
 		return fmt.Errorf("mutate Go source %q: nil edit function", f.filename)
 	}
 
-	return edit(f.ast)
+	err := edit(f.ast)
+	if err == nil {
+		f.sourceValid = false
+	}
+
+	return err
 }
 
 // Parse parses src as a Go source file while retaining comments. It returns no
@@ -84,9 +97,11 @@ func Parse(filename string, src []byte) (*File, error) {
 	}
 
 	return &File{
-		ast:      fileAST,
-		fileSet:  fileSet,
-		filename: filename,
+		ast:         fileAST,
+		fileSet:     fileSet,
+		filename:    filename,
+		source:      append([]byte(nil), src...),
+		sourceValid: true,
 	}, nil
 }
 
