@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"testing"
 
@@ -62,7 +63,10 @@ func TestRun(t *testing.T) {
 		require.Contains(t, errors.String(), "Usage:")
 		require.Contains(t, errors.String(), "Format populated Go struct literals")
 		require.Contains(t, errors.String(), "gostructfmt -w ./...")
+		require.Contains(t, errors.String(), "gostructfmt --diff -w")
+		require.Contains(t, errors.String(), "changed lines")
 		require.Contains(t, errors.String(), "-w, --write")
+		require.Contains(t, errors.String(), "--diff")
 	})
 
 	t.Run("writes one file atomically when requested", func(t *testing.T) {
@@ -148,4 +152,64 @@ func TestRun(t *testing.T) {
 		require.Contains(t, string(mainSource), "User{\n")
 		require.Contains(t, string(nestedSource), "User{\n")
 	})
+
+	t.Run("formats only changed Go files in diff mode", func(t *testing.T) {
+		// Arrange
+		directory := t.TempDir()
+		t.Chdir(directory)
+		require.NoError(t, os.WriteFile("changed.go", []byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"old\"}\n"), 0o600))
+		require.NoError(t, os.WriteFile("unchanged.go", []byte("package example\ntype Other struct { Name string }\nvar _ = Other{Name: \"untouched\"}\n"), 0o600))
+		runGitCommand(t, directory, "init")
+		runGitCommand(t, directory, "add", "changed.go", "unchanged.go")
+		runGitCommand(t, directory, "-c", "user.name=gostructfmt", "-c", "user.email=gostructfmt@example.invalid", "commit", "-m", "initial")
+		require.NoError(t, os.WriteFile("changed.go", []byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"old\"}\nvar _ = User{Name: \"new\"}\n"), 0o600))
+
+		var (
+			output bytes.Buffer
+			errors bytes.Buffer
+		)
+
+		// Act
+		status := run([]string{"--diff", "-w"}, bytes.NewBuffer(nil), &output, &errors)
+		changed, changedErr := os.ReadFile("changed.go")
+		unchanged, unchangedErr := os.ReadFile("unchanged.go")
+
+		// Assert
+		require.Equal(t, 0, status)
+		require.NoError(t, changedErr)
+		require.NoError(t, unchangedErr)
+		require.Empty(t, output.String())
+		require.Empty(t, errors.String())
+		require.Contains(t, string(changed), `User{Name: "old"}`)
+		require.Contains(t, string(changed), "User{\n")
+		require.Contains(t, string(unchanged), `Other{Name: "untouched"}`)
+	})
+
+	t.Run("does nothing when diff is empty", func(t *testing.T) {
+		// Arrange
+		directory := t.TempDir()
+		t.Chdir(directory)
+		runGitCommand(t, directory, "init")
+
+		var (
+			output bytes.Buffer
+			errors bytes.Buffer
+		)
+
+		// Act
+		status := run([]string{"--diff"}, bytes.NewBufferString("not Go source"), &output, &errors)
+
+		// Assert
+		require.Equal(t, 0, status)
+		require.Empty(t, output.String())
+		require.Empty(t, errors.String())
+	})
+}
+
+func runGitCommand(t *testing.T, directory string, args ...string) {
+	t.Helper()
+
+	command := exec.Command("git", args...)
+	command.Dir = directory
+	require.NoError(t, command.Run())
 }

@@ -34,6 +34,13 @@ To format all Go files recursively under the current directory, use:
 gostructfmt -w ./...
 ```
 
+To format only struct literals overlapping changed lines in the working tree's
+Git diff, use:
+
+```sh
+gostructfmt --diff -w
+```
+
 Hidden directories, `vendor`, `testdata`, and underscore-prefixed directories
 are skipped.
 

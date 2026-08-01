@@ -95,7 +95,147 @@ func TransformStructLiterals(file *File) error {
 
 type sourceEdit struct {
 	offset int
+	end    int
 	text   string
+}
+
+// LineRange identifies an inclusive, one-based range of source lines.
+type LineRange struct {
+	Start int
+	End   int
+}
+
+// FormatStructLiteralsInLines formats only struct literals that overlap one
+// of the supplied source ranges. Source outside those literals is preserved
+// byte-for-byte.
+func FormatStructLiteralsInLines(file *File, ranges []LineRange) ([]byte, error) {
+	if file == nil {
+		return nil, fmt.Errorf("format struct literals in lines: nil file")
+	}
+
+	if !file.sourceValid {
+		if err := file.syncSourceFromAST(); err != nil {
+			return nil, fmt.Errorf("format struct literals in lines: synchronize source: %w", err)
+		}
+	}
+
+	updatedSource, err := formatSelectedLiteralSource(file, ranges)
+	if err != nil {
+		return nil, err
+	}
+
+	if _, err := Parse(file.filename, updatedSource); err != nil {
+		return nil, fmt.Errorf("format struct literals in lines: %w", err)
+	}
+
+	return updatedSource, nil
+}
+
+func formatSelectedLiteralSource(file *File, ranges []LineRange) ([]byte, error) {
+	fileInfo := file.fileSet.File(file.ast.Pos())
+	if fileInfo == nil {
+		return nil, fmt.Errorf("format struct literals in lines: source file unavailable")
+	}
+
+	literals := selectedLiterals(file.ast, fileInfo, ranges)
+
+	edits := make([]sourceEdit, 0, len(literals))
+	for _, literal := range literals {
+		if hasSelectedAncestor(literal, literals, fileInfo) {
+			continue
+		}
+
+		start := fileInfo.Offset(literal.Pos())
+		end := fileInfo.Offset(literal.End())
+
+		formatted, err := formatLiteralSource(file.source[start:end])
+		if err != nil {
+			return nil, fmt.Errorf("format struct literals in lines: %w", err)
+		}
+
+		edits = append(edits, sourceEdit{offset: start, end: end, text: string(formatted)})
+	}
+
+	return applySourceEdits(file.source, edits), nil
+}
+
+func selectedLiterals(fileAST *ast.File, fileInfo *token.File, ranges []LineRange) []*ast.CompositeLit {
+	structTypes := declaredStructTypes(fileAST)
+	literals := make([]*ast.CompositeLit, 0)
+
+	ast.Inspect(fileAST, func(node ast.Node) bool {
+		literal, ok := node.(*ast.CompositeLit)
+		if !ok || len(literal.Elts) == 0 || !isStructLiteralType(literal.Type, structTypes) {
+			return true
+		}
+
+		if literalOverlapsLines(literal, fileInfo, ranges) {
+			literals = append(literals, literal)
+		}
+
+		return true
+	})
+
+	return literals
+}
+
+func literalOverlapsLines(literal *ast.CompositeLit, file *token.File, ranges []LineRange) bool {
+	start := file.Line(literal.Pos())
+
+	end := file.Line(literal.End())
+	for _, lineRange := range ranges {
+		if lineRange.Start <= end && start <= lineRange.End {
+			return true
+		}
+	}
+
+	return false
+}
+
+func hasSelectedAncestor(literal *ast.CompositeLit, selected []*ast.CompositeLit, file *token.File) bool {
+	start := file.Offset(literal.Pos())
+
+	end := file.Offset(literal.End())
+	for _, candidate := range selected {
+		candidateStart := file.Offset(candidate.Pos())
+
+		candidateEnd := file.Offset(candidate.End())
+		if candidateStart < start && end < candidateEnd {
+			return true
+		}
+	}
+
+	return false
+}
+
+func formatLiteralSource(source []byte) ([]byte, error) {
+	wrapped := append([]byte("package example\nvar _ = "), source...)
+	wrapped = append(wrapped, '\n')
+
+	file, err := Parse("<literal>", wrapped)
+	if err != nil {
+		return nil, err
+	}
+
+	if err := FormatStructLiterals(file); err != nil {
+		return nil, err
+	}
+
+	formatted, err := file.Print()
+	if err != nil {
+		return nil, err
+	}
+
+	const marker = "var _ = "
+
+	_, after, ok := bytes.Cut(formatted, []byte(marker))
+	if !ok {
+		return nil, fmt.Errorf("formatted literal marker unavailable")
+	}
+
+	literal := bytes.TrimSpace(after)
+
+	return append([]byte(nil), literal...), nil
 }
 
 func addLiteralEdits(edits *[]sourceEdit, literal *ast.CompositeLit, file *token.File, source []byte) {
@@ -227,7 +367,8 @@ func applySourceEdits(source []byte, edits []sourceEdit) []byte {
 
 		output.Write(source[previous:edit.offset])
 		output.WriteString(edit.text)
-		previous = edit.offset
+
+		previous = max(edit.end, edit.offset)
 	}
 
 	output.Write(source[previous:])
