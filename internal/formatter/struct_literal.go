@@ -30,6 +30,7 @@ func FormatStructLiterals(file *File) error {
 	}
 
 	structTypes := declaredStructTypes(file.ast)
+	elidedLiteralTypes := elidedCompositeLiteralTypes(file.ast)
 
 	fileInfo := file.fileSet.File(file.ast.Pos())
 	if fileInfo == nil {
@@ -40,7 +41,7 @@ func FormatStructLiterals(file *File) error {
 
 	ast.Inspect(file.ast, func(node ast.Node) bool {
 		literal, ok := node.(*ast.CompositeLit)
-		if !ok || len(literal.Elts) == 0 || !isStructLiteralType(literal.Type, structTypes) {
+		if !ok || len(literal.Elts) == 0 || !isStructLiteralTypeOrElided(literal, elidedLiteralTypes, structTypes) {
 			return true
 		}
 
@@ -153,7 +154,11 @@ func formatSelectedLiteralSource(file *File, ranges []LineRange) ([]byte, error)
 			return nil, fmt.Errorf("format struct literals in lines: %w", err)
 		}
 
-		edits = append(edits, sourceEdit{offset: start, end: end, text: string(formatted)})
+		edits = append(edits, sourceEdit{
+			offset: start,
+			end:    end,
+			text:   string(formatted),
+		})
 	}
 
 	return applySourceEdits(file.source, edits), nil
@@ -161,11 +166,12 @@ func formatSelectedLiteralSource(file *File, ranges []LineRange) ([]byte, error)
 
 func selectedLiterals(fileAST *ast.File, fileInfo *token.File, ranges []LineRange) []*ast.CompositeLit {
 	structTypes := declaredStructTypes(fileAST)
+	elidedLiteralTypes := elidedCompositeLiteralTypes(fileAST)
 	literals := make([]*ast.CompositeLit, 0)
 
 	ast.Inspect(fileAST, func(node ast.Node) bool {
 		literal, ok := node.(*ast.CompositeLit)
-		if !ok || len(literal.Elts) == 0 || !isStructLiteralType(literal.Type, structTypes) {
+		if !ok || len(literal.Elts) == 0 || !isStructLiteralTypeOrElided(literal, elidedLiteralTypes, structTypes) {
 			return true
 		}
 
@@ -433,6 +439,42 @@ func isStructLiteralType(expression ast.Expr, declared map[string]bool) bool {
 	default:
 		return false
 	}
+}
+
+func isStructLiteralTypeOrElided(literal *ast.CompositeLit, elided map[*ast.CompositeLit]ast.Expr, declared map[string]bool) bool {
+	expression := literal.Type
+	if expression == nil {
+		expression = elided[literal]
+	}
+
+	return isStructLiteralType(expression, declared)
+}
+
+func elidedCompositeLiteralTypes(file *ast.File) map[*ast.CompositeLit]ast.Expr {
+	types := make(map[*ast.CompositeLit]ast.Expr)
+
+	ast.Inspect(file, func(node ast.Node) bool {
+		literal, ok := node.(*ast.CompositeLit)
+		if !ok {
+			return true
+		}
+
+		arrayType, ok := literal.Type.(*ast.ArrayType)
+		if !ok {
+			return true
+		}
+
+		for _, element := range literal.Elts {
+			child, ok := element.(*ast.CompositeLit)
+			if ok && child.Type == nil {
+				types[child] = arrayType.Elt
+			}
+		}
+
+		return true
+	})
+
+	return types
 }
 
 func isStructType(expression ast.Expr, expressions map[string]ast.Expr, visiting map[string]bool) bool {

@@ -100,6 +100,23 @@ func TestFormatStructLiterals(t *testing.T) {
 		require.Equal(t, "package example\n\ntype Inner struct{ Name string }\ntype Outer struct{ Inner Inner }\n\nfunc build() Outer {\n\treturn Outer{ // outer\n\t\tInner: Inner{\n\t\t\tName: \"x\",\n\t\t}, // inner\n\t}\n}\n", string(output))
 	})
 
+	t.Run("expands struct literals elided in slice elements", func(t *testing.T) {
+		// Arrange
+		source := []byte("package example\ntype User struct { Name string; Age int }\nvar _ = []User{{Name: \"Alice\", Age: 20}}\nvar _ = []struct { Name string }{{Name: \"Bob\"}}\n")
+		file, err := formatter.Parse("example.go", source)
+		require.NoError(t, err)
+
+		// Act
+		err = formatter.FormatStructLiterals(file)
+		output, printErr := file.Print()
+
+		// Assert
+		require.NoError(t, err)
+		require.NoError(t, printErr)
+		require.Contains(t, string(output), "var _ = []User{{\n\tName: \"Alice\",\n\tAge:  20,\n}}")
+		require.Contains(t, string(output), "var _ = []struct{ Name string }{{\n\tName: \"Bob\",\n}}")
+	})
+
 	t.Run("keeps already multiline literals valid and reparsable", func(t *testing.T) {
 		// Arrange
 		source := []byte("package example\ntype User struct { Name string }\nvar _ = User{\nName: \"Alice\",\n}\n")
