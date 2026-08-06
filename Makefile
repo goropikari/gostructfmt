@@ -19,7 +19,7 @@ gitleaks:
 	gitleaks detect --no-banner --redact --source .
 
 install:
-	go install ./cmd/gomut
+	go install ./cmd/gostructfmt/
 
 install-codex:
 	@set -eu; \
