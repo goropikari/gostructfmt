@@ -3,6 +3,7 @@
 ## Testing
 
 テスト方針の要点。
+詳細なテストガイドラインは [TESTING.md](TESTING.md) を参照すること。
 
 - `testify` を使う
 - AAA パターンで書く
@@ -12,10 +13,17 @@
 
 ## Development
 
+- ユーザーから指摘を受けた場合、同様の問題の再発防止に役立つ内容は AGENTS.md またはその他の適切な規約ドキュメントにも追記する
 - 全体テスト: `go test ./...`
 - format: `make fmt`
 - lint: `make lint`
 - コードを編集したら `make fmt` と `make lint` でエラーが出ないことも確認する
+
+### Change size guidance (800 lines)
+
+Unless the change is mechanical the total number of changed lines should not exceed 800 lines. For complex logic changes the size should be under 500 lines.
+
+If the change is larger, explore whether it can be split into reviewable stages and identify the smallest coherent stage to land first. Base the staging suggestion on the actual diff, dependencies, and affected call sites.
 
 ## Pull Requests
 
