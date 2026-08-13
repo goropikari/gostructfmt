@@ -45,14 +45,14 @@
     "semantic_hash": "6dfe341e064fa83fbead25cac14d40c4"
   },
   "internal/formatter/struct_literal.go": {
-    "mtime": 1786030256.710259,
-    "ast_hash": "58fee9b180710dae0d6e0985d1fe09ab",
-    "semantic_hash": "58fee9b180710dae0d6e0985d1fe09ab"
+    "mtime": 1786643709.0524962,
+    "ast_hash": "7f4b28effcd0591126f602d37eb272c0",
+    "semantic_hash": ""
   },
   "internal/formatter/struct_literal_test.go": {
-    "mtime": 1786030256.710259,
-    "ast_hash": "da16c80f91d97b2051f6f2e1e9e6ec24",
-    "semantic_hash": "da16c80f91d97b2051f6f2e1e9e6ec24"
+    "mtime": 1786643680.136494,
+    "ast_hash": "2e12aa7a03cd0449de04800332aa502c",
+    "semantic_hash": ""
   },
   "plugin/gostructfmt/gostructfmt.go": {
     "mtime": 1786030256.714259,
@@ -90,14 +90,14 @@
     "semantic_hash": "c8fdbc6efb02fdf5bf556669999ac740"
   },
   "AGENTS.md": {
-    "mtime": 1786641879.0403762,
-    "ast_hash": "3259d828041a450c989b52e84f8f1e3c",
-    "semantic_hash": "3259d828041a450c989b52e84f8f1e3c"
+    "mtime": 1786643436.7604773,
+    "ast_hash": "c7cac1adf77ce4adab7198efafc35e7a",
+    "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785590264.3715672,
-    "ast_hash": "66cdc9dfc8481e5d515d74d1d67f4947",
-    "semantic_hash": "66cdc9dfc8481e5d515d74d1d67f4947"
+    "mtime": 1786643669.3404932,
+    "ast_hash": "54521a4eb00a0919791635fb88937e60",
+    "semantic_hash": ""
   },
   "TESTING.md": {
     "mtime": 1785582728.743074,
@@ -108,5 +108,35 @@
     "mtime": 1785582728.779074,
     "ast_hash": "85c2fb67a35f4ce37eb25a06818c0241",
     "semantic_hash": "85c2fb67a35f4ce37eb25a06818c0241"
+  },
+  ".implementation-orchestrator/evidence.json": {
+    "mtime": 1786643640.6124911,
+    "ast_hash": "2055b15fba155c1f8e6fb1b83cec9eb5",
+    "semantic_hash": ""
+  },
+  ".quality/baseline.json": {
+    "mtime": 1786642325.6044052,
+    "ast_hash": "bd7c486b8a0bc1287d34c105f0dc7c11",
+    "semantic_hash": ""
+  },
+  ".quality/state.json": {
+    "mtime": 1786642216.732398,
+    "ast_hash": "83432b770c98323d6c5f394b5b80c660",
+    "semantic_hash": ""
+  },
+  ".implementation-orchestrator/implementation-plan.md": {
+    "mtime": 1786643712.7604964,
+    "ast_hash": "dfda1677b074c0ba26e2b7074ca48f82",
+    "semantic_hash": ""
+  },
+  ".quality/README.md": {
+    "mtime": 1786642216.732398,
+    "ast_hash": "b02d7cfd8ade1ed5e9020b0834088447",
+    "semantic_hash": ""
+  },
+  "docs/quality-model.md": {
+    "mtime": 1786642300.4684033,
+    "ast_hash": "077bdb648d8eb82aef40aac6d2e1c17e",
+    "semantic_hash": ""
   }
 }

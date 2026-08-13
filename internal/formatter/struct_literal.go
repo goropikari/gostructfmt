@@ -9,9 +9,10 @@ import (
 )
 
 // FormatStructLiterals expands populated struct composite literals into the
-// multi-line form understood by gofmt. It leaves empty literals and
-// slice/array/map literals unchanged, and preserves comments by applying
-// edits to the original source before parsing it again.
+// multi-line form understood by gofmt. It leaves empty and non-struct
+// literals unchanged, while also formatting struct literals elided in
+// slice/array elements and map keys or values. It preserves comments by
+// applying edits to the original source before parsing it again.
 //
 // Formatting reparses the result, so callers must reacquire AST and FileSet
 // pointers after this function returns. Qualified and indexed type
@@ -459,22 +460,45 @@ func elidedCompositeLiteralTypes(file *ast.File) map[*ast.CompositeLit]ast.Expr 
 			return true
 		}
 
-		arrayType, ok := literal.Type.(*ast.ArrayType)
-		if !ok {
-			return true
-		}
-
-		for _, element := range literal.Elts {
-			child, ok := element.(*ast.CompositeLit)
-			if ok && child.Type == nil {
-				types[child] = arrayType.Elt
-			}
+		switch literalType := literal.Type.(type) {
+		case *ast.ArrayType:
+			addElidedArrayElementTypes(types, literal.Elts, literalType.Elt)
+		case *ast.MapType:
+			addElidedMapEntryTypes(types, literal.Elts, literalType)
 		}
 
 		return true
 	})
 
 	return types
+}
+
+func addElidedArrayElementTypes(types map[*ast.CompositeLit]ast.Expr, elements []ast.Expr, elementType ast.Expr) {
+	for _, element := range elements {
+		child, ok := element.(*ast.CompositeLit)
+		if ok && child.Type == nil {
+			types[child] = elementType
+		}
+	}
+}
+
+func addElidedMapEntryTypes(types map[*ast.CompositeLit]ast.Expr, elements []ast.Expr, mapType *ast.MapType) {
+	for _, element := range elements {
+		entry, ok := element.(*ast.KeyValueExpr)
+		if !ok {
+			continue
+		}
+
+		addElidedCompositeLiteralType(types, entry.Key, mapType.Key)
+		addElidedCompositeLiteralType(types, entry.Value, mapType.Value)
+	}
+}
+
+func addElidedCompositeLiteralType(types map[*ast.CompositeLit]ast.Expr, expression, literalType ast.Expr) {
+	literal, ok := expression.(*ast.CompositeLit)
+	if ok && literal.Type == nil {
+		types[literal] = literalType
+	}
 }
 
 func isStructType(expression ast.Expr, expressions map[string]ast.Expr, visiting map[string]bool) bool {

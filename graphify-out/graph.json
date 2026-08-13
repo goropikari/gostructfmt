@@ -43,7 +43,7 @@
       "_origin": "ast",
       "id": "cmd_gostructfmt_main",
       "community": 5,
-      "community_name": "CLI Execution Flow",
+      "community_name": "run",
       "norm_label": "main.go"
     },
     {
@@ -54,7 +54,7 @@
       "_origin": "ast",
       "id": "cmd_gostructfmt_main_main",
       "community": 5,
-      "community_name": "CLI Execution Flow",
+      "community_name": "run",
       "norm_label": "main()"
     },
     {
@@ -65,7 +65,7 @@
       "_origin": "ast",
       "id": "cmd_gostructfmt_main_run",
       "community": 5,
-      "community_name": "CLI Execution Flow",
+      "community_name": "run",
       "norm_label": "run()"
     },
     {
@@ -76,7 +76,7 @@
       "_origin": "ast",
       "id": "cmd_gostructfmt_main_go_reader",
       "community": 5,
-      "community_name": "CLI Execution Flow",
+      "community_name": "run",
       "norm_label": "reader"
     },
     {
@@ -87,7 +87,7 @@
       "_origin": "ast",
       "id": "cmd_gostructfmt_main_go_writer",
       "community": 5,
-      "community_name": "CLI Execution Flow",
+      "community_name": "run",
       "norm_label": "writer"
     },
     {
@@ -98,7 +98,7 @@
       "_origin": "ast",
       "id": "cmd_gostructfmt_main_test",
       "community": 5,
-      "community_name": "CLI Execution Flow",
+      "community_name": "run",
       "norm_label": "main_test.go"
     },
     {
@@ -109,7 +109,7 @@
       "_origin": "ast",
       "id": "cmd_gostructfmt_main_test_testrun",
       "community": 5,
-      "community_name": "CLI Execution Flow",
+      "community_name": "run",
       "norm_label": "testrun()"
     },
     {
@@ -120,7 +120,7 @@
       "_origin": "ast",
       "id": "cmd_gostructfmt_main_test_go_t",
       "community": 5,
-      "community_name": "CLI Execution Flow",
+      "community_name": "run",
       "norm_label": "t"
     },
     {
@@ -131,7 +131,7 @@
       "_origin": "ast",
       "id": "cmd_gostructfmt_main_test_rungitcommand",
       "community": 5,
-      "community_name": "CLI Execution Flow",
+      "community_name": "run",
       "norm_label": "rungitcommand()"
     },
     {
@@ -144,7 +144,7 @@
       "_origin": "ast",
       "id": "pkg_github_com_goropikari_gostructfmt",
       "community": 8,
-      "community_name": "Go Module Dependency",
+      "community_name": "github.com/goropikari/gostructfmt",
       "norm_label": "github.com/goropikari/gostructfmt"
     },
     {
@@ -155,7 +155,7 @@
       "_origin": "ast",
       "id": "internal_cli_command",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "command.go"
     },
     {
@@ -166,7 +166,7 @@
       "_origin": "ast",
       "id": "cli_exiterror",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "exiterror"
     },
     {
@@ -177,7 +177,7 @@
       "_origin": "ast",
       "id": "cli_exiterror_error",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": ".error()"
     },
     {
@@ -188,7 +188,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_newcommand",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "newcommand()"
     },
     {
@@ -199,7 +199,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_go_reader",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "reader"
     },
     {
@@ -210,7 +210,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_go_writer",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "writer"
     },
     {
@@ -221,7 +221,7 @@
       "_origin": "ast",
       "id": "command",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "command"
     },
     {
@@ -232,7 +232,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_execute",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "execute()"
     },
     {
@@ -243,7 +243,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_formatwithoutfiles",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "formatwithoutfiles()"
     },
     {
@@ -254,7 +254,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_formatfiles",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "formatfiles()"
     },
     {
@@ -265,7 +265,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_resolvefilenames",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "resolvefilenames()"
     },
     {
@@ -276,7 +276,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_formatreader",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "formatreader()"
     },
     {
@@ -287,7 +287,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_formatfile",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "formatfile()"
     },
     {
@@ -298,7 +298,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_formatsource",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "formatsource()"
     },
     {
@@ -309,7 +309,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_expandpackagepatterns",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "expandpackagepatterns()"
     },
     {
@@ -320,7 +320,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_changedgofiles",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "changedgofiles()"
     },
     {
@@ -331,7 +331,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_parsediffrange",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "parsediffrange()"
     },
     {
@@ -342,7 +342,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_expandcurrentdirectory",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "expandcurrentdirectory()"
     },
     {
@@ -353,7 +353,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_skippackagedirectory",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "skippackagedirectory()"
     },
     {
@@ -364,7 +364,7 @@
       "_origin": "ast",
       "id": "internal_cli_command_atomicwritefile",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "atomicwritefile()"
     },
     {
@@ -375,7 +375,7 @@
       "_origin": "ast",
       "id": "filemode",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "filemode"
     },
     {
@@ -386,7 +386,7 @@
       "_origin": "ast",
       "id": "internal_formatter_parse",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "parse.go"
     },
     {
@@ -397,7 +397,7 @@
       "_origin": "ast",
       "id": "internal_formatter_parse_go_formatter_file",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "file"
     },
     {
@@ -408,7 +408,7 @@
       "_origin": "ast",
       "id": "fileset",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "fileset"
     },
     {
@@ -419,7 +419,7 @@
       "_origin": "ast",
       "id": "formatter_file_ast",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": ".ast()"
     },
     {
@@ -430,7 +430,7 @@
       "_origin": "ast",
       "id": "formatter_file_fileset",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": ".fileset()"
     },
     {
@@ -441,7 +441,7 @@
       "_origin": "ast",
       "id": "formatter_file_filename",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": ".filename()"
     },
     {
@@ -452,7 +452,7 @@
       "_origin": "ast",
       "id": "formatter_file_mutateast",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": ".mutateast()"
     },
     {
@@ -463,7 +463,7 @@
       "_origin": "ast",
       "id": "internal_formatter_parse_parse",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "parse()"
     },
     {
@@ -474,7 +474,7 @@
       "_origin": "ast",
       "id": "formatter_file_print",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": ".print()"
     },
     {
@@ -485,7 +485,7 @@
       "_origin": "ast",
       "id": "internal_formatter_parse_parseandprint",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "parseandprint()"
     },
     {
@@ -496,7 +496,7 @@
       "_origin": "ast",
       "id": "internal_formatter_parse_test",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "parse_test.go"
     },
     {
@@ -507,7 +507,7 @@
       "_origin": "ast",
       "id": "internal_formatter_parse_test_testparse",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "testparse()"
     },
     {
@@ -518,7 +518,7 @@
       "_origin": "ast",
       "id": "internal_formatter_parse_test_go_t",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "t"
     },
     {
@@ -529,7 +529,7 @@
       "_origin": "ast",
       "id": "internal_formatter_parse_test_testfileprint",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "testfileprint()"
     },
     {
@@ -540,7 +540,7 @@
       "_origin": "ast",
       "id": "internal_formatter_parse_test_testparseandprint",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "testparseandprint()"
     },
     {
@@ -551,7 +551,7 @@
       "_origin": "ast",
       "id": "internal_formatter_parse_test_testfileaccessorsandmutation",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "testfileaccessorsandmutation()"
     },
     {
@@ -562,18 +562,18 @@
       "_origin": "ast",
       "id": "internal_formatter_struct_literal",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "struct_literal.go"
     },
     {
       "label": "FormatStructLiterals()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L21",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_formatstructliterals",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "formatstructliterals()"
     },
     {
@@ -584,95 +584,95 @@
       "_origin": "ast",
       "id": "file",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "file"
     },
     {
       "label": "File",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L72",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_go_formatter_file",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "file"
     },
     {
       "label": ".syncSourceFromAST()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L72",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "formatter_file_syncsourcefromast",
-      "community": 1,
-      "community_name": "Go AST File Processing",
+      "community": 0,
+      "community_name": "struct_literal.go",
       "norm_label": ".syncsourcefromast()"
     },
     {
       "label": "TransformStructLiterals()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L93",
+      "source_location": "L94",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_transformstructliterals",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "transformstructliterals()"
     },
     {
       "label": "sourceEdit",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L97",
+      "source_location": "L98",
       "_origin": "ast",
       "id": "formatter_sourceedit",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "sourceedit"
     },
     {
       "label": "LineRange",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L104",
+      "source_location": "L105",
       "_origin": "ast",
       "id": "formatter_linerange",
       "community": 2,
-      "community_name": "Command File Operations",
+      "community_name": "command.go",
       "norm_label": "linerange"
     },
     {
       "label": "FormatStructLiteralsInLines()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L112",
+      "source_location": "L113",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_formatstructliteralsinlines",
-      "community": 1,
-      "community_name": "Go AST File Processing",
+      "community": 2,
+      "community_name": "command.go",
       "norm_label": "formatstructliteralsinlines()"
     },
     {
       "label": "formatSelectedLiteralSource()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L135",
+      "source_location": "L136",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_formatselectedliteralsource",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "formatselectedliteralsource()"
     },
     {
       "label": "selectedLiterals()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L167",
+      "source_location": "L168",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_selectedliterals",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "selectedliterals()"
     },
     {
@@ -683,139 +683,139 @@
       "_origin": "ast",
       "id": "compositelit",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "compositelit"
     },
     {
       "label": "literalOverlapsLines()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L188",
+      "source_location": "L189",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_literaloverlapslines",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "literaloverlapslines()"
     },
     {
       "label": "hasSelectedAncestor()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L201",
+      "source_location": "L202",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_hasselectedancestor",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "hasselectedancestor()"
     },
     {
       "label": "formatLiteralSource()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L217",
+      "source_location": "L218",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_formatliteralsource",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "formatliteralsource()"
     },
     {
       "label": "addLiteralEdits()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L247",
+      "source_location": "L248",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_addliteraledits",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "addliteraledits()"
     },
     {
       "label": "hasCommaBefore()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L286",
+      "source_location": "L287",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_hascommabefore",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "hascommabefore()"
     },
     {
       "label": "skipWhitespace()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L308",
+      "source_location": "L309",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_skipwhitespace",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "skipwhitespace()"
     },
     {
       "label": "skipComment()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L321",
+      "source_location": "L322",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_skipcomment",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "skipcomment()"
     },
     {
       "label": "skipLineComment()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L337",
+      "source_location": "L338",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_skiplinecomment",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "skiplinecomment()"
     },
     {
       "label": "skipBlockComment()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L345",
+      "source_location": "L346",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_skipblockcomment",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "skipblockcomment()"
     },
     {
       "label": "applySourceEdits()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L357",
+      "source_location": "L358",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_applysourceedits",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "applysourceedits()"
     },
     {
       "label": "declaredStructTypes()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L385",
+      "source_location": "L386",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_declaredstructtypes",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "declaredstructtypes()"
     },
     {
       "label": "resolveStructType()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L412",
+      "source_location": "L413",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_resolvestructtype",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "resolvestructtype()"
     },
     {
@@ -826,51 +826,95 @@
       "_origin": "ast",
       "id": "expr",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "expr"
     },
     {
       "label": "isStructLiteralType()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L428",
+      "source_location": "L429",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_isstructliteraltype",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "isstructliteraltype()"
     },
     {
       "label": "isStructLiteralTypeOrElided()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L444",
+      "source_location": "L445",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_isstructliteraltypeorelided",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "isstructliteraltypeorelided()"
     },
     {
       "label": "elidedCompositeLiteralTypes()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L453",
+      "source_location": "L454",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_elidedcompositeliteraltypes",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "elidedcompositeliteraltypes()"
+    },
+    {
+      "label": "addElidedArrayElementTypes()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L476",
+      "_origin": "ast",
+      "id": "internal_formatter_struct_literal_addelidedarrayelementtypes",
+      "community": 0,
+      "community_name": "struct_literal.go",
+      "norm_label": "addelidedarrayelementtypes()"
+    },
+    {
+      "label": "addElidedMapEntryTypes()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L485",
+      "_origin": "ast",
+      "id": "internal_formatter_struct_literal_addelidedmapentrytypes",
+      "community": 0,
+      "community_name": "struct_literal.go",
+      "norm_label": "addelidedmapentrytypes()"
+    },
+    {
+      "label": "MapType",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "maptype",
+      "community": 0,
+      "community_name": "struct_literal.go",
+      "norm_label": "maptype"
+    },
+    {
+      "label": "addElidedCompositeLiteralType()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L497",
+      "_origin": "ast",
+      "id": "internal_formatter_struct_literal_addelidedcompositeliteraltype",
+      "community": 0,
+      "community_name": "struct_literal.go",
+      "norm_label": "addelidedcompositeliteraltype()"
     },
     {
       "label": "isStructType()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L480",
+      "source_location": "L504",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_isstructtype",
       "community": 0,
-      "community_name": "Struct Literal Formatting",
+      "community_name": "struct_literal.go",
       "norm_label": "isstructtype()"
     },
     {
@@ -881,7 +925,7 @@
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_test",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "struct_literal_test.go"
     },
     {
@@ -892,7 +936,7 @@
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_test_testformatstructliterals",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "testformatstructliterals()"
     },
     {
@@ -903,18 +947,18 @@
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_test_go_t",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "t"
     },
     {
       "label": "TestTransformStructLiterals()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal_test.go",
-      "source_location": "L139",
+      "source_location": "L155",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_test_testtransformstructliterals",
       "community": 1,
-      "community_name": "Go AST File Processing",
+      "community_name": "Parse",
       "norm_label": "testtransformstructliterals()"
     },
     {
@@ -925,7 +969,7 @@
       "_origin": "ast",
       "id": "plugin_gostructfmt_gostructfmt",
       "community": 3,
-      "community_name": "golangci Linter Plugin",
+      "community_name": "Plugin",
       "norm_label": "gostructfmt.go"
     },
     {
@@ -936,7 +980,7 @@
       "_origin": "ast",
       "id": "plugin_gostructfmt_gostructfmt_init",
       "community": 3,
-      "community_name": "golangci Linter Plugin",
+      "community_name": "Plugin",
       "norm_label": "init()"
     },
     {
@@ -947,7 +991,7 @@
       "_origin": "ast",
       "id": "gostructfmt_plugin",
       "community": 3,
-      "community_name": "golangci Linter Plugin",
+      "community_name": "Plugin",
       "norm_label": "plugin"
     },
     {
@@ -958,7 +1002,7 @@
       "_origin": "ast",
       "id": "plugin_gostructfmt_gostructfmt_new",
       "community": 3,
-      "community_name": "golangci Linter Plugin",
+      "community_name": "Plugin",
       "norm_label": "new()"
     },
     {
@@ -969,7 +1013,7 @@
       "_origin": "ast",
       "id": "linterplugin",
       "community": 3,
-      "community_name": "golangci Linter Plugin",
+      "community_name": "Plugin",
       "norm_label": "linterplugin"
     },
     {
@@ -980,7 +1024,7 @@
       "_origin": "ast",
       "id": "gostructfmt_plugin_buildanalyzers",
       "community": 3,
-      "community_name": "golangci Linter Plugin",
+      "community_name": "Plugin",
       "norm_label": ".buildanalyzers()"
     },
     {
@@ -991,7 +1035,7 @@
       "_origin": "ast",
       "id": "analyzer",
       "community": 3,
-      "community_name": "golangci Linter Plugin",
+      "community_name": "Plugin",
       "norm_label": "analyzer"
     },
     {
@@ -1002,7 +1046,7 @@
       "_origin": "ast",
       "id": "gostructfmt_plugin_getloadmode",
       "community": 3,
-      "community_name": "golangci Linter Plugin",
+      "community_name": "Plugin",
       "norm_label": ".getloadmode()"
     },
     {
@@ -1012,8 +1056,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "plugin_gostructfmt_gostructfmt_run",
-      "community": 1,
-      "community_name": "Go AST File Processing",
+      "community": 3,
+      "community_name": "Plugin",
       "norm_label": "run()"
     },
     {
@@ -1023,8 +1067,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "pass",
-      "community": 1,
-      "community_name": "Go AST File Processing",
+      "community": 3,
+      "community_name": "Plugin",
       "norm_label": "pass"
     },
     {
@@ -1035,7 +1079,7 @@
       "_origin": "ast",
       "id": "plugin_gostructfmt_gostructfmt_test",
       "community": 3,
-      "community_name": "golangci Linter Plugin",
+      "community_name": "Plugin",
       "norm_label": "gostructfmt_test.go"
     },
     {
@@ -1046,7 +1090,7 @@
       "_origin": "ast",
       "id": "plugin_gostructfmt_gostructfmt_test_testrun",
       "community": 3,
-      "community_name": "golangci Linter Plugin",
+      "community_name": "Plugin",
       "norm_label": "testrun()"
     },
     {
@@ -1057,8 +1101,294 @@
       "_origin": "ast",
       "id": "plugin_gostructfmt_gostructfmt_test_go_t",
       "community": 3,
-      "community_name": "golangci Linter Plugin",
+      "community_name": "Plugin",
       "norm_label": "t"
+    },
+    {
+      "label": "implementation-plan.md",
+      "file_type": "document",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "implementation_orchestrator_implementation_plan",
+      "community": 10,
+      "community_name": "Implementation Plan",
+      "norm_label": "implementation-plan.md"
+    },
+    {
+      "label": "Implementation Plan",
+      "file_type": "document",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "implementation_orchestrator_implementation_plan_implementation_plan",
+      "community": 10,
+      "community_name": "Implementation Plan",
+      "norm_label": "implementation plan"
+    },
+    {
+      "label": "Change summary",
+      "file_type": "document",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "implementation_orchestrator_implementation_plan_change_summary",
+      "community": 10,
+      "community_name": "Implementation Plan",
+      "norm_label": "change summary"
+    },
+    {
+      "label": "Risk and decision analysis",
+      "file_type": "document",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "implementation_orchestrator_implementation_plan_risk_and_decision_analysis",
+      "community": 10,
+      "community_name": "Implementation Plan",
+      "norm_label": "risk and decision analysis"
+    },
+    {
+      "label": "Required route decision",
+      "file_type": "document",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "implementation_orchestrator_implementation_plan_required_route_decision",
+      "community": 10,
+      "community_name": "Implementation Plan",
+      "norm_label": "required route decision"
+    },
+    {
+      "label": "Change size and staging",
+      "file_type": "document",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "implementation_orchestrator_implementation_plan_change_size_and_staging",
+      "community": 10,
+      "community_name": "Implementation Plan",
+      "norm_label": "change size and staging"
+    },
+    {
+      "label": "Selected skills",
+      "file_type": "document",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "implementation_orchestrator_implementation_plan_selected_skills",
+      "community": 10,
+      "community_name": "Implementation Plan",
+      "norm_label": "selected skills"
+    },
+    {
+      "label": "Acceptance and validation",
+      "file_type": "document",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "implementation_orchestrator_implementation_plan_acceptance_and_validation",
+      "community": 10,
+      "community_name": "Implementation Plan",
+      "norm_label": "acceptance and validation"
+    },
+    {
+      "label": "Implementation steps",
+      "file_type": "document",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "implementation_orchestrator_implementation_plan_implementation_steps",
+      "community": 10,
+      "community_name": "Implementation Plan",
+      "norm_label": "implementation steps"
+    },
+    {
+      "label": "Decision gates",
+      "file_type": "document",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "implementation_orchestrator_implementation_plan_decision_gates",
+      "community": 10,
+      "community_name": "Implementation Plan",
+      "norm_label": "decision gates"
+    },
+    {
+      "label": "Completion evidence",
+      "file_type": "document",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "implementation_orchestrator_implementation_plan_completion_evidence",
+      "community": 10,
+      "community_name": "Implementation Plan",
+      "norm_label": "completion evidence"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": ".quality/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "quality_readme",
+      "community": 11,
+      "community_name": "README.md",
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Repository quality state",
+      "file_type": "document",
+      "source_file": ".quality/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "quality_readme_repository_quality_state",
+      "community": 11,
+      "community_name": "README.md",
+      "norm_label": "repository quality state"
+    },
+    {
+      "label": "quality-model.md",
+      "file_type": "document",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_quality_model",
+      "community": 9,
+      "community_name": "Factors and evidence",
+      "norm_label": "quality-model.md"
+    },
+    {
+      "label": "Quality Model",
+      "file_type": "document",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_quality_model_quality_model",
+      "community": 9,
+      "community_name": "Factors and evidence",
+      "norm_label": "quality model"
+    },
+    {
+      "label": "Product boundary",
+      "file_type": "document",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_quality_model_product_boundary",
+      "community": 9,
+      "community_name": "Factors and evidence",
+      "norm_label": "product boundary"
+    },
+    {
+      "label": "Goals",
+      "file_type": "document",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "docs_quality_model_goals",
+      "community": 9,
+      "community_name": "Factors and evidence",
+      "norm_label": "goals"
+    },
+    {
+      "label": "Factors and evidence",
+      "file_type": "document",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "docs_quality_model_factors_and_evidence",
+      "community": 9,
+      "community_name": "Factors and evidence",
+      "norm_label": "factors and evidence"
+    },
+    {
+      "label": "Functional correctness",
+      "file_type": "document",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "docs_quality_model_functional_correctness",
+      "community": 9,
+      "community_name": "Factors and evidence",
+      "norm_label": "functional correctness"
+    },
+    {
+      "label": "Deterministic and idempotent formatting",
+      "file_type": "document",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "docs_quality_model_deterministic_and_idempotent_formatting",
+      "community": 9,
+      "community_name": "Factors and evidence",
+      "norm_label": "deterministic and idempotent formatting"
+    },
+    {
+      "label": "Safe file selection and recovery",
+      "file_type": "document",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "docs_quality_model_safe_file_selection_and_recovery",
+      "community": 9,
+      "community_name": "Factors and evidence",
+      "norm_label": "safe file selection and recovery"
+    },
+    {
+      "label": "Interface compatibility",
+      "file_type": "document",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "docs_quality_model_interface_compatibility",
+      "community": 9,
+      "community_name": "Factors and evidence",
+      "norm_label": "interface compatibility"
+    },
+    {
+      "label": "Maintainable responsibility boundaries",
+      "file_type": "document",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L109",
+      "_origin": "ast",
+      "id": "docs_quality_model_maintainable_responsibility_boundaries",
+      "community": 9,
+      "community_name": "Factors and evidence",
+      "norm_label": "maintainable responsibility boundaries"
+    },
+    {
+      "label": "Verifiable behavior",
+      "file_type": "document",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L129",
+      "_origin": "ast",
+      "id": "docs_quality_model_verifiable_behavior",
+      "community": 9,
+      "community_name": "Factors and evidence",
+      "norm_label": "verifiable behavior"
+    },
+    {
+      "label": "Interpretation rules",
+      "file_type": "document",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L149",
+      "_origin": "ast",
+      "id": "docs_quality_model_interpretation_rules",
+      "community": 9,
+      "community_name": "Factors and evidence",
+      "norm_label": "interpretation rules"
+    },
+    {
+      "label": "Handoff",
+      "file_type": "document",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L161",
+      "_origin": "ast",
+      "id": "docs_quality_model_handoff",
+      "community": 9,
+      "community_name": "Factors and evidence",
+      "norm_label": "handoff"
     },
     {
       "label": "gostructfmt",
@@ -1069,10 +1399,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_gostructfmt",
       "community": 6,
-      "community_name": "Product Features and Config",
-      "norm_label": "gostructfmt"
+      "community_name": "gostructfmt",
+      "norm_label": "gostructfmt",
+      "_origin": "semantic",
+      "id": "readme_gostructfmt"
     },
     {
       "label": "Command Line Interface",
@@ -1083,10 +1414,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_command_line",
       "community": 6,
-      "community_name": "Product Features and Config",
-      "norm_label": "command line interface"
+      "community_name": "gostructfmt",
+      "norm_label": "command line interface",
+      "_origin": "semantic",
+      "id": "readme_command_line"
     },
     {
       "label": "Atomic File Replacement",
@@ -1097,10 +1429,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_atomic_write",
       "community": 6,
-      "community_name": "Product Features and Config",
-      "norm_label": "atomic file replacement"
+      "community_name": "gostructfmt",
+      "norm_label": "atomic file replacement",
+      "_origin": "semantic",
+      "id": "readme_atomic_write"
     },
     {
       "label": "Git Diff Formatting",
@@ -1111,10 +1444,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_diff_formatting",
       "community": 6,
-      "community_name": "Product Features and Config",
-      "norm_label": "git diff formatting"
+      "community_name": "gostructfmt",
+      "norm_label": "git diff formatting",
+      "_origin": "semantic",
+      "id": "readme_diff_formatting"
     },
     {
       "label": "golangci-lint Plugin",
@@ -1125,10 +1459,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_golangci_lint_plugin",
       "community": 6,
-      "community_name": "Product Features and Config",
-      "norm_label": "golangci-lint plugin"
+      "community_name": "gostructfmt",
+      "norm_label": "golangci-lint plugin",
+      "_origin": "semantic",
+      "id": "readme_golangci_lint_plugin"
     },
     {
       "label": "Testing Guidelines",
@@ -1139,10 +1474,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "testing_testing_guidelines",
       "community": 4,
-      "community_name": "Testing Standards",
-      "norm_label": "testing guidelines"
+      "community_name": "Testing Guidelines",
+      "norm_label": "testing guidelines",
+      "_origin": "semantic",
+      "id": "testing_testing_guidelines"
     },
     {
       "label": "Test Pyramid",
@@ -1153,10 +1489,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "testing_test_pyramid",
       "community": 4,
-      "community_name": "Testing Standards",
-      "norm_label": "test pyramid"
+      "community_name": "Testing Guidelines",
+      "norm_label": "test pyramid",
+      "_origin": "semantic",
+      "id": "testing_test_pyramid"
     },
     {
       "label": "Arrange Act Assert Pattern",
@@ -1167,10 +1504,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "testing_aaa_pattern",
       "community": 4,
-      "community_name": "Testing Standards",
-      "norm_label": "arrange act assert pattern"
+      "community_name": "Testing Guidelines",
+      "norm_label": "arrange act assert pattern",
+      "_origin": "semantic",
+      "id": "testing_aaa_pattern"
     },
     {
       "label": "Testify Assertions",
@@ -1181,10 +1519,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "testing_testify_assertions",
       "community": 4,
-      "community_name": "Testing Standards",
-      "norm_label": "testify assertions"
+      "community_name": "Testing Guidelines",
+      "norm_label": "testify assertions",
+      "_origin": "semantic",
+      "id": "testing_testify_assertions"
     },
     {
       "label": "Deterministic Tests",
@@ -1195,10 +1534,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "testing_deterministic_tests",
       "community": 4,
-      "community_name": "Testing Standards",
-      "norm_label": "deterministic tests"
+      "community_name": "Testing Guidelines",
+      "norm_label": "deterministic tests",
+      "_origin": "semantic",
+      "id": "testing_deterministic_tests"
     },
     {
       "label": "Race Detection",
@@ -1209,10 +1549,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "testing_race_detection",
       "community": 4,
-      "community_name": "Testing Standards",
-      "norm_label": "race detection"
+      "community_name": "Testing Guidelines",
+      "norm_label": "race detection",
+      "_origin": "semantic",
+      "id": "testing_race_detection"
     },
     {
       "label": "Test Framework Guidelines",
@@ -1223,10 +1564,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_testing_guidelines_framework",
       "community": 4,
-      "community_name": "Testing Standards",
-      "norm_label": "test framework guidelines"
+      "community_name": "Testing Guidelines",
+      "norm_label": "test framework guidelines",
+      "_origin": "semantic",
+      "id": "docs_testing_guidelines_framework"
     },
     {
       "label": "AAA Test Structure",
@@ -1237,10 +1579,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_testing_guidelines_aaa_pattern",
       "community": 4,
-      "community_name": "Testing Standards",
-      "norm_label": "aaa test structure"
+      "community_name": "Testing Guidelines",
+      "norm_label": "aaa test structure",
+      "_origin": "semantic",
+      "id": "docs_testing_guidelines_aaa_pattern"
     },
     {
       "label": "Subtest Scenarios",
@@ -1251,10 +1594,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_testing_guidelines_t_run",
       "community": 4,
-      "community_name": "Testing Standards",
-      "norm_label": "subtest scenarios"
+      "community_name": "Testing Guidelines",
+      "norm_label": "subtest scenarios",
+      "_origin": "semantic",
+      "id": "docs_testing_guidelines_t_run"
     },
     {
       "label": "Repository Testing Policy",
@@ -1265,10 +1609,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_testing_policy",
       "community": 4,
-      "community_name": "Testing Standards",
-      "norm_label": "repository testing policy"
+      "community_name": "Testing Guidelines",
+      "norm_label": "repository testing policy",
+      "_origin": "semantic",
+      "id": "agents_testing_policy"
     },
     {
       "label": "Development Checks",
@@ -1279,10 +1624,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_development_checks",
       "community": 7,
-      "community_name": "CI and Pull Requests",
-      "norm_label": "development checks"
+      "community_name": "Lint and Format Job",
+      "norm_label": "development checks",
+      "_origin": "semantic",
+      "id": "agents_development_checks"
     },
     {
       "label": "Pull Request Requirements",
@@ -1293,10 +1639,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_pull_request_requirements",
       "community": 7,
-      "community_name": "CI and Pull Requests",
-      "norm_label": "pull request requirements"
+      "community_name": "Lint and Format Job",
+      "norm_label": "pull request requirements",
+      "_origin": "semantic",
+      "id": "agents_pull_request_requirements"
     },
     {
       "label": "Pull Request Template",
@@ -1307,10 +1654,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "github_pull_request_template_pull_request_template",
       "community": 7,
-      "community_name": "CI and Pull Requests",
-      "norm_label": "pull request template"
+      "community_name": "Lint and Format Job",
+      "norm_label": "pull request template",
+      "_origin": "semantic",
+      "id": "github_pull_request_template_pull_request_template"
     },
     {
       "label": "CI Workflow",
@@ -1321,10 +1669,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "github_workflows_ci_ci",
       "community": 7,
-      "community_name": "CI and Pull Requests",
-      "norm_label": "ci workflow"
+      "community_name": "Lint and Format Job",
+      "norm_label": "ci workflow",
+      "_origin": "semantic",
+      "id": "github_workflows_ci_ci"
     },
     {
       "label": "Lint and Format Job",
@@ -1335,10 +1684,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "github_workflows_ci_lint_and_format",
       "community": 7,
-      "community_name": "CI and Pull Requests",
-      "norm_label": "lint and format job"
+      "community_name": "Lint and Format Job",
+      "norm_label": "lint and format job",
+      "_origin": "semantic",
+      "id": "github_workflows_ci_lint_and_format"
     },
     {
       "label": "gostructfmt golangci-lint Module Plugin",
@@ -1349,10 +1699,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "custom_gcl_gostructfmt_plugin",
       "community": 6,
-      "community_name": "Product Features and Config",
-      "norm_label": "gostructfmt golangci-lint module plugin"
+      "community_name": "gostructfmt",
+      "norm_label": "gostructfmt golangci-lint module plugin",
+      "_origin": "semantic",
+      "id": "custom_gcl_gostructfmt_plugin"
     },
     {
       "label": "gostructfmt Linter Configuration",
@@ -1363,10 +1714,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "golangci_gostructfmt_gostructfmt_linter",
       "community": 6,
-      "community_name": "Product Features and Config",
-      "norm_label": "gostructfmt linter configuration"
+      "community_name": "gostructfmt",
+      "norm_label": "gostructfmt linter configuration",
+      "_origin": "semantic",
+      "id": "golangci_gostructfmt_gostructfmt_linter"
     },
     {
       "label": "Standard golangci-lint Configuration",
@@ -1377,10 +1729,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "golangci_standard_linters",
       "community": 7,
-      "community_name": "CI and Pull Requests",
-      "norm_label": "standard golangci-lint configuration"
+      "community_name": "Lint and Format Job",
+      "norm_label": "standard golangci-lint configuration",
+      "_origin": "semantic",
+      "id": "golangci_standard_linters"
     }
   ],
   "links": [
@@ -2276,7 +2629,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L78",
+      "source_location": "L79",
       "weight": 1.0,
       "_origin": "ast",
       "source": "formatter_file_syncsourcefromast",
@@ -2336,7 +2689,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L221",
+      "source_location": "L222",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatliteralsource",
@@ -2348,7 +2701,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L59",
+      "source_location": "L60",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatstructliterals",
@@ -2360,7 +2713,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L128",
+      "source_location": "L129",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatstructliteralsinlines",
@@ -2384,7 +2737,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "internal/formatter/struct_literal_test.go",
-      "source_location": "L142",
+      "source_location": "L158",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_test_testtransformstructliterals",
@@ -2534,7 +2887,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L104",
+      "source_location": "L105",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2545,7 +2898,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L97",
+      "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2556,7 +2909,40 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L247",
+      "source_location": "L476",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "internal_formatter_struct_literal",
+      "target": "internal_formatter_struct_literal_addelidedarrayelementtypes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L497",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "internal_formatter_struct_literal",
+      "target": "internal_formatter_struct_literal_addelidedcompositeliteraltype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L485",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "internal_formatter_struct_literal",
+      "target": "internal_formatter_struct_literal_addelidedmapentrytypes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L248",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2567,7 +2953,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L357",
+      "source_location": "L358",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2578,7 +2964,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L385",
+      "source_location": "L386",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2589,7 +2975,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L453",
+      "source_location": "L454",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2600,7 +2986,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L217",
+      "source_location": "L218",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2611,7 +2997,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L135",
+      "source_location": "L136",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2622,7 +3008,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2633,7 +3019,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L112",
+      "source_location": "L113",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2644,7 +3030,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L286",
+      "source_location": "L287",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2655,7 +3041,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L201",
+      "source_location": "L202",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2666,7 +3052,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L428",
+      "source_location": "L429",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2677,7 +3063,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L444",
+      "source_location": "L445",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2688,7 +3074,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L480",
+      "source_location": "L504",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2699,7 +3085,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L188",
+      "source_location": "L189",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2710,7 +3096,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L412",
+      "source_location": "L413",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2721,7 +3107,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L167",
+      "source_location": "L168",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2732,7 +3118,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L345",
+      "source_location": "L346",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2743,7 +3129,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L321",
+      "source_location": "L322",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2754,7 +3140,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L337",
+      "source_location": "L338",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2765,7 +3151,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L308",
+      "source_location": "L309",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2776,7 +3162,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L93",
+      "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal",
@@ -2788,7 +3174,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L226",
+      "source_location": "L227",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatliteralsource",
@@ -2799,7 +3185,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -2812,7 +3198,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatstructliterals",
@@ -2824,7 +3210,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L48",
+      "source_location": "L49",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatstructliterals",
@@ -2836,7 +3222,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L57",
+      "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatstructliterals",
@@ -2848,7 +3234,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatstructliterals",
@@ -2860,7 +3246,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatstructliterals",
@@ -2872,7 +3258,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L44",
+      "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatstructliterals",
@@ -2896,7 +3282,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L94",
+      "source_location": "L95",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_transformstructliterals",
@@ -2907,7 +3293,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L247",
+      "source_location": "L248",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -2919,7 +3305,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L385",
+      "source_location": "L386",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -2931,7 +3317,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L453",
+      "source_location": "L454",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -2943,7 +3329,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L135",
+      "source_location": "L136",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -2955,7 +3341,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L112",
+      "source_location": "L113",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -2967,7 +3353,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L72",
+      "source_location": "L73",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_go_formatter_file",
@@ -2978,7 +3364,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L201",
+      "source_location": "L202",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -2990,7 +3376,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L188",
+      "source_location": "L189",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3002,7 +3388,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L167",
+      "source_location": "L168",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3014,7 +3400,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L93",
+      "source_location": "L94",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3027,7 +3413,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L118",
+      "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatstructliteralsinlines",
@@ -3040,7 +3426,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "internal/formatter/struct_literal_test.go",
-      "source_location": "L146",
+      "source_location": "L162",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_test_testtransformstructliterals",
@@ -3050,7 +3436,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L247",
+      "source_location": "L248",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3062,7 +3448,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L357",
+      "source_location": "L358",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3074,7 +3460,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L135",
+      "source_location": "L136",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3086,7 +3472,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L112",
+      "source_location": "L113",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3098,7 +3484,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L188",
+      "source_location": "L189",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3110,7 +3496,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L167",
+      "source_location": "L168",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3123,7 +3509,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L123",
+      "source_location": "L124",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatstructliteralsinlines",
@@ -3147,7 +3533,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L164",
+      "source_location": "L165",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatselectedliteralsource",
@@ -3159,7 +3545,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L152",
+      "source_location": "L153",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatselectedliteralsource",
@@ -3171,7 +3557,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L145",
+      "source_location": "L146",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatselectedliteralsource",
@@ -3183,7 +3569,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L141",
+      "source_location": "L142",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_formatselectedliteralsource",
@@ -3194,24 +3580,12 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L167",
+      "source_location": "L168",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_selectedliterals",
       "target": "compositelit",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L168",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "internal_formatter_struct_literal_selectedliterals",
-      "target": "internal_formatter_struct_literal_declaredstructtypes",
       "confidence_score": 1.0
     },
     {
@@ -3223,6 +3597,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_selectedliterals",
+      "target": "internal_formatter_struct_literal_declaredstructtypes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L170",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "internal_formatter_struct_literal_selectedliterals",
       "target": "internal_formatter_struct_literal_elidedcompositeliteraltypes",
       "confidence_score": 1.0
     },
@@ -3231,7 +3617,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L174",
+      "source_location": "L175",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_selectedliterals",
@@ -3243,7 +3629,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L178",
+      "source_location": "L179",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_selectedliterals",
@@ -3254,7 +3640,43 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L247",
+      "source_location": "L476",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "internal_formatter_struct_literal_addelidedarrayelementtypes",
+      "target": "compositelit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L497",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "internal_formatter_struct_literal_addelidedcompositeliteraltype",
+      "target": "compositelit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L485",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "internal_formatter_struct_literal_addelidedmapentrytypes",
+      "target": "compositelit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L248",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3266,7 +3688,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L453",
+      "source_location": "L454",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
@@ -3278,7 +3700,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L201",
+      "source_location": "L202",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3290,7 +3712,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L444",
+      "source_location": "L445",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3302,7 +3724,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L188",
+      "source_location": "L189",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3315,7 +3737,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L277",
+      "source_location": "L278",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_addliteraledits",
@@ -3327,7 +3749,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L297",
+      "source_location": "L298",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_hascommabefore",
@@ -3339,7 +3761,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L288",
+      "source_location": "L289",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_hascommabefore",
@@ -3351,7 +3773,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L334",
+      "source_location": "L335",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_skipcomment",
@@ -3363,7 +3785,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L327",
+      "source_location": "L328",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_skipcomment",
@@ -3375,7 +3797,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L406",
+      "source_location": "L407",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_declaredstructtypes",
@@ -3387,7 +3809,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L485",
+      "source_location": "L509",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_isstructtype",
@@ -3398,7 +3820,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L412",
+      "source_location": "L413",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3410,7 +3832,43 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L453",
+      "source_location": "L476",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "internal_formatter_struct_literal_addelidedarrayelementtypes",
+      "target": "expr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L497",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "internal_formatter_struct_literal_addelidedcompositeliteraltype",
+      "target": "expr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L485",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "internal_formatter_struct_literal_addelidedmapentrytypes",
+      "target": "expr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L454",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
@@ -3422,7 +3880,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L428",
+      "source_location": "L429",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3434,7 +3892,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L444",
+      "source_location": "L445",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3446,7 +3904,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L480",
+      "source_location": "L504",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3459,11 +3917,59 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal.go",
-      "source_location": "L450",
+      "source_location": "L451",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_isstructliteraltypeorelided",
       "target": "internal_formatter_struct_literal_isstructliteraltype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L465",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "internal_formatter_struct_literal_elidedcompositeliteraltypes",
+      "target": "internal_formatter_struct_literal_addelidedarrayelementtypes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L467",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "internal_formatter_struct_literal_elidedcompositeliteraltypes",
+      "target": "internal_formatter_struct_literal_addelidedmapentrytypes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L492",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "internal_formatter_struct_literal_addelidedmapentrytypes",
+      "target": "internal_formatter_struct_literal_addelidedcompositeliteraltype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L485",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "internal_formatter_struct_literal_addelidedmapentrytypes",
+      "target": "maptype",
       "confidence_score": 1.0
     },
     {
@@ -3481,7 +3987,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal_test.go",
-      "source_location": "L139",
+      "source_location": "L155",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_test",
@@ -3504,7 +4010,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal_test.go",
-      "source_location": "L139",
+      "source_location": "L155",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -3662,12 +4168,266 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "implementation_orchestrator_implementation_plan",
+      "target": "implementation_orchestrator_implementation_plan_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "implementation_orchestrator_implementation_plan_implementation_plan",
+      "target": "implementation_orchestrator_implementation_plan_acceptance_and_validation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "implementation_orchestrator_implementation_plan_implementation_plan",
+      "target": "implementation_orchestrator_implementation_plan_change_size_and_staging",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "implementation_orchestrator_implementation_plan_implementation_plan",
+      "target": "implementation_orchestrator_implementation_plan_change_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "implementation_orchestrator_implementation_plan_implementation_plan",
+      "target": "implementation_orchestrator_implementation_plan_completion_evidence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "implementation_orchestrator_implementation_plan_implementation_plan",
+      "target": "implementation_orchestrator_implementation_plan_decision_gates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "implementation_orchestrator_implementation_plan_implementation_plan",
+      "target": "implementation_orchestrator_implementation_plan_implementation_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "implementation_orchestrator_implementation_plan_implementation_plan",
+      "target": "implementation_orchestrator_implementation_plan_required_route_decision",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "implementation_orchestrator_implementation_plan_implementation_plan",
+      "target": "implementation_orchestrator_implementation_plan_risk_and_decision_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".implementation-orchestrator/implementation-plan.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "implementation_orchestrator_implementation_plan_implementation_plan",
+      "target": "implementation_orchestrator_implementation_plan_selected_skills",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".quality/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "quality_readme",
+      "target": "quality_readme_repository_quality_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_quality_model",
+      "target": "docs_quality_model_quality_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_quality_model_quality_model",
+      "target": "docs_quality_model_factors_and_evidence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_quality_model_quality_model",
+      "target": "docs_quality_model_goals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L161",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_quality_model_quality_model",
+      "target": "docs_quality_model_handoff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L149",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_quality_model_quality_model",
+      "target": "docs_quality_model_interpretation_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_quality_model_quality_model",
+      "target": "docs_quality_model_product_boundary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_quality_model_factors_and_evidence",
+      "target": "docs_quality_model_deterministic_and_idempotent_formatting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_quality_model_factors_and_evidence",
+      "target": "docs_quality_model_functional_correctness",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_quality_model_factors_and_evidence",
+      "target": "docs_quality_model_interface_compatibility",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_quality_model_factors_and_evidence",
+      "target": "docs_quality_model_maintainable_responsibility_boundaries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_quality_model_factors_and_evidence",
+      "target": "docs_quality_model_safe_file_selection_and_recovery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/quality-model.md",
+      "source_location": "L129",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_quality_model_factors_and_evidence",
+      "target": "docs_quality_model_verifiable_behavior",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "conceptually_related_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "readme_diff_formatting",
       "target": "readme_gostructfmt"
     },
@@ -3678,6 +4438,7 @@
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "readme_golangci_lint_plugin",
       "target": "readme_gostructfmt"
     },
@@ -3688,6 +4449,7 @@
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "readme_gostructfmt",
       "target": "readme_command_line"
     },
@@ -3698,6 +4460,7 @@
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "readme_atomic_write",
       "target": "readme_command_line"
     },
@@ -3708,6 +4471,7 @@
       "source_file": ".custom-gcl.yml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "custom_gcl_gostructfmt_plugin",
       "target": "readme_golangci_lint_plugin"
     },
@@ -3718,6 +4482,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_testing_policy",
       "target": "testing_testing_guidelines"
     },
@@ -3728,6 +4493,7 @@
       "source_file": "docs/testing-guidelines.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docs_testing_guidelines_framework",
       "target": "testing_testing_guidelines"
     },
@@ -3738,6 +4504,7 @@
       "source_file": "TESTING.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "testing_aaa_pattern",
       "target": "testing_testing_guidelines"
     },
@@ -3748,6 +4515,7 @@
       "source_file": "TESTING.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "testing_deterministic_tests",
       "target": "testing_testing_guidelines"
     },
@@ -3758,6 +4526,7 @@
       "source_file": "TESTING.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "testing_test_pyramid",
       "target": "testing_testing_guidelines"
     },
@@ -3768,6 +4537,7 @@
       "source_file": "TESTING.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "testing_testify_assertions",
       "target": "testing_testing_guidelines"
     },
@@ -3778,6 +4548,7 @@
       "source_file": "docs/testing-guidelines.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docs_testing_guidelines_aaa_pattern",
       "target": "testing_aaa_pattern"
     },
@@ -3788,6 +4559,7 @@
       "source_file": "docs/testing-guidelines.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "docs_testing_guidelines_t_run",
       "target": "testing_aaa_pattern"
     },
@@ -3798,18 +4570,9 @@
       "source_file": "TESTING.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "testing_race_detection",
       "target": "testing_deterministic_tests"
-    },
-    {
-      "relation": "implements",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": ".github/workflows/ci.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "github_workflows_ci_lint_and_format",
-      "target": "agents_development_checks"
     },
     {
       "relation": "references",
@@ -3818,7 +4581,19 @@
       "source_file": ".github/pull_request_template.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "github_pull_request_template_pull_request_template",
+      "target": "agents_development_checks"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".github/workflows/ci.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "semantic",
+      "source": "github_workflows_ci_lint_and_format",
       "target": "agents_development_checks"
     },
     {
@@ -3828,6 +4603,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_pull_request_requirements",
       "target": "github_pull_request_template_pull_request_template"
     },
@@ -3838,6 +4614,7 @@
       "source_file": ".github/workflows/ci.yml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "github_workflows_ci_ci",
       "target": "github_workflows_ci_lint_and_format"
     },
@@ -3848,6 +4625,7 @@
       "source_file": ".golangci.yml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "golangci_standard_linters",
       "target": "github_workflows_ci_lint_and_format"
     },
@@ -3858,6 +4636,7 @@
       "source_file": ".golangci-gostructfmt.yml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "golangci_gostructfmt_gostructfmt_linter",
       "target": "custom_gcl_gostructfmt_plugin"
     }
@@ -3893,5 +4672,5 @@
       "source_file": ".github/workflows/ci.yml"
     }
   ],
-  "built_at_commit": "32c170dcf623692fa26017d7cbea94d3b85ee14f"
+  "built_at_commit": "283bb9bc343bf67afadac05c65c7e42e4a763d6a"
 }

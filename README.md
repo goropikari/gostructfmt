@@ -1,8 +1,9 @@
 # gostructfmt
 
 `gostructfmt` formats populated Go struct literals as deterministic,
-gofmt-compatible multi-line literals. Empty literals and slice, array, and map
-literals are left unchanged.
+gofmt-compatible multi-line literals. Empty and non-struct literals are left
+unchanged; this includes slice, array, and map containers, though populated
+struct literals within their elements, keys, or values are formatted.
 
 ## Command line
 

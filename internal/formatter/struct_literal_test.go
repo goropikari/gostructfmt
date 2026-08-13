@@ -117,6 +117,22 @@ func TestFormatStructLiterals(t *testing.T) {
 		require.Contains(t, string(output), "var _ = []struct{ Name string }{{\n\tName: \"Bob\",\n}}")
 	})
 
+	t.Run("expands struct literals elided in map keys and values", func(t *testing.T) {
+		// Arrange
+		source := []byte("package example\ntype User struct { Name string; Age int }\nvar _ = map[User]User{{Name: \"key\", Age: 1}: {Name: \"value\", Age: 2}}\n")
+		file, err := formatter.Parse("example.go", source)
+		require.NoError(t, err)
+
+		// Act
+		err = formatter.FormatStructLiterals(file)
+		output, printErr := file.Print()
+
+		// Assert
+		require.NoError(t, err)
+		require.NoError(t, printErr)
+		require.Contains(t, string(output), "var _ = map[User]User{{\n\tName: \"key\",\n\tAge:  1,\n}: {\n\tName: \"value\",\n\tAge:  2,\n}}")
+	})
+
 	t.Run("keeps already multiline literals valid and reparsable", func(t *testing.T) {
 		// Arrange
 		source := []byte("package example\ntype User struct { Name string }\nvar _ = User{\nName: \"Alice\",\n}\n")
