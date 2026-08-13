@@ -1,5 +1,7 @@
 .worktrees
 docs/reviews
 .implementation-orchestrator/
+graphify-out/.graphify_labels.json.sig
+graphify-out/cache/
 
 .dev-workflow*
