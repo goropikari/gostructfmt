@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "baseline_version": "1.0.0",
+  "run_id": null,
+  "started_at": null,
+  "finished_at": "2026-08-13T17:30:16.738344+00:00",
+  "result": "NOT_RUN",
+  "checks": [],
+  "findings": [],
+  "changed_scope": [],
+  "notes": [
+    "Baseline initialized; no quality gate has run yet."
+  ]
+}

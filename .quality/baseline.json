@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "baseline_version": "1.0.0",
+  "repository": {
+    "root": "."
+  },
+  "quality_model": {
+    "source": "docs/quality-model.md",
+    "version": "1.0.0",
+    "characteristics": [
+      "reliability",
+      "maintainability"
+    ],
+    "factors": [
+      {
+        "id": "reliability.syntax_preservation",
+        "applicable": true,
+        "required": true,
+        "severity": "critical",
+        "gqm": {
+          "goal": "For formatter users, preserve valid Go source while applying the documented struct-literal transformation.",
+          "questions": [
+            "Does formatting retain parseable Go and leave unsupported literal kinds unchanged?"
+          ],
+          "metrics": [
+            "formatter_contract_test_result",
+            "parse_and_format_error_result"
+          ]
+        },
+        "measures": [
+          "formatter_contract_tests",
+          "parse_and_format_errors"
+        ],
+        "rating": {
+          "method": "binary_evidence",
+          "pass_condition": "Required applicable contract tests pass and no confirmed regression remains."
+        },
+        "aggregation": {
+          "entity_hierarchy": [
+            "test_scenario",
+            "package",
+            "system"
+          ],
+          "method": "worst_case",
+          "retain_worst_entities": 10
+        }
+      },
+      {
+        "id": "reliability.safe_file_updates",
+        "applicable": true,
+        "required": true,
+        "severity": "critical",
+        "gqm": {
+          "goal": "For file-modifying CLI users, prevent partial or unintended source changes when selection, parsing, or writing fails.",
+          "questions": [
+            "Are only documented files selected and are failed updates recoverable?"
+          ],
+          "metrics": [
+            "cli_file_selection_test_result",
+            "atomic_write_failure_test_result"
+          ]
+        },
+        "measures": [
+          "cli_file_selection_tests",
+          "atomic_write_and_error_path_tests",
+          "data_integrity_review_when_write_behavior_changes"
+        ],
+        "rating": {
+          "method": "binary_evidence",
+          "pass_condition": "Applicable selection and write-safety evidence passes; no data-loss or partial-write defect is confirmed."
+        },
+        "aggregation": {
+          "entity_hierarchy": [
+            "scenario",
+            "cli_operation",
+            "system"
+          ],
+          "method": "worst_case",
+          "retain_worst_entities": 10
+        }
+      },
+      {
+        "id": "maintainability.cli_and_plugin_contracts",
+        "applicable": true,
+        "required": true,
+        "severity": "critical",
+        "gqm": {
+          "goal": "For CLI and linter-plugin consumers, preserve documented flags, streams, exit statuses, diagnostics, and configuration behavior.",
+          "questions": [
+            "Does a public contract change break an existing documented consumer?"
+          ],
+          "metrics": [
+            "cli_contract_test_result",
+            "plugin_contract_test_result",
+            "api_compatibility_review_result"
+          ]
+        },
+        "measures": [
+          "cli_and_plugin_contract_tests",
+          "api_compatibility_review_for_public_contract_changes"
+        ],
+        "rating": {
+          "method": "binary_evidence",
+          "pass_condition": "Applicable contract tests pass and compatibility review finds no unapproved breaking change."
+        },
+        "aggregation": {
+          "entity_hierarchy": [
+            "consumer_contract",
+            "component",
+            "system"
+          ],
+          "method": "worst_case",
+          "retain_worst_entities": 10
+        }
+      },
+      {
+        "id": "maintainability.responsibility_boundaries",
+        "applicable": true,
+        "required": false,
+        "severity": "major",
+        "gqm": {
+          "goal": "For maintainers, keep parser, formatter, CLI, and plugin responsibilities understandable and independently changeable.",
+          "questions": [
+            "Are unrelated reasons to change coupled across or within these boundaries?"
+          ],
+          "metrics": [
+            "architecture_review_findings",
+            "readability_review_findings"
+          ]
+        },
+        "measures": [
+          "architecture_review",
+          "readability_review_when_complexity_or_coupling_changes"
+        ],
+        "rating": {
+          "method": "review_evidence",
+          "pass_condition": "No confirmed major boundary finding remains without an accepted exception."
+        },
+        "aggregation": {
+          "entity_hierarchy": [
+            "symbol",
+            "file",
+            "package",
+            "system"
+          ],
+          "method": "worst_case",
+          "retain_worst_entities": 10
+        }
+      },
+      {
+        "id": "maintainability.verifiable_behavior",
+        "applicable": true,
+        "required": true,
+        "severity": "major",
+        "gqm": {
+          "goal": "For maintainers, make behavior regressions detectable with deterministic tests that assert observable contracts.",
+          "questions": [
+            "Do changed success, failure, and boundary behaviors have meaningful and isolated evidence?"
+          ],
+          "metrics": [
+            "go_test_result",
+            "test_quality_review_findings",
+            "whitebox_risk_coverage"
+          ]
+        },
+        "measures": [
+          "go_test",
+          "test_quality_review_when_tests_change",
+          "whitebox_risk_based_test_for_high_risk_paths"
+        ],
+        "rating": {
+          "method": "binary_evidence",
+          "pass_condition": "Required tests pass and no applicable high-priority risk lacks a justified test or analysis."
+        },
+        "aggregation": {
+          "entity_hierarchy": [
+            "risk_condition",
+            "test_scenario",
+            "package",
+            "system"
+          ],
+          "method": "worst_case",
+          "retain_worst_entities": 10
+        }
+      }
+    ]
+  },
+  "repository_tools": [],
+  "analysis_skills": [
+    {
+      "name": "requirements-review",
+      "applied": true,
+      "evidence": "README.md, AGENTS.md, TESTING.md, Makefile, and CLI tests define observable formatter and file-update contracts; no conflicting requirement was found."
+    },
+    {
+      "name": "architecture-review",
+      "applied": true,
+      "evidence": "Source inspection and graphify-out/GRAPH_REPORT.md show intentional formatter, CLI, and plugin package boundaries with no import cycle."
+    },
+    {
+      "name": "change-impact-review",
+      "applied": true,
+      "evidence": "Public consumers are standard input/output, file paths, Git diff selection, CLI flags and exit statuses, and the golangci-lint module plugin."
+    },
+    {
+      "name": "security-review",
+      "applied": true,
+      "evidence": "The input boundary is Go source and filesystem paths; no authentication, secrets, personal data, network service, or privilege boundary was found in production code."
+    },
+    {
+      "name": "whitebox-risk-based-test",
+      "applied": true,
+      "evidence": "Traced Parse -> FormatStructLiterals -> Print, CLI file/diff/write paths, and plugin analyzer paths to prioritize syntax preservation, selection, and recovery tests."
+    },
+    {
+      "name": "review-orchestrator",
+      "applied": true,
+      "evidence": "Selected requirements, architecture, change-impact, security, API compatibility, and test-quality review scopes; data, privacy, concurrency, performance, observability, and release reviews were not applicable to the current product boundary."
+    },
+    {
+      "name": "api-compatibility-review",
+      "applied": true,
+      "evidence": "The README, cmd/gostructfmt/main.go, cmd/gostructfmt/main_test.go, and plugin/gostructfmt define CLI and module-plugin contracts. No current breaking change was under review; future public-contract changes require this review."
+    },
+    {
+      "name": "test-quality-review",
+      "applied": true,
+      "evidence": "Existing tests use testify and t.Run with deterministic temp-directory fixtures for CLI file operations; the baseline requires focused observable tests for changed behavior."
+    }
+  ],
+  "mechanical_checks": [
+    {
+      "id": "go-test",
+      "command": "go test ./...",
+      "required": true,
+      "when": "Go module"
+    },
+    {
+      "id": "go-vet",
+      "command": "go vet ./...",
+      "required": true,
+      "when": "Go module"
+    },
+    {
+      "id": "go-test-race",
+      "command": "go test -race ./...",
+      "required": true,
+      "when": "Go code affecting concurrency, shared state, or lifecycle changes"
+    },
+    {
+      "id": "format",
+      "command": "make fmt",
+      "required": true,
+      "when": "source, test, documentation, or configuration changes"
+    },
+    {
+      "id": "lint",
+      "command": "make lint",
+      "required": true,
+      "when": "Go source, tests, tooling, or configuration changes"
+    }
+  ],
+  "must_quality": [
+    {
+      "id": "requirements",
+      "rule": "Requested behavior is satisfied and demonstrated by tests or evidence",
+      "severity": "critical"
+    },
+    {
+      "id": "regression",
+      "rule": "Existing supported behavior is not unintentionally broken",
+      "severity": "critical"
+    },
+    {
+      "id": "repository-conventions",
+      "rule": "Repository-local guidance and public contracts are respected",
+      "severity": "major"
+    },
+    {
+      "id": "security",
+      "rule": "No critical security defect is introduced",
+      "severity": "critical"
+    },
+    {
+      "id": "syntax-preservation",
+      "rule": "Formatter changes preserve valid Go source and documented literal scope.",
+      "severity": "critical"
+    },
+    {
+      "id": "file-update-safety",
+      "rule": "File selection and write failures do not cause unintended or partial source updates.",
+      "severity": "critical"
+    },
+    {
+      "id": "public-contract-compatibility",
+      "rule": "CLI and plugin contract changes are tested and require an explicit compatibility decision.",
+      "severity": "critical"
+    }
+  ],
+  "performance_quality": [
+    {
+      "id": "simplicity",
+      "rule": "Prefer the smallest understandable change",
+      "severity": "non_blocking"
+    },
+    {
+      "id": "maintainability",
+      "rule": "Keep responsibilities, names, and tests easy to evolve",
+      "severity": "non_blocking"
+    }
+  ],
+  "critical_defects": [
+    "Security compromise or secret exposure",
+    "Data loss, corruption, or unsafe migration",
+    "Required behavior missing or public API broken without approval",
+    "Formatter emits invalid Go source or unexpectedly rewrites source outside its documented scope",
+    "File selection or write behavior causes unintended or partial source updates"
+  ],
+  "assumptions": [
+    "No calibrated numeric threshold is used: this small Go CLI has no comparable benchmark population. Required factors use documented pass/fail contracts and preserve leaf-level evidence.",
+    "make fmt and make lint may modify files; they are required repository workflows, but a gate must report any resulting diff rather than treating a non-clean worktree as a quality failure.",
+    "The current baseline establishes policy only. .quality/state.json remains NOT_RUN until a quality assessment executes the applicable checks."
+  ]
+}
