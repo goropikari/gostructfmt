@@ -1,0 +1,64 @@
+{
+  "nodes": [
+    {
+      "id": "github_workflows_ci_ci",
+      "label": "CI Workflow",
+      "file_type": "document",
+      "source_file": ".github/workflows/ci.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "github_workflows_ci_lint_and_format",
+      "label": "Lint and Format Job",
+      "file_type": "concept",
+      "source_file": ".github/workflows/ci.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "github_workflows_ci_lint_and_format",
+      "target": "agents_development_checks",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".github/workflows/ci.yml",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "github_workflows_ci_ci",
+      "target": "github_workflows_ci_lint_and_format",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": ".github/workflows/ci.yml",
+      "source_location": null,
+      "weight": 1
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "repository_quality_gate",
+      "label": "Repository Quality Gate",
+      "nodes": [
+        "agents_development_checks",
+        "github_workflows_ci_lint_and_format",
+        "golangci_standard_linters",
+        "golangci_gostructfmt_gostructfmt_linter"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".github/workflows/ci.yml"
+    }
+  ]
+}

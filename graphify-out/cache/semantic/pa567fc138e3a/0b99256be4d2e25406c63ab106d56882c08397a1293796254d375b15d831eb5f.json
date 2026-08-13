@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": "readme_gostructfmt",
+      "label": "gostructfmt",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_command_line",
+      "label": "Command Line Interface",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_atomic_write",
+      "label": "Atomic File Replacement",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_diff_formatting",
+      "label": "Git Diff Formatting",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_golangci_lint_plugin",
+      "label": "golangci-lint Plugin",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "readme_gostructfmt",
+      "target": "readme_command_line",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "readme_atomic_write",
+      "target": "readme_command_line",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "readme_diff_formatting",
+      "target": "readme_gostructfmt",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "readme_golangci_lint_plugin",
+      "target": "readme_gostructfmt",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    }
+  ],
+  "hyperedges": []
+}

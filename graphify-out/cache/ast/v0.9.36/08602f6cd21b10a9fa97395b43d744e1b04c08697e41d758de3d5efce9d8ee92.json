@@ -1,0 +1,1508 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_go",
+      "label": "struct_literal.go",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "label": "FormatStructLiterals()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L21"
+    },
+    {
+      "id": "file",
+      "label": "File",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/internal/formatter/struct_literal.go"
+    },
+    {
+      "id": "formatter_file",
+      "label": "File",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L72"
+    },
+    {
+      "id": "formatter_file_syncsourcefromast",
+      "label": ".syncSourceFromAST()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L72"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_transformstructliterals",
+      "label": "TransformStructLiterals()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L93"
+    },
+    {
+      "id": "formatter_sourceedit",
+      "label": "sourceEdit",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L97"
+    },
+    {
+      "id": "formatter_linerange",
+      "label": "LineRange",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L104"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_formatstructliteralsinlines",
+      "label": "FormatStructLiteralsInLines()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L112"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "label": "formatSelectedLiteralSource()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L135"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_selectedliterals",
+      "label": "selectedLiterals()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L167"
+    },
+    {
+      "id": "compositelit",
+      "label": "CompositeLit",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/internal/formatter/struct_literal.go"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_literaloverlapslines",
+      "label": "literalOverlapsLines()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L188"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_hasselectedancestor",
+      "label": "hasSelectedAncestor()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L201"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_formatliteralsource",
+      "label": "formatLiteralSource()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L217"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "label": "addLiteralEdits()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L247"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_hascommabefore",
+      "label": "hasCommaBefore()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L286"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_skipwhitespace",
+      "label": "skipWhitespace()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L308"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_skipcomment",
+      "label": "skipComment()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L321"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_skiplinecomment",
+      "label": "skipLineComment()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L337"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_skipblockcomment",
+      "label": "skipBlockComment()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L345"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_applysourceedits",
+      "label": "applySourceEdits()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L357"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_declaredstructtypes",
+      "label": "declaredStructTypes()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L385"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_resolvestructtype",
+      "label": "resolveStructType()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L412"
+    },
+    {
+      "id": "expr",
+      "label": "Expr",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/internal/formatter/struct_literal.go"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_isstructliteraltype",
+      "label": "isStructLiteralType()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L428"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_isstructliteraltypeorelided",
+      "label": "isStructLiteralTypeOrElided()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L444"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_elidedcompositeliteraltypes",
+      "label": "elidedCompositeLiteralTypes()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L453"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_struct_literal_isstructtype",
+      "label": "isStructType()",
+      "file_type": "code",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L480"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "go_pkg_bytes",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L4",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "go_pkg_fmt",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L5",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "go_pkg_go_ast",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "go_pkg_go_token",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "go_pkg_sort",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "target": "file",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "formatter_file",
+      "target": "formatter_file_syncsourcefromast",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_transformstructliterals",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_transformstructliterals",
+      "target": "formatter_file",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L93",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "formatter_sourceedit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "formatter_linerange",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_formatstructliteralsinlines",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatstructliteralsinlines",
+      "target": "formatter_file",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L112",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatstructliteralsinlines",
+      "target": "formatter_linerange",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L112",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "target": "formatter_file",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L135",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "target": "formatter_linerange",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L135",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_selectedliterals",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L167",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_selectedliterals",
+      "target": "formatter_file",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L167",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_selectedliterals",
+      "target": "formatter_file",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L167",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_selectedliterals",
+      "target": "formatter_linerange",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L167",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_selectedliterals",
+      "target": "compositelit",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L167",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_literaloverlapslines",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L188",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_literaloverlapslines",
+      "target": "compositelit",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L188",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_literaloverlapslines",
+      "target": "formatter_file",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L188",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_literaloverlapslines",
+      "target": "formatter_linerange",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L188",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_hasselectedancestor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_hasselectedancestor",
+      "target": "compositelit",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L201",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_hasselectedancestor",
+      "target": "compositelit",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L201",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_hasselectedancestor",
+      "target": "formatter_file",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L201",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_formatliteralsource",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L217",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L247",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "target": "formatter_sourceedit",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L247",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "target": "compositelit",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L247",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "target": "formatter_file",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L247",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_hascommabefore",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L286",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_skipwhitespace",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L308",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_skipcomment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L321",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_skiplinecomment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L337",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_skipblockcomment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L345",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_applysourceedits",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L357",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_applysourceedits",
+      "target": "formatter_sourceedit",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L357",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_declaredstructtypes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L385",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_declaredstructtypes",
+      "target": "formatter_file",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L385",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_resolvestructtype",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L412",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_resolvestructtype",
+      "target": "expr",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L412",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_isstructliteraltype",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L428",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_isstructliteraltype",
+      "target": "expr",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L428",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_isstructliteraltypeorelided",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L444",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_isstructliteraltypeorelided",
+      "target": "compositelit",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L444",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_isstructliteraltypeorelided",
+      "target": "compositelit",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L444",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_isstructliteraltypeorelided",
+      "target": "expr",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L444",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_elidedcompositeliteraltypes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L453",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_elidedcompositeliteraltypes",
+      "target": "formatter_file",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L453",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_elidedcompositeliteraltypes",
+      "target": "compositelit",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L453",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_elidedcompositeliteraltypes",
+      "target": "expr",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L453",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_go",
+      "target": "$graphify-root$_internal_formatter_struct_literal_isstructtype",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L480",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_isstructtype",
+      "target": "expr",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L480",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_isstructtype",
+      "target": "expr",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L480",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "target": "formatter_file_syncsourcefromast",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "target": "$graphify-root$_internal_formatter_struct_literal_declaredstructtypes",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "target": "$graphify-root$_internal_formatter_struct_literal_elidedcompositeliteraltypes",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "target": "$graphify-root$_internal_formatter_struct_literal_isstructliteraltypeorelided",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "target": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "target": "$graphify-root$_internal_formatter_struct_literal_applysourceedits",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_transformstructliterals",
+      "target": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatstructliteralsinlines",
+      "target": "formatter_file_syncsourcefromast",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatstructliteralsinlines",
+      "target": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "target": "$graphify-root$_internal_formatter_struct_literal_selectedliterals",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "target": "$graphify-root$_internal_formatter_struct_literal_hasselectedancestor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "target": "$graphify-root$_internal_formatter_struct_literal_formatliteralsource",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L152",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "target": "$graphify-root$_internal_formatter_struct_literal_applysourceedits",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L164",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_selectedliterals",
+      "target": "$graphify-root$_internal_formatter_struct_literal_declaredstructtypes",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L168",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_selectedliterals",
+      "target": "$graphify-root$_internal_formatter_struct_literal_elidedcompositeliteraltypes",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_selectedliterals",
+      "target": "$graphify-root$_internal_formatter_struct_literal_isstructliteraltypeorelided",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L174",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_selectedliterals",
+      "target": "$graphify-root$_internal_formatter_struct_literal_literaloverlapslines",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L178",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_formatliteralsource",
+      "target": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "target": "$graphify-root$_internal_formatter_struct_literal_hascommabefore",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L277",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_hascommabefore",
+      "target": "$graphify-root$_internal_formatter_struct_literal_skipwhitespace",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L288",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_hascommabefore",
+      "target": "$graphify-root$_internal_formatter_struct_literal_skipcomment",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L297",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_skipcomment",
+      "target": "$graphify-root$_internal_formatter_struct_literal_skiplinecomment",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L327",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_skipcomment",
+      "target": "$graphify-root$_internal_formatter_struct_literal_skipblockcomment",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L334",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_declaredstructtypes",
+      "target": "$graphify-root$_internal_formatter_struct_literal_resolvestructtype",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L406",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_resolvestructtype",
+      "target": "$graphify-root$_internal_formatter_struct_literal_isstructtype",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L425",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_isstructliteraltypeorelided",
+      "target": "$graphify-root$_internal_formatter_struct_literal_isstructliteraltype",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L450",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_struct_literal_isstructtype",
+      "target": "$graphify-root$_internal_formatter_struct_literal_resolvestructtype",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L485",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L23"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L28"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "callee": "Pos",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L35"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L37"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "callee": "Inspect",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L42"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "callee": "Parse",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L59"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatstructliterals",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L61"
+    },
+    {
+      "caller_nid": "formatter_file_syncsourcefromast",
+      "callee": "Print",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L73"
+    },
+    {
+      "caller_nid": "formatter_file_syncsourcefromast",
+      "callee": "Parse",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L78"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatstructliteralsinlines",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L114"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatstructliteralsinlines",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L119"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatstructliteralsinlines",
+      "callee": "Parse",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L128"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatstructliteralsinlines",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L129"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "callee": "Pos",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L136"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L138"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "callee": "Offset",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L149"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "callee": "Pos",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L149"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "callee": "Offset",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L150"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "callee": "End",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L150"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L154"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatselectedliteralsource",
+      "callee": "string",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L160"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_selectedliterals",
+      "callee": "Inspect",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L172"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_literaloverlapslines",
+      "callee": "Line",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L189"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_literaloverlapslines",
+      "callee": "Pos",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L189"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_literaloverlapslines",
+      "callee": "Line",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L191"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_literaloverlapslines",
+      "callee": "End",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L191"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_hasselectedancestor",
+      "callee": "Offset",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L202"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_hasselectedancestor",
+      "callee": "Pos",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L202"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_hasselectedancestor",
+      "callee": "Offset",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L204"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_hasselectedancestor",
+      "callee": "End",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L204"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_hasselectedancestor",
+      "callee": "Offset",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L206"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_hasselectedancestor",
+      "callee": "Pos",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L206"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_hasselectedancestor",
+      "callee": "Offset",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L208"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_hasselectedancestor",
+      "callee": "End",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L208"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatliteralsource",
+      "callee": "Parse",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L221"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatliteralsource",
+      "callee": "Print",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L230"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatliteralsource",
+      "callee": "Cut",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L237"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatliteralsource",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L239"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_formatliteralsource",
+      "callee": "TrimSpace",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L242"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "callee": "Offset",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L248"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "callee": "Offset",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L249"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L250"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "callee": "Offset",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L259"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "callee": "Pos",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L259"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "callee": "Offset",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L273"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "callee": "Pos",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L273"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "callee": "Offset",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L276"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_addliteraledits",
+      "callee": "End",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L276"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_applysourceedits",
+      "callee": "SliceStable",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L358"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_applysourceedits",
+      "callee": "Write",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L374"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_applysourceedits",
+      "callee": "WriteString",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L375"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_applysourceedits",
+      "callee": "Write",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L380"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_applysourceedits",
+      "callee": "Bytes",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L382"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_isstructliteraltype",
+      "callee": "isStructLiteralType",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L438"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_elidedcompositeliteraltypes",
+      "callee": "Inspect",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L456"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_struct_literal_isstructtype",
+      "callee": "isStructType",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/struct_literal.go",
+      "source_location": "L487"
+    }
+  ]
+}

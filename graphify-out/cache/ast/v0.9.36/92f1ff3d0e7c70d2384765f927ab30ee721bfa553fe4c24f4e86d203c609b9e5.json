@@ -1,0 +1,385 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_internal_formatter_parse_go",
+      "label": "parse.go",
+      "file_type": "code",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "formatter_file",
+      "label": "File",
+      "file_type": "code",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L16"
+    },
+    {
+      "id": "fileset",
+      "label": "FileSet",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/internal/formatter/parse.go"
+    },
+    {
+      "id": "formatter_file_ast",
+      "label": ".AST()",
+      "file_type": "code",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L30"
+    },
+    {
+      "id": "formatter_file_fileset",
+      "label": ".FileSet()",
+      "file_type": "code",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L43"
+    },
+    {
+      "id": "formatter_file_filename",
+      "label": ".Filename()",
+      "file_type": "code",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L52"
+    },
+    {
+      "id": "formatter_file_mutateast",
+      "label": ".MutateAST()",
+      "file_type": "code",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L63"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_parse_parse",
+      "label": "Parse()",
+      "file_type": "code",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L87"
+    },
+    {
+      "id": "formatter_file_print",
+      "label": ".Print()",
+      "file_type": "code",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L110"
+    },
+    {
+      "id": "$graphify-root$_internal_formatter_parse_parseandprint",
+      "label": "ParseAndPrint()",
+      "file_type": "code",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L135"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_internal_formatter_parse_go",
+      "target": "go_pkg_bytes",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L5",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_parse_go",
+      "target": "go_pkg_fmt",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_parse_go",
+      "target": "go_pkg_go_ast",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_parse_go",
+      "target": "go_pkg_go_format",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_parse_go",
+      "target": "go_pkg_go_parser",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_parse_go",
+      "target": "go_pkg_go_token",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_parse_go",
+      "target": "formatter_file",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "formatter_file",
+      "target": "fileset",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L18",
+      "weight": 1.0,
+      "context": "field"
+    },
+    {
+      "source": "formatter_file",
+      "target": "formatter_file_ast",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "formatter_file_ast",
+      "target": "formatter_file",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L30",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "formatter_file",
+      "target": "formatter_file_fileset",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "formatter_file_fileset",
+      "target": "fileset",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L43",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "formatter_file",
+      "target": "formatter_file_filename",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "formatter_file",
+      "target": "formatter_file_mutateast",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "formatter_file_mutateast",
+      "target": "formatter_file",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L63",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_parse_go",
+      "target": "$graphify-root$_internal_formatter_parse_parse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_parse_parse",
+      "target": "formatter_file",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L87",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "formatter_file",
+      "target": "formatter_file_print",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_parse_go",
+      "target": "$graphify-root$_internal_formatter_parse_parseandprint",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_parse_parseandprint",
+      "target": "$graphify-root$_internal_formatter_parse_parse",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_formatter_parse_parseandprint",
+      "target": "formatter_file_print",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L141",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "formatter_file_mutateast",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L65"
+    },
+    {
+      "caller_nid": "formatter_file_mutateast",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L69"
+    },
+    {
+      "caller_nid": "formatter_file_mutateast",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L73"
+    },
+    {
+      "caller_nid": "formatter_file_mutateast",
+      "callee": "edit",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L76"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_parse_parse",
+      "callee": "NewFileSet",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L92"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_parse_parse",
+      "callee": "ParseFile",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L94"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_formatter_parse_parse",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L96"
+    },
+    {
+      "caller_nid": "formatter_file_print",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L112"
+    },
+    {
+      "caller_nid": "formatter_file_print",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L116"
+    },
+    {
+      "caller_nid": "formatter_file_print",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L120"
+    },
+    {
+      "caller_nid": "formatter_file_print",
+      "callee": "Node",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L125"
+    },
+    {
+      "caller_nid": "formatter_file_print",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L127"
+    },
+    {
+      "caller_nid": "formatter_file_print",
+      "callee": "Bytes",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/formatter/parse.go",
+      "source_location": "L130"
+    }
+  ]
+}

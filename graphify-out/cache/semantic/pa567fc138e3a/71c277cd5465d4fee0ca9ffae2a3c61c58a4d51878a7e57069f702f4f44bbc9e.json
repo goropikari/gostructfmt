@@ -1,0 +1,28 @@
+{
+  "nodes": [
+    {
+      "id": "golangci_standard_linters",
+      "label": "Standard golangci-lint Configuration",
+      "file_type": "document",
+      "source_file": ".golangci.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "golangci_standard_linters",
+      "target": "github_workflows_ci_lint_and_format",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": ".golangci.yml",
+      "source_location": null,
+      "weight": 1
+    }
+  ],
+  "hyperedges": []
+}

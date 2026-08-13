@@ -1,0 +1,141 @@
+{
+  ".claude/settings.local.json": {
+    "size": 99,
+    "mtime_ns": 1785582728775073872,
+    "word_count": 14,
+    "hashes": { ".claude/settings.local.json": "c7e8fb73423b9ceee7f8096033424403241b7e234ce4612e2d17ab881c83411b" }
+  },
+  ".custom-gcl.yml": {
+    "size": 150,
+    "mtime_ns": 1785590264043567247,
+    "word_count": 10,
+    "hashes": { ".custom-gcl.yml": "8e2a3f98ec9852d522e5741a4add33c152a42905071ca4dea6bcffe9737ffea7" }
+  },
+  ".devcontainer/devcontainer.json": {
+    "size": 307,
+    "mtime_ns": 1785582804059079065,
+    "word_count": 27,
+    "hashes": { ".devcontainer/devcontainer.json": "dc16c7a35174401f2232e08fb34ad0ac2d58d8d545a86ce8189de4226931d888" }
+  },
+  ".github/pull_request_template.md": {
+    "size": 426,
+    "mtime_ns": 1785582728783073872,
+    "word_count": 43,
+    "hashes": { ".github/pull_request_template.md": "4ef7c7197efa894a49f1698f0dd190b36a143845d059b75de8cdd07a094709d0" }
+  },
+  ".github/workflows/ci.yml": {
+    "size": 1256,
+    "mtime_ns": 1785582728783073872,
+    "word_count": 122,
+    "hashes": { ".github/workflows/ci.yml": "8264a717ccda27a549c1a42559c3fb0122dd9bd346b34feffb6ba8dcbb1a46bf" }
+  },
+  ".golangci-gostructfmt.yml": {
+    "size": 275,
+    "mtime_ns": 1785590264207567258,
+    "word_count": 24,
+    "hashes": { ".golangci-gostructfmt.yml": "035c74eb449996e4a5517b07a1eb0d72e434b955dfae5f48f7591a854c8b5be9" }
+  },
+  ".golangci.yml": {
+    "size": 939,
+    "mtime_ns": 1785582728779073872,
+    "word_count": 96,
+    "hashes": { ".golangci.yml": "71c277cd5465d4fee0ca9ffae2a3c61c58a4d51878a7e57069f702f4f44bbc9e" }
+  },
+  "AGENTS.md": {
+    "size": 1477,
+    "mtime_ns": 1786641879040376176,
+    "hashes": { "agents.md": "d45cf4d6494b3b1bfee65641fd29526c04f6e953109809f68ac0fc53fbbed5c2" }
+  },
+  "README.md": {
+    "size": 1757,
+    "mtime_ns": 1785590264371567266,
+    "word_count": 242,
+    "hashes": { "readme.md": "0b99256be4d2e25406c63ab106d56882c08397a1293796254d375b15d831eb5f" }
+  },
+  "TESTING.md": {
+    "size": 11528,
+    "mtime_ns": 1785582728743073869,
+    "word_count": 507,
+    "hashes": { "testing.md": "a6952ff794f15e31f134a8eb1df98d208c90ff77e9bae0aba96742d61cc33350" }
+  },
+  "cmd/gostructfmt/main.go": {
+    "size": 585,
+    "mtime_ns": 1786030256686258868,
+    "word_count": 73,
+    "hashes": { "cmd/gostructfmt/main.go": "4373c3768dc103734414b02dd2216e016ee62fda2920ab12167f91a41fc5351c" }
+  },
+  "cmd/gostructfmt/main_test.go": {
+    "size": 6524,
+    "mtime_ns": 1786030256690258868,
+    "word_count": 630,
+    "hashes": { "cmd/gostructfmt/main_test.go": "2b9f3ba3c426e6c1cca4df419c03e38c069d9d9b2f846382d84ca4fdb18f8291" }
+  },
+  "docs/testing-guidelines.md": {
+    "size": 1657,
+    "mtime_ns": 1785582728779073872,
+    "word_count": 266,
+    "hashes": { "docs/testing-guidelines.md": "6e8a89e67024af90789d49bf38e1d81c7b5e774278124890017e5b7b178844cd" }
+  },
+  "dprint.json": {
+    "size": 704,
+    "mtime_ns": 1785582728775073872,
+    "word_count": 42,
+    "hashes": { "dprint.json": "407702aa11081e0f24f816f55b5deb67b02f279b3cc92a07216e00ced9e7a583" }
+  },
+  "go.mod": {
+    "size": 456,
+    "mtime_ns": 1785590270955567694,
+    "word_count": 38,
+    "hashes": { "go.mod": "dbbcfef3e81b98e1d83b84e70cbb4d2bbda49e6ccc8fbaaebef23488dc4aceca" }
+  },
+  "internal/cli/command.go": {
+    "size": 8320,
+    "mtime_ns": 1786030256698258867,
+    "word_count": 1085,
+    "hashes": { "internal/cli/command.go": "2d254478c6786bfd881fa04deb22ea4350bdabacda55a2a05e1fc35993062362" }
+  },
+  "internal/formatter/parse.go": {
+    "size": 3624,
+    "mtime_ns": 1786030256698258867,
+    "word_count": 569,
+    "hashes": { "internal/formatter/parse.go": "92f1ff3d0e7c70d2384765f927ab30ee721bfa553fe4c24f4e86d203c609b9e5" }
+  },
+  "internal/formatter/parse_test.go": {
+    "size": 6519,
+    "mtime_ns": 1786030256702258867,
+    "word_count": 692,
+    "hashes": { "internal/formatter/parse_test.go": "515051922afcb5093355e68078680bcf5b50873c01da9fed53063c4a3d64ee28" }
+  },
+  "internal/formatter/struct_literal.go": {
+    "size": 11505,
+    "mtime_ns": 1786030256710258867,
+    "word_count": 1395,
+    "hashes": {
+      "internal/formatter/struct_literal.go": "08602f6cd21b10a9fa97395b43d744e1b04c08697e41d758de3d5efce9d8ee92"
+    }
+  },
+  "internal/formatter/struct_literal_test.go": {
+    "size": 5997,
+    "mtime_ns": 1786030256710258867,
+    "word_count": 627,
+    "hashes": {
+      "internal/formatter/struct_literal_test.go": "81db59a7e9cb34a0a4882ac6aedb7627bd0db7f1c19aa1f9e5cc463955e30ecb"
+    }
+  },
+  "plugin/gostructfmt/gostructfmt.go": {
+    "size": 2287,
+    "mtime_ns": 1786030256714258867,
+    "word_count": 246,
+    "hashes": {
+      "plugin/gostructfmt/gostructfmt.go": "68cb7486f1a9562a91ebe99240837c645d862d10334e8d1bd3fd0e439fe4bbef"
+    }
+  },
+  "plugin/gostructfmt/gostructfmt_test.go": {
+    "size": 2132,
+    "mtime_ns": 1786030256718258867,
+    "word_count": 205,
+    "hashes": {
+      "plugin/gostructfmt/gostructfmt_test.go": "9cb600aa237d64fd46ca9aca62d92a0cbc2092f3a454950ddb0920474514f6e3"
+    }
+  }
+}

@@ -1,0 +1,403 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_plugin_gostructfmt_gostructfmt_go",
+      "label": "gostructfmt.go",
+      "file_type": "code",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_plugin_gostructfmt_gostructfmt_init",
+      "label": "init()",
+      "file_type": "code",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L15"
+    },
+    {
+      "id": "gostructfmt_plugin",
+      "label": "Plugin",
+      "file_type": "code",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L20"
+    },
+    {
+      "id": "$graphify-root$_plugin_gostructfmt_gostructfmt_new",
+      "label": "New()",
+      "file_type": "code",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L23"
+    },
+    {
+      "id": "linterplugin",
+      "label": "LinterPlugin",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/plugin/gostructfmt/gostructfmt.go"
+    },
+    {
+      "id": "gostructfmt_plugin_buildanalyzers",
+      "label": ".BuildAnalyzers()",
+      "file_type": "code",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L28"
+    },
+    {
+      "id": "analyzer",
+      "label": "Analyzer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/plugin/gostructfmt/gostructfmt.go"
+    },
+    {
+      "id": "gostructfmt_plugin_getloadmode",
+      "label": ".GetLoadMode()",
+      "file_type": "code",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L39"
+    },
+    {
+      "id": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L43"
+    },
+    {
+      "id": "pass",
+      "label": "Pass",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/plugin/gostructfmt/gostructfmt.go"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_plugin_gostructfmt_gostructfmt_go",
+      "target": "go_pkg_bytes",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_plugin_gostructfmt_gostructfmt_go",
+      "target": "go_pkg_fmt",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_plugin_gostructfmt_gostructfmt_go",
+      "target": "go_pkg_go_ast",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_plugin_gostructfmt_gostructfmt_go",
+      "target": "go_pkg_github_com_golangci_plugin_module_register_register",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_plugin_gostructfmt_gostructfmt_go",
+      "target": "go_pkg_github_com_goropikari_gostructfmt_internal_formatter",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_plugin_gostructfmt_gostructfmt_go",
+      "target": "go_pkg_golang_org_x_tools_go_analysis",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_plugin_gostructfmt_gostructfmt_go",
+      "target": "$graphify-root$_plugin_gostructfmt_gostructfmt_init",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_plugin_gostructfmt_gostructfmt_go",
+      "target": "gostructfmt_plugin",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_plugin_gostructfmt_gostructfmt_go",
+      "target": "$graphify-root$_plugin_gostructfmt_gostructfmt_new",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_plugin_gostructfmt_gostructfmt_new",
+      "target": "linterplugin",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L23",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "gostructfmt_plugin",
+      "target": "gostructfmt_plugin_buildanalyzers",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "gostructfmt_plugin_buildanalyzers",
+      "target": "analyzer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "gostructfmt_plugin",
+      "target": "gostructfmt_plugin_getloadmode",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_plugin_gostructfmt_gostructfmt_go",
+      "target": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "target": "pass",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L43",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_plugin_gostructfmt_gostructfmt_init",
+      "target": "gostructfmt_plugin",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L16",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "Name",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L45"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "Pos",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L45"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "ReadFile",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L47"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L49"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "Parse",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L52"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "Inspect",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L57"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "Position",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L63"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "Pos",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L63"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "Position",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L65"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "End",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L65"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L66"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "Position",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L70"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "Pos",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L70"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "Position",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L71"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "End",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L71"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "FormatStructLiteralsInLines",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L73"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "string",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L81"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "string",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L81"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "Report",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L82"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "Pos",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L83"
+    },
+    {
+      "caller_nid": "$graphify-root$_plugin_gostructfmt_gostructfmt_run",
+      "callee": "End",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "plugin/gostructfmt/gostructfmt.go",
+      "source_location": "L84"
+    }
+  ]
+}

@@ -1,0 +1,1025 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_cmd_gostructfmt_main_test_go",
+      "label": "main_test.go",
+      "file_type": "code",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "label": "TestRun()",
+      "file_type": "code",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L13"
+    },
+    {
+      "id": "t",
+      "label": "T",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/cmd/gostructfmt/main_test.go"
+    },
+    {
+      "id": "$graphify-root$_cmd_gostructfmt_main_test_rungitcommand",
+      "label": "runGitCommand()",
+      "file_type": "code",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L209"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_cmd_gostructfmt_main_test_go",
+      "target": "go_pkg_bytes",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L4",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_cmd_gostructfmt_main_test_go",
+      "target": "go_pkg_os",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L5",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_cmd_gostructfmt_main_test_go",
+      "target": "go_pkg_os_exec",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_cmd_gostructfmt_main_test_go",
+      "target": "go_pkg_path_filepath",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_cmd_gostructfmt_main_test_go",
+      "target": "go_pkg_testing",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_cmd_gostructfmt_main_test_go",
+      "target": "go_pkg_github_com_stretchr_testify_require",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_cmd_gostructfmt_main_test_go",
+      "target": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "target": "t",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_cmd_gostructfmt_main_test_go",
+      "target": "$graphify-root$_cmd_gostructfmt_main_test_rungitcommand",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L209",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_cmd_gostructfmt_main_test_rungitcommand",
+      "target": "t",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L209",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "target": "$graphify-root$_cmd_gostructfmt_main_test_rungitcommand",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L162",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Run",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L14"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NewBufferString",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L16"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "run",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L24"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Equal",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L27"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Empty",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L28"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L29"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Run",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L32"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NewBufferString",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L34"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "run",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L42"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Equal",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L45"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Empty",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L46"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L47"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Run",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L50"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "run",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L59"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Equal",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L62"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L63"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L64"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L65"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L66"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L67"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L68"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L69"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Run",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L72"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "TempDir",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L74"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Join",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L75"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NoError",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L76"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "WriteFile",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L76"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "run",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L84"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NewBuffer",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L84"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "ReadFile",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L85"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Equal",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L88"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NoError",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L89"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Empty",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L90"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Empty",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L91"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L92"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "string",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L92"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Run",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L95"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "run",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L103"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NewBufferString",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L103"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Equal",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L106"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Empty",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L107"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L108"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Run",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L111"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "run",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L119"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NewBuffer",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L119"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Equal",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L122"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Empty",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L123"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L124"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Run",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L127"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "TempDir",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L129"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NoError",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L130"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Mkdir",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L130"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Join",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L130"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NoError",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L131"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "WriteFile",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L131"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Join",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L131"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Join",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L132"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NoError",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L133"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "WriteFile",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L133"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Chdir",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L134"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "run",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L142"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NewBuffer",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L142"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "ReadFile",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L143"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Join",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L143"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "ReadFile",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L144"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Equal",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L147"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NoError",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L148"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NoError",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L149"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Empty",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L150"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Empty",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L151"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L152"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "string",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L152"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L153"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "string",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L153"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Run",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L156"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "TempDir",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L158"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Chdir",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L159"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NoError",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L160"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "WriteFile",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L160"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NoError",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L161"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "WriteFile",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L161"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NoError",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L165"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "WriteFile",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L165"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "run",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L173"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NewBuffer",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L173"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "ReadFile",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L174"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "ReadFile",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L175"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Equal",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L178"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NoError",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L179"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NoError",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L180"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Empty",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L181"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Empty",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L182"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L183"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "string",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L183"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L184"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "string",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L184"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Contains",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L185"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "string",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L185"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Run",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L188"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "TempDir",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L190"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Chdir",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L191"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "run",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L200"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "NewBufferString",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L200"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Equal",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L203"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Empty",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L204"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_testrun",
+      "callee": "Empty",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L205"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_rungitcommand",
+      "callee": "Helper",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L210"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_rungitcommand",
+      "callee": "Command",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L212"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_rungitcommand",
+      "callee": "NoError",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L214"
+    },
+    {
+      "caller_nid": "$graphify-root$_cmd_gostructfmt_main_test_rungitcommand",
+      "callee": "Run",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "cmd/gostructfmt/main_test.go",
+      "source_location": "L214"
+    }
+  ]
+}

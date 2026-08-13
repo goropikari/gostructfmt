@@ -1,0 +1,28 @@
+{
+  "nodes": [
+    {
+      "id": "golangci_gostructfmt_gostructfmt_linter",
+      "label": "gostructfmt Linter Configuration",
+      "file_type": "concept",
+      "source_file": ".golangci-gostructfmt.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "golangci_gostructfmt_gostructfmt_linter",
+      "target": "custom_gcl_gostructfmt_plugin",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": ".golangci-gostructfmt.yml",
+      "source_location": null,
+      "weight": 1
+    }
+  ],
+  "hyperedges": []
+}

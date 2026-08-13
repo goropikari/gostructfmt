@@ -1,0 +1,139 @@
+{
+  "nodes": [
+    {
+      "id": "testing_testing_guidelines",
+      "label": "Testing Guidelines",
+      "file_type": "document",
+      "source_file": "TESTING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "testing_test_pyramid",
+      "label": "Test Pyramid",
+      "file_type": "rationale",
+      "source_file": "TESTING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "testing_aaa_pattern",
+      "label": "Arrange Act Assert Pattern",
+      "file_type": "rationale",
+      "source_file": "TESTING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "testing_testify_assertions",
+      "label": "Testify Assertions",
+      "file_type": "concept",
+      "source_file": "TESTING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "testing_deterministic_tests",
+      "label": "Deterministic Tests",
+      "file_type": "rationale",
+      "source_file": "TESTING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "testing_race_detection",
+      "label": "Race Detection",
+      "file_type": "concept",
+      "source_file": "TESTING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "testing_test_pyramid",
+      "target": "testing_testing_guidelines",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "TESTING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "testing_aaa_pattern",
+      "target": "testing_testing_guidelines",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "TESTING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "testing_testify_assertions",
+      "target": "testing_testing_guidelines",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "TESTING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "testing_deterministic_tests",
+      "target": "testing_testing_guidelines",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "TESTING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "testing_race_detection",
+      "target": "testing_deterministic_tests",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "TESTING.md",
+      "source_location": null,
+      "weight": 1
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "repository_test_quality_practices",
+      "label": "Repository Test Quality Practices",
+      "nodes": [
+        "testing_aaa_pattern",
+        "testing_testify_assertions",
+        "testing_deterministic_tests",
+        "docs_testing_guidelines_t_run",
+        "agents_testing_policy"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "TESTING.md"
+    }
+  ]
+}

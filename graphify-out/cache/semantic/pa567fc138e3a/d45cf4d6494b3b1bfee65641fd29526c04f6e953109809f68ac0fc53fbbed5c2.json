@@ -1,0 +1,70 @@
+{
+  "nodes": [
+    {
+      "id": "agents_testing_policy",
+      "label": "Repository Testing Policy",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_development_checks",
+      "label": "Development Checks",
+      "file_type": "rationale",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_pull_request_requirements",
+      "label": "Pull Request Requirements",
+      "file_type": "rationale",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents_testing_policy",
+      "target": "testing_testing_guidelines",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "agents_development_checks",
+      "target": "github_workflows_ci_lint_and_format",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "agents_pull_request_requirements",
+      "target": "github_pull_request_template_pull_request_template",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1
+    }
+  ],
+  "hyperedges": []
+}

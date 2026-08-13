@@ -1,0 +1,1245 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_internal_cli_command_go",
+      "label": "command.go",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "cli_exiterror",
+      "label": "ExitError",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L18"
+    },
+    {
+      "id": "cli_exiterror_error",
+      "label": ".Error()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L23"
+    },
+    {
+      "id": "$graphify-root$_internal_cli_command_newcommand",
+      "label": "NewCommand()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L26"
+    },
+    {
+      "id": "reader",
+      "label": "Reader",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/internal/cli/command.go"
+    },
+    {
+      "id": "writer",
+      "label": "Writer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/internal/cli/command.go"
+    },
+    {
+      "id": "command",
+      "label": "Command",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/internal/cli/command.go"
+    },
+    {
+      "id": "$graphify-root$_internal_cli_command_execute",
+      "label": "execute()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L66"
+    },
+    {
+      "id": "$graphify-root$_internal_cli_command_formatwithoutfiles",
+      "label": "formatWithoutFiles()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L93"
+    },
+    {
+      "id": "$graphify-root$_internal_cli_command_formatfiles",
+      "label": "formatFiles()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L104"
+    },
+    {
+      "id": "linerange",
+      "label": "LineRange",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/internal/cli/command.go"
+    },
+    {
+      "id": "$graphify-root$_internal_cli_command_resolvefilenames",
+      "label": "resolveFilenames()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L125"
+    },
+    {
+      "id": "$graphify-root$_internal_cli_command_formatreader",
+      "label": "formatReader()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L139"
+    },
+    {
+      "id": "$graphify-root$_internal_cli_command_formatfile",
+      "label": "formatFile()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L157"
+    },
+    {
+      "id": "$graphify-root$_internal_cli_command_formatsource",
+      "label": "formatSource()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L185"
+    },
+    {
+      "id": "$graphify-root$_internal_cli_command_expandpackagepatterns",
+      "label": "expandPackagePatterns()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L202"
+    },
+    {
+      "id": "$graphify-root$_internal_cli_command_changedgofiles",
+      "label": "changedGoFiles()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L223"
+    },
+    {
+      "id": "$graphify-root$_internal_cli_command_parsediffrange",
+      "label": "parseDiffRange()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L272"
+    },
+    {
+      "id": "$graphify-root$_internal_cli_command_expandcurrentdirectory",
+      "label": "expandCurrentDirectory()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L291"
+    },
+    {
+      "id": "$graphify-root$_internal_cli_command_skippackagedirectory",
+      "label": "skipPackageDirectory()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L312"
+    },
+    {
+      "id": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "label": "atomicWriteFile()",
+      "file_type": "code",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L324"
+    },
+    {
+      "id": "filemode",
+      "label": "FileMode",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/internal/cli/command.go"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "go_pkg_fmt",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L4",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "go_pkg_io",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L5",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "go_pkg_os",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "go_pkg_os_exec",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "go_pkg_path_filepath",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "go_pkg_sort",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "go_pkg_strconv",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "go_pkg_strings",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "go_pkg_github_com_goropikari_gostructfmt_internal_formatter",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "go_pkg_github_com_spf13_cobra",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "cli_exiterror",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_exiterror",
+      "target": "cli_exiterror_error",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "$graphify-root$_internal_cli_command_newcommand",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_newcommand",
+      "target": "reader",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_newcommand",
+      "target": "writer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_newcommand",
+      "target": "command",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "$graphify-root$_internal_cli_command_execute",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_execute",
+      "target": "command",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L66",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_execute",
+      "target": "reader",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L66",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_execute",
+      "target": "writer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L66",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "$graphify-root$_internal_cli_command_formatwithoutfiles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_formatwithoutfiles",
+      "target": "reader",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L93",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_formatwithoutfiles",
+      "target": "writer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L93",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "$graphify-root$_internal_cli_command_formatfiles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_formatfiles",
+      "target": "writer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L104",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_formatfiles",
+      "target": "linerange",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L104",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "$graphify-root$_internal_cli_command_resolvefilenames",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_resolvefilenames",
+      "target": "linerange",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L125",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "$graphify-root$_internal_cli_command_formatreader",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L139",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_formatreader",
+      "target": "reader",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L139",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_formatreader",
+      "target": "writer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L139",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "$graphify-root$_internal_cli_command_formatfile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_formatfile",
+      "target": "writer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L157",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_formatfile",
+      "target": "linerange",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L157",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "$graphify-root$_internal_cli_command_formatsource",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L185",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_formatsource",
+      "target": "linerange",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L185",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "$graphify-root$_internal_cli_command_expandpackagepatterns",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "$graphify-root$_internal_cli_command_changedgofiles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L223",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_changedgofiles",
+      "target": "linerange",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L223",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "$graphify-root$_internal_cli_command_parsediffrange",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L272",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "$graphify-root$_internal_cli_command_expandcurrentdirectory",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L291",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "$graphify-root$_internal_cli_command_skippackagedirectory",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L312",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_go",
+      "target": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L324",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "target": "filemode",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L324",
+      "weight": 1.0,
+      "context": "parameter_type"
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_newcommand",
+      "target": "$graphify-root$_internal_cli_command_execute",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_execute",
+      "target": "$graphify-root$_internal_cli_command_resolvefilenames",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_execute",
+      "target": "$graphify-root$_internal_cli_command_formatwithoutfiles",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_execute",
+      "target": "$graphify-root$_internal_cli_command_formatfiles",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_formatwithoutfiles",
+      "target": "$graphify-root$_internal_cli_command_formatreader",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_formatfiles",
+      "target": "$graphify-root$_internal_cli_command_formatfile",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_resolvefilenames",
+      "target": "$graphify-root$_internal_cli_command_changedgofiles",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_resolvefilenames",
+      "target": "$graphify-root$_internal_cli_command_expandpackagepatterns",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_formatreader",
+      "target": "$graphify-root$_internal_cli_command_formatsource",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_formatfile",
+      "target": "$graphify-root$_internal_cli_command_formatsource",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L163",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_formatfile",
+      "target": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L178",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_expandpackagepatterns",
+      "target": "$graphify-root$_internal_cli_command_expandcurrentdirectory",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L210",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_changedgofiles",
+      "target": "command",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_changedgofiles",
+      "target": "$graphify-root$_internal_cli_command_parsediffrange",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L249",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_internal_cli_command_expandcurrentdirectory",
+      "target": "$graphify-root$_internal_cli_command_skippackagedirectory",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L299",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_newcommand",
+      "callee": "SetOut",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L58"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_newcommand",
+      "callee": "SetErr",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L59"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_newcommand",
+      "callee": "BoolVarP",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L60"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_newcommand",
+      "callee": "Flags",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L60"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_newcommand",
+      "callee": "BoolVar",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L61"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_newcommand",
+      "callee": "Flags",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L61"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_execute",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L86"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatwithoutfiles",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L97"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatfiles",
+      "callee": "Fprintf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L109"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatfiles",
+      "callee": "Clean",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L109"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatfiles",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L118"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_resolvefilenames",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L127"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatreader",
+      "callee": "ReadAll",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L140"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatreader",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L142"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatreader",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L147"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatreader",
+      "callee": "Write",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L150"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatreader",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L151"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatfile",
+      "callee": "ReadFile",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L158"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatfile",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L160"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatfile",
+      "callee": "Write",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L169"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatfile",
+      "callee": "Stat",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L173"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatfile",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L175"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatfile",
+      "callee": "Perm",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L178"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatfile",
+      "callee": "Mode",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L178"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatfile",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L179"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatsource",
+      "callee": "Parse",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L186"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatsource",
+      "callee": "FormatStructLiteralsInLines",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L192"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatsource",
+      "callee": "FormatStructLiterals",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L195"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_formatsource",
+      "callee": "Print",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L199"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_expandpackagepatterns",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L212"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_expandpackagepatterns",
+      "callee": "Strings",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L218"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_changedgofiles",
+      "callee": "Output",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L226"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_changedgofiles",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L228"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_changedgofiles",
+      "callee": "SplitSeq",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L234"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_changedgofiles",
+      "callee": "string",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L234"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_changedgofiles",
+      "callee": "CutPrefix",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L235"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_changedgofiles",
+      "callee": "FromSlash",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L236"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_changedgofiles",
+      "callee": "HasPrefix",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L240"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_changedgofiles",
+      "callee": "Fields",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L244"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_changedgofiles",
+      "callee": "TrimPrefix",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L249"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_changedgofiles",
+      "callee": "Errorf",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L251"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_changedgofiles",
+      "callee": "Strings",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L267"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_parsediffrange",
+      "callee": "SplitN",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L273"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_parsediffrange",
+      "callee": "Atoi",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L275"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_parsediffrange",
+      "callee": "Atoi",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L282"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_expandcurrentdirectory",
+      "callee": "WalkDir",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L293"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_expandcurrentdirectory",
+      "callee": "IsDir",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L298"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_expandcurrentdirectory",
+      "callee": "Name",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L299"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_expandcurrentdirectory",
+      "callee": "Ext",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L302"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_skippackagedirectory",
+      "callee": "HasPrefix",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L317"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_skippackagedirectory",
+      "callee": "HasPrefix",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L317"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "callee": "CreateTemp",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L325"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "callee": "Dir",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L325"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "callee": "Name",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L330"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "callee": "Remove",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L331"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "callee": "Chmod",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L333"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "callee": "Close",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L334"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "callee": "Write",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L338"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "callee": "Close",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L339"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "callee": "Sync",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L343"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "callee": "Close",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L344"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "callee": "Close",
+      "is_member_call": true,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L348"
+    },
+    {
+      "caller_nid": "$graphify-root$_internal_cli_command_atomicwritefile",
+      "callee": "Rename",
+      "is_member_call": false,
+      "language": "go",
+      "source_file": "internal/cli/command.go",
+      "source_location": "L352"
+    }
+  ]
+}
