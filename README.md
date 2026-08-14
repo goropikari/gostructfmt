@@ -1,11 +1,13 @@
 # gotreesj
 
-`gotreesj` formats populated Go struct literals and long function calls as
-deterministic, gofmt-compatible multi-line syntax. Empty and non-struct
-literals are left unchanged; this includes slice, array, and map containers,
-though populated struct literals within their elements, keys, or values are
-formatted. Function calls longer than 120 characters are split one argument
-per line.
+`gotreesj` formats populated Go struct literals and long, single-line function
+calls with multiple arguments as deterministic, gofmt-compatible multi-line
+syntax. Empty and non-struct literals are left unchanged; this includes slice,
+array, and map containers, though populated struct literals within their
+elements, keys, or values are formatted. Function calls longer than 120
+characters are split one argument per line.
+
+The name `gotreesj` is inspired by [treesj](https://github.com/wansmer/treesj).
 
 ## Command line
 
@@ -37,8 +39,8 @@ To format all Go files recursively under the current directory, use:
 gotreesj -w ./...
 ```
 
-To format only struct literals overlapping changed lines in the working tree's
-Git diff, use:
+To format only struct literals and long function calls overlapping changed lines
+in the working tree's Git diff, use:
 
 ```sh
 gotreesj --diff -w
