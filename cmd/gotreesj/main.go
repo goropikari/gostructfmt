@@ -1,4 +1,4 @@
-// Command gostructfmt formats struct literals in Go source.
+// Command gotreesj formats struct literals in Go source.
 package main
 
 import (
@@ -6,7 +6,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/goropikari/gostructfmt/internal/cli"
+	"github.com/goropikari/gotreesj/internal/cli"
 )
 
 func main() {
@@ -23,7 +23,7 @@ func run(args []string, stdin io.Reader, stdout, stderr io.Writer) int {
 			code = exitErr.Code
 		}
 
-		fmt.Fprintln(stderr, "gostructfmt:", err)
+		fmt.Fprintln(stderr, "gotreesj:", err)
 
 		return code
 	}

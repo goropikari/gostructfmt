@@ -1,6 +1,6 @@
 # Quality Model
 
-This document defines how quality is assessed for `gostructfmt`. It describes
+This document defines how quality is assessed for `gotreesj`. It describes
 the properties to observe and the evidence that supports an assessment; it does
 not prescribe thresholds, required checks, severities, or release decisions.
 
@@ -103,7 +103,7 @@ maintainability
 | Instruments        | CLI and plugin tests; `api-compatibility-review` for changed flags, diagnostics, configuration, or exported APIs.                  |
 | Evidence           | Test output, configuration fixture result, and review finding with the affected caller contract.                                   |
 | Limitations        | Undocumented downstream integrations are not discoverable solely from repository evidence.                                         |
-| Applicability      | `cmd/gostructfmt`, `plugin/gostructfmt`, README configuration examples.                                                            |
+| Applicability      | `cmd/gotreesj`, `plugin/gotreesj`, README configuration examples.                                                                  |
 | Default confidence | Medium.                                                                                                                            |
 
 ### Maintainable responsibility boundaries

@@ -6,13 +6,16 @@ import (
 	"go/ast"
 	"go/token"
 	"sort"
+	"unicode/utf8"
 )
 
-// FormatStructLiterals expands populated struct composite literals into the
-// multi-line form understood by gofmt. It leaves empty and non-struct
-// literals unchanged, while also formatting struct literals elided in
-// slice/array elements and map keys or values. It preserves comments by
-// applying edits to the original source before parsing it again.
+const maxSingleLineCallLength = 80
+
+// FormatStructLiterals expands populated struct composite literals and long
+// function calls into the multi-line form understood by gofmt. It leaves empty
+// and non-struct literals unchanged, while also formatting struct literals
+// elided in slice/array elements and map keys or values. It preserves comments
+// by applying edits to the original source before parsing it again.
 //
 // Formatting reparses the result, so callers must reacquire AST and FileSet
 // pointers after this function returns. Qualified and indexed type
@@ -50,6 +53,7 @@ func FormatStructLiterals(file *File) error {
 
 		return true
 	})
+	addLongCallEdits(&edits, file.ast, fileInfo, file.source, nil)
 
 	if len(edits) == 0 {
 		return nil
@@ -162,7 +166,72 @@ func formatSelectedLiteralSource(file *File, ranges []LineRange) ([]byte, error)
 		})
 	}
 
+	addLongCallEdits(&edits, file.ast, fileInfo, file.source, ranges)
+
 	return applySourceEdits(file.source, edits), nil
+}
+
+func addLongCallEdits(edits *[]sourceEdit, fileAST *ast.File, file *token.File, source []byte, ranges []LineRange) {
+	ast.Inspect(fileAST, func(node ast.Node) bool {
+		call, ok := node.(*ast.CallExpr)
+		if !ok || len(call.Args) < 2 || !longSingleLineCall(call, file, source) {
+			return true
+		}
+
+		if ranges != nil && !nodeOverlapsLines(call, file, ranges) {
+			return true
+		}
+
+		lparen := file.Offset(call.Lparen)
+		rparen := file.Offset(call.Rparen)
+
+		*edits = append(*edits, sourceEdit{
+			offset: lparen + 1,
+			text:   "\n",
+		})
+
+		for index, argument := range call.Args {
+			if index > 0 {
+				*edits = append(*edits, sourceEdit{
+					offset: file.Offset(argument.Pos()),
+					text:   "\n",
+				})
+			}
+
+			end := rparen
+			if index+1 < len(call.Args) {
+				end = file.Offset(call.Args[index+1].Pos())
+			}
+
+			argumentEnd := file.Offset(argument.End())
+			if !hasCommaBefore(source, argumentEnd, end) {
+				*edits = append(*edits, sourceEdit{
+					offset: argumentEnd,
+					text:   ",",
+				})
+			}
+		}
+
+		*edits = append(*edits, sourceEdit{
+			offset: rparen,
+			text:   "\n",
+		})
+
+		return true
+	})
+}
+
+func longSingleLineCall(call *ast.CallExpr, file *token.File, source []byte) bool {
+	start := file.Offset(call.Lparen)
+
+	end := file.Offset(call.Rparen) + 1
+	if bytes.Contains(source[start:end], []byte{'\n'}) {
+		return false
+	}
+
+	lineStart := bytes.LastIndex(source[:start], []byte{'\n'}) + 1
+
+	return utf8.RuneCount(source[lineStart:end]) > maxSingleLineCallLength
 }
 
 func selectedLiterals(fileAST *ast.File, fileInfo *token.File, ranges []LineRange) []*ast.CompositeLit {
@@ -176,7 +245,7 @@ func selectedLiterals(fileAST *ast.File, fileInfo *token.File, ranges []LineRang
 			return true
 		}
 
-		if literalOverlapsLines(literal, fileInfo, ranges) {
+		if nodeOverlapsLines(literal, fileInfo, ranges) {
 			literals = append(literals, literal)
 		}
 
@@ -186,10 +255,10 @@ func selectedLiterals(fileAST *ast.File, fileInfo *token.File, ranges []LineRang
 	return literals
 }
 
-func literalOverlapsLines(literal *ast.CompositeLit, file *token.File, ranges []LineRange) bool {
-	start := file.Line(literal.Pos())
+func nodeOverlapsLines(node ast.Node, file *token.File, ranges []LineRange) bool {
+	start := file.Line(node.Pos())
 
-	end := file.Line(literal.End())
+	end := file.Line(node.End())
 	for _, lineRange := range ranges {
 		if lineRange.Start <= end && start <= lineRange.End {
 			return true

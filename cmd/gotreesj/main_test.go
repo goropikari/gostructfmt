@@ -62,8 +62,8 @@ func TestRun(t *testing.T) {
 		require.Equal(t, 0, status)
 		require.Contains(t, errors.String(), "Usage:")
 		require.Contains(t, errors.String(), "Format populated Go struct literals")
-		require.Contains(t, errors.String(), "gostructfmt -w ./...")
-		require.Contains(t, errors.String(), "gostructfmt --diff -w")
+		require.Contains(t, errors.String(), "gotreesj -w ./...")
+		require.Contains(t, errors.String(), "gotreesj --diff -w")
 		require.Contains(t, errors.String(), "changed lines")
 		require.Contains(t, errors.String(), "-w, --write")
 		require.Contains(t, errors.String(), "--diff")
@@ -161,7 +161,7 @@ func TestRun(t *testing.T) {
 		require.NoError(t, os.WriteFile("unchanged.go", []byte("package example\ntype Other struct { Name string }\nvar _ = Other{Name: \"untouched\"}\n"), 0o600))
 		runGitCommand(t, directory, "init")
 		runGitCommand(t, directory, "add", "changed.go", "unchanged.go")
-		runGitCommand(t, directory, "-c", "user.name=gostructfmt", "-c", "user.email=gostructfmt@example.invalid", "commit", "-m", "initial")
+		runGitCommand(t, directory, "-c", "user.name=gotreesj", "-c", "user.email=gotreesj@example.invalid", "commit", "-m", "initial")
 		require.NoError(t, os.WriteFile("changed.go", []byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"old\"}\nvar _ = User{Name: \"new\"}\n"), 0o600))
 
 		var (

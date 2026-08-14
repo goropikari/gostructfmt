@@ -19,7 +19,7 @@ gitleaks:
 	gitleaks detect --no-banner --redact --source .
 
 install:
-	go install ./cmd/gostructfmt/
+	go install ./cmd/gotreesj/
 
 install-codex:
 	@set -eu; \

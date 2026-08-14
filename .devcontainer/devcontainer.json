@@ -8,7 +8,7 @@
   },
   "mounts": [
     {
-      "source": "gostructfmt-codex-home",
+      "source": "gotreesj-codex-home",
       "target": "/home/vscode/.codex",
       "type": "volume"
     }

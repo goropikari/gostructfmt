@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/goropikari/gostructfmt/internal/formatter"
+	"github.com/goropikari/gotreesj/internal/formatter"
 	"github.com/spf13/cobra"
 )
 
@@ -22,13 +22,13 @@ type ExitError struct {
 
 func (e *ExitError) Error() string { return e.Err.Error() }
 
-// NewCommand creates the gostructfmt command with injectable streams.
+// NewCommand creates the gotreesj command with injectable streams.
 func NewCommand(stdin io.Reader, stdout, stderr io.Writer) *cobra.Command {
 	writeFiles := false
 	diffMode := false
 
 	command := &cobra.Command{
-		Use:   "gostructfmt [files...]",
+		Use:   "gotreesj [files...]",
 		Short: "format Go struct literals",
 		Long: "Format populated Go struct literals as deterministic, gofmt-compatible " +
 			"multi-line literals. With no files, source is read from standard input. " +
@@ -36,19 +36,19 @@ func NewCommand(stdin io.Reader, stdout, stderr io.Writer) *cobra.Command {
 			"Use --diff to format only literals overlapping changed lines in the working " +
 			"tree's git diff.",
 		Example: `  # Format standard input and print the result
-  gostructfmt < input.go
+  gotreesj < input.go
 
   # Format one file and print the result
-  gostructfmt input.go
+  gotreesj input.go
 
   # Format one or more files in place
-  gostructfmt -w input.go other.go
+  gotreesj -w input.go other.go
 
   # Format all Go files below the current directory in place
-  gostructfmt -w ./...
+  gotreesj -w ./...
 
   # Format literals overlapping changed lines in the working tree
-  gostructfmt --diff -w`,
+  gotreesj --diff -w`,
 		SilenceErrors: true,
 		SilenceUsage:  true,
 		RunE: func(command *cobra.Command, args []string) error {
@@ -106,7 +106,7 @@ func formatFiles(filenames []string, writeFiles bool, stdout, stderr io.Writer, 
 
 	for _, filename := range filenames {
 		if err := formatFile(filename, writeFiles, stdout, diffRanges[filename]); err != nil {
-			fmt.Fprintf(stderr, "gostructfmt: %s: %v\n", filepath.Clean(filename), err)
+			fmt.Fprintf(stderr, "gotreesj: %s: %v\n", filepath.Clean(filename), err)
 
 			status = 1
 		}
@@ -139,16 +139,16 @@ func resolveFilenames(args []string, diffMode bool) ([]string, map[string][]form
 func formatReader(filename string, input io.Reader, output, stderr io.Writer) error {
 	source, err := io.ReadAll(input)
 	if err != nil {
-		return fmt.Errorf("gostructfmt: %s: read: %w", filename, err)
+		return fmt.Errorf("gotreesj: %s: read: %w", filename, err)
 	}
 
 	formatted, err := formatSource(filename, source, nil)
 	if err != nil {
-		return fmt.Errorf("gostructfmt: %s: %w", filename, err)
+		return fmt.Errorf("gotreesj: %s: %w", filename, err)
 	}
 
 	if _, err := output.Write(formatted); err != nil {
-		return fmt.Errorf("gostructfmt: %s: write: %w", filename, err)
+		return fmt.Errorf("gotreesj: %s: write: %w", filename, err)
 	}
 
 	return nil
@@ -322,7 +322,7 @@ func skipPackageDirectory(path, name string) error {
 }
 
 func atomicWriteFile(filename string, contents []byte, mode os.FileMode) error {
-	temporary, err := os.CreateTemp(filepath.Dir(filename), ".gostructfmt-*")
+	temporary, err := os.CreateTemp(filepath.Dir(filename), ".gotreesj-*")
 	if err != nil {
 		return err
 	}

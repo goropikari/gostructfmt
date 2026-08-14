@@ -5,11 +5,30 @@ import (
 	"go/token"
 	"testing"
 
-	"github.com/goropikari/gostructfmt/internal/formatter"
+	"github.com/goropikari/gotreesj/internal/formatter"
 	"github.com/stretchr/testify/require"
 )
 
 func TestFormatStructLiterals(t *testing.T) {
+	t.Run("wraps long function call arguments one per line", func(t *testing.T) {
+		// Arrange
+		source := []byte("package example\nfunc build() { _ = call(\"short\", 1); _ = configureUser(\"Alice\", \"Administrator\", \"Tokyo\", \"engineering\", true, 42) }\n")
+		file, err := formatter.Parse("example.go", source)
+		require.NoError(t, err)
+
+		// Act
+		err = formatter.FormatStructLiterals(file)
+		output, printErr := file.Print()
+
+		// Assert
+		require.NoError(t, err)
+		require.NoError(t, printErr)
+
+		result := string(output)
+		require.Contains(t, result, "configureUser(\n\t\t\"Alice\",\n\t\t\"Administrator\",\n\t\t\"Tokyo\",\n\t\t\"engineering\",\n\t\ttrue,\n\t\t42,\n\t)")
+		require.Contains(t, result, `call("short", 1)`)
+	})
+
 	t.Run("expands named struct literal", func(t *testing.T) {
 		// Arrange
 		source := []byte("package example\ntype User struct { Name string; Age int }\nfunc build() User { return User{Name: \"Alice\", Age: 20} }\n")

@@ -6,7 +6,7 @@ import (
 	"go/token"
 	"testing"
 
-	"github.com/goropikari/gostructfmt/internal/formatter"
+	"github.com/goropikari/gotreesj/internal/formatter"
 	"github.com/stretchr/testify/require"
 )
 

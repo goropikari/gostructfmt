@@ -1,4 +1,4 @@
-module github.com/goropikari/gostructfmt
+module github.com/goropikari/gotreesj
 
 go 1.26
 

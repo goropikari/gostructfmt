@@ -1,6 +1,6 @@
 version: v2.12.2
 
 plugins:
-  - module: github.com/goropikari/gostructfmt
-    import: github.com/goropikari/gostructfmt/plugin/gostructfmt
+  - module: github.com/goropikari/gotreesj
+    import: github.com/goropikari/gotreesj/plugin/gotreesj
     path: .

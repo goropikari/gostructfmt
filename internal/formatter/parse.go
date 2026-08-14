@@ -1,4 +1,4 @@
-// Package formatter contains the implementation used by the gostructfmt CLI.
+// Package formatter contains the implementation used by the gotreesj CLI.
 package formatter
 
 import (

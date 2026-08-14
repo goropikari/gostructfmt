@@ -1,0 +1,12 @@
+version: "2"
+
+linters:
+  default: standard
+  enable:
+    - gotreesj
+  settings:
+    custom:
+      gotreesj:
+        type: module
+        description: Check populated Go struct literals and long function calls for gotreesj formatting.
+        original-url: github.com/goropikari/gotreesj

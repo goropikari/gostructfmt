@@ -220,7 +220,7 @@
     {
       "name": "api-compatibility-review",
       "applied": true,
-      "evidence": "The README, cmd/gostructfmt/main.go, cmd/gostructfmt/main_test.go, and plugin/gostructfmt define CLI and module-plugin contracts. No current breaking change was under review; future public-contract changes require this review."
+      "evidence": "The README, cmd/gotreesj/main.go, cmd/gotreesj/main_test.go, and plugin/gotreesj define CLI and module-plugin contracts. This rename intentionally changes those public identifiers and requires callers to migrate to gotreesj."
     },
     {
       "name": "test-quality-review",
