@@ -9,7 +9,7 @@ import (
 	"unicode/utf8"
 )
 
-const maxSingleLineCallLength = 80
+const maxSingleLineCallLength = 120
 
 // FormatStructLiterals expands populated struct composite literals and long
 // function calls into the multi-line form understood by gofmt. It leaves empty

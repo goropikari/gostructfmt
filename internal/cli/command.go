@@ -58,7 +58,12 @@ func NewCommand(stdin io.Reader, stdout, stderr io.Writer) *cobra.Command {
 	command.SetOut(stderr)
 	command.SetErr(stderr)
 	command.Flags().BoolVarP(&writeFiles, "write", "w", false, "write result to source files instead of standard output")
-	command.Flags().BoolVar(&diffMode, "diff", false, "format literals overlapping changed lines in the working tree's git diff")
+	command.Flags().BoolVar(
+		&diffMode,
+		"diff",
+		false,
+		"format literals overlapping changed lines in the working tree's git diff",
+	)
 
 	return command
 }

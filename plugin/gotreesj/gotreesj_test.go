@@ -26,7 +26,7 @@ func TestRun(t *testing.T) {
 
 	t.Run("reports a long function call with single-line arguments", func(t *testing.T) {
 		// Arrange
-		source := []byte("package example\nvar _ = configureUser(\"Alice\", \"Administrator\", \"Tokyo\", \"engineering\", true, 42)\n")
+		source := []byte("package example\nvar _ = configureUser(\"Alice\", \"Administrator\", \"Tokyo\", \"engineering\", true, 42, \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\")\n")
 
 		// Act
 		reports := runAnalyzer(t, source)

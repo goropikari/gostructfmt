@@ -4,7 +4,7 @@
 deterministic, gofmt-compatible multi-line syntax. Empty and non-struct
 literals are left unchanged; this includes slice, array, and map containers,
 though populated struct literals within their elements, keys, or values are
-formatted. Function calls longer than 80 characters are split one argument
+formatted. Function calls longer than 120 characters are split one argument
 per line.
 
 ## Command line

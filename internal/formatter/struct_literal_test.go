@@ -12,7 +12,7 @@ import (
 func TestFormatStructLiterals(t *testing.T) {
 	t.Run("wraps long function call arguments one per line", func(t *testing.T) {
 		// Arrange
-		source := []byte("package example\nfunc build() { _ = call(\"short\", 1); _ = configureUser(\"Alice\", \"Administrator\", \"Tokyo\", \"engineering\", true, 42) }\n")
+		source := []byte("package example\nfunc build() { _ = call(\"short\", 1); _ = configureUser(\"Alice\", \"Administrator\", \"Tokyo\", \"engineering\", true, 42, \"xxxxxxxxxxxxxxxxxxxxxxx\") }\n")
 		file, err := formatter.Parse("example.go", source)
 		require.NoError(t, err)
 
@@ -25,8 +25,32 @@ func TestFormatStructLiterals(t *testing.T) {
 		require.NoError(t, printErr)
 
 		result := string(output)
-		require.Contains(t, result, "configureUser(\n\t\t\"Alice\",\n\t\t\"Administrator\",\n\t\t\"Tokyo\",\n\t\t\"engineering\",\n\t\ttrue,\n\t\t42,\n\t)")
+		require.Contains(
+			t,
+			result,
+			"configureUser(\n\t\t\"Alice\",\n\t\t\"Administrator\",\n\t\t\"Tokyo\",\n\t\t\"engineering\",\n\t\ttrue,\n\t\t42,\n\t\t\"xxxxxxxxxxxxxxxxxxxxxxx\",\n\t)",
+		)
 		require.Contains(t, result, `call("short", 1)`)
+	})
+
+	t.Run("keeps a function call at the 120-character threshold on one line", func(t *testing.T) {
+		// Arrange
+		source := []byte("package example\nfunc build() { _ = configureUser(\"Alice\", \"Administrator\", \"Tokyo\", \"engineering\", true, 42, \"xxxxxxxxxxxxxxxxxxxxxx\") }\n")
+		file, err := formatter.Parse("example.go", source)
+		require.NoError(t, err)
+
+		// Act
+		err = formatter.FormatStructLiterals(file)
+		output, printErr := file.Print()
+
+		// Assert
+		require.NoError(t, err)
+		require.NoError(t, printErr)
+		require.Contains(
+			t,
+			string(output),
+			`configureUser("Alice", "Administrator", "Tokyo", "engineering", true, 42, "xxxxxxxxxxxxxxxxxxxxxx")`,
+		)
 	})
 
 	t.Run("expands named struct literal", func(t *testing.T) {
@@ -42,7 +66,11 @@ func TestFormatStructLiterals(t *testing.T) {
 		// Assert
 		require.NoError(t, err)
 		require.NoError(t, printErr)
-		require.Equal(t, "package example\n\ntype User struct {\n\tName string\n\tAge  int\n}\n\nfunc build() User {\n\treturn User{\n\t\tName: \"Alice\",\n\t\tAge:  20,\n\t}\n}\n", string(output))
+		require.Equal(
+			t,
+			"package example\n\ntype User struct {\n\tName string\n\tAge  int\n}\n\nfunc build() User {\n\treturn User{\n\t\tName: \"Alice\",\n\t\tAge:  20,\n\t}\n}\n",
+			string(output),
+		)
 	})
 
 	t.Run("expands anonymous qualified and generic struct literals", func(t *testing.T) {
@@ -116,7 +144,11 @@ func TestFormatStructLiterals(t *testing.T) {
 		// Assert
 		require.NoError(t, err)
 		require.NoError(t, printErr)
-		require.Equal(t, "package example\n\ntype Inner struct{ Name string }\ntype Outer struct{ Inner Inner }\n\nfunc build() Outer {\n\treturn Outer{ // outer\n\t\tInner: Inner{\n\t\t\tName: \"x\",\n\t\t}, // inner\n\t}\n}\n", string(output))
+		require.Equal(
+			t,
+			"package example\n\ntype Inner struct{ Name string }\ntype Outer struct{ Inner Inner }\n\nfunc build() Outer {\n\treturn Outer{ // outer\n\t\tInner: Inner{\n\t\t\tName: \"x\",\n\t\t}, // inner\n\t}\n}\n",
+			string(output),
+		)
 	})
 
 	t.Run("expands struct literals elided in slice elements", func(t *testing.T) {
@@ -149,7 +181,11 @@ func TestFormatStructLiterals(t *testing.T) {
 		// Assert
 		require.NoError(t, err)
 		require.NoError(t, printErr)
-		require.Contains(t, string(output), "var _ = map[User]User{{\n\tName: \"key\",\n\tAge:  1,\n}: {\n\tName: \"value\",\n\tAge:  2,\n}}")
+		require.Contains(
+			t,
+			string(output),
+			"var _ = map[User]User{{\n\tName: \"key\",\n\tAge:  1,\n}: {\n\tName: \"value\",\n\tAge:  2,\n}}",
+		)
 	})
 
 	t.Run("keeps already multiline literals valid and reparsable", func(t *testing.T) {
@@ -167,14 +203,21 @@ func TestFormatStructLiterals(t *testing.T) {
 		require.NoError(t, err)
 		require.NoError(t, printErr)
 		require.NoError(t, parseErr)
-		require.Equal(t, "package example\n\ntype User struct{ Name string }\n\nvar _ = User{\n\tName: \"Alice\",\n}\n", string(output))
+		require.Equal(
+			t,
+			"package example\n\ntype User struct{ Name string }\n\nvar _ = User{\n\tName: \"Alice\",\n}\n",
+			string(output),
+		)
 	})
 }
 
 func TestTransformStructLiterals(t *testing.T) {
 	t.Run("delegates to the struct literal formatter", func(t *testing.T) {
 		// Arrange
-		file, err := formatter.Parse("example.go", []byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"Alice\"}\n"))
+		file, err := formatter.Parse(
+			"example.go",
+			[]byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"Alice\"}\n"),
+		)
 		require.NoError(t, err)
 
 		// Act

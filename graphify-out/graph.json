@@ -984,7 +984,7 @@
       "label": "TestTransformStructLiterals()",
       "file_type": "code",
       "source_file": "internal/formatter/struct_literal_test.go",
-      "source_location": "L174",
+      "source_location": "L190",
       "_origin": "ast",
       "id": "internal_formatter_struct_literal_test_testtransformstructliterals",
       "community": 1,
@@ -2697,7 +2697,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "internal/formatter/struct_literal_test.go",
-      "source_location": "L177",
+      "source_location": "L193",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_test_testtransformstructliterals",
@@ -3444,7 +3444,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "internal/formatter/struct_literal_test.go",
-      "source_location": "L181",
+      "source_location": "L197",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_test_testtransformstructliterals",
@@ -4089,7 +4089,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal_test.go",
-      "source_location": "L174",
+      "source_location": "L190",
       "weight": 1.0,
       "_origin": "ast",
       "source": "internal_formatter_struct_literal_test",
@@ -4112,7 +4112,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "internal/formatter/struct_literal_test.go",
-      "source_location": "L174",
+      "source_location": "L190",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -4780,5 +4780,5 @@
       "source_file": "TESTING.md"
     }
   ],
-  "built_at_commit": "0cd2a80304a0fb9e74e39d2025292f243243f577"
+  "built_at_commit": "85880d4eba8261f8e0643004eed94732b0bdaa84"
 }

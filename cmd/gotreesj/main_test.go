@@ -73,7 +73,14 @@ func TestRun(t *testing.T) {
 		// Arrange
 		directory := t.TempDir()
 		filename := filepath.Join(directory, "input.go")
-		require.NoError(t, os.WriteFile(filename, []byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"Alice\"}\n"), 0o600))
+		require.NoError(
+			t,
+			os.WriteFile(
+				filename,
+				[]byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"Alice\"}\n"),
+				0o600,
+			),
+		)
 
 		var (
 			output bytes.Buffer
@@ -128,9 +135,23 @@ func TestRun(t *testing.T) {
 		// Arrange
 		directory := t.TempDir()
 		require.NoError(t, os.Mkdir(filepath.Join(directory, "nested"), 0o750))
-		require.NoError(t, os.WriteFile(filepath.Join(directory, "main.go"), []byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"Alice\"}\n"), 0o600))
+		require.NoError(
+			t,
+			os.WriteFile(
+				filepath.Join(directory, "main.go"),
+				[]byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"Alice\"}\n"),
+				0o600,
+			),
+		)
 		nestedFilename := filepath.Join(directory, "nested", "nested.go")
-		require.NoError(t, os.WriteFile(nestedFilename, []byte("package nested\ntype User struct { Name string }\nvar _ = User{Name: \"Bob\"}\n"), 0o600))
+		require.NoError(
+			t,
+			os.WriteFile(
+				nestedFilename,
+				[]byte("package nested\ntype User struct { Name string }\nvar _ = User{Name: \"Bob\"}\n"),
+				0o600,
+			),
+		)
 		t.Chdir(directory)
 
 		var (
@@ -157,12 +178,43 @@ func TestRun(t *testing.T) {
 		// Arrange
 		directory := t.TempDir()
 		t.Chdir(directory)
-		require.NoError(t, os.WriteFile("changed.go", []byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"old\"}\n"), 0o600))
-		require.NoError(t, os.WriteFile("unchanged.go", []byte("package example\ntype Other struct { Name string }\nvar _ = Other{Name: \"untouched\"}\n"), 0o600))
+		require.NoError(
+			t,
+			os.WriteFile(
+				"changed.go",
+				[]byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"old\"}\n"),
+				0o600,
+			),
+		)
+		require.NoError(
+			t,
+			os.WriteFile(
+				"unchanged.go",
+				[]byte("package example\ntype Other struct { Name string }\nvar _ = Other{Name: \"untouched\"}\n"),
+				0o600,
+			),
+		)
 		runGitCommand(t, directory, "init")
 		runGitCommand(t, directory, "add", "changed.go", "unchanged.go")
-		runGitCommand(t, directory, "-c", "user.name=gotreesj", "-c", "user.email=gotreesj@example.invalid", "commit", "-m", "initial")
-		require.NoError(t, os.WriteFile("changed.go", []byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"old\"}\nvar _ = User{Name: \"new\"}\n"), 0o600))
+		runGitCommand(
+			t,
+			directory,
+			"-c",
+			"user.name=gotreesj",
+			"-c",
+			"user.email=gotreesj@example.invalid",
+			"commit",
+			"-m",
+			"initial",
+		)
+		require.NoError(
+			t,
+			os.WriteFile(
+				"changed.go",
+				[]byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"old\"}\nvar _ = User{Name: \"new\"}\n"),
+				0o600,
+			),
+		)
 
 		var (
 			output bytes.Buffer

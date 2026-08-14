@@ -1,8 +1,8 @@
-# Graph Report - gostructfmt (2026-08-15)
+# Graph Report - gotreesj (2026-08-15)
 
 ## Corpus Check
 
-- 22 files · ~10,363 words
+- 22 files · ~10,428 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -13,7 +13,7 @@
 
 ## Graph Freshness
 
-- Built from commit: `0cd2a803`
+- Built from commit: `85880d4e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

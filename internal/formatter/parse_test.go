@@ -80,7 +80,11 @@ func TestFilePrint(t *testing.T) {
 
 		// Assert
 		require.NoError(t, err)
-		require.Equal(t, "package example\n\nimport \"fmt\"\n\ntype Config struct{ Name string }\n\nfunc build() Config { return Config{Name: fmt.Sprint(\"x\")} }\n", string(output))
+		require.Equal(
+			t,
+			"package example\n\nimport \"fmt\"\n\ntype Config struct{ Name string }\n\nfunc build() Config { return Config{Name: fmt.Sprint(\"x\")} }\n",
+			string(output),
+		)
 	})
 
 	t.Run("prints after a reachable AST mutation using the original file set", func(t *testing.T) {

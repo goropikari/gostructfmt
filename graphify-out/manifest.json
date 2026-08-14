@@ -20,28 +20,28 @@
     "semantic_hash": ""
   },
   "internal/cli/command.go": {
-    "mtime": 1786719094.2998157,
+    "mtime": 1786720229.0154793,
     "ast_hash": "5a8618ce64f5432460993270c0b9a362",
     "semantic_hash": ""
   },
   "internal/formatter/parse.go": {
-    "mtime": 1786719094.5078156,
+    "mtime": 1786720193.6794903,
     "ast_hash": "426e462c27f97ac40044acc8a99596a9",
     "semantic_hash": ""
   },
   "internal/formatter/parse_test.go": {
-    "mtime": 1786719094.6158156,
+    "mtime": 1786720229.0154793,
     "ast_hash": "be49a5cd1ab07efb817d28826d63f9da",
     "semantic_hash": ""
   },
   "internal/formatter/struct_literal.go": {
-    "mtime": 1786719764.7836177,
-    "ast_hash": "3d38d63813b03aeb81d1bd15b84d9af0",
+    "mtime": 1786720348.3954422,
+    "ast_hash": "e23c5c979e6170bc53f2dbf5adf734aa",
     "semantic_hash": ""
   },
   "internal/formatter/struct_literal_test.go": {
-    "mtime": 1786719764.8236177,
-    "ast_hash": "1d629a5f720a987d5816190e1d467cd0",
+    "mtime": 1786720361.0314386,
+    "ast_hash": "afbbe8f3a5409f77241f1867a81058f6",
     "semantic_hash": ""
   },
   ".custom-gcl.yml": {
@@ -70,8 +70,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786719717.7636318,
-    "ast_hash": "c9e6e0adc977f5a65363faab38c3b97a",
+    "mtime": 1786720348.6034422,
+    "ast_hash": "b20312b1dd37b9a4a7a52eb8b1ea09f8",
     "semantic_hash": ""
   },
   "TESTING.md": {
@@ -105,23 +105,23 @@
     "semantic_hash": ""
   },
   "cmd/gotreesj/main.go": {
-    "mtime": 1786719094.4038155,
+    "mtime": 1786720193.6714904,
     "ast_hash": "d2354dfae76429167eb709cf07af0b9b",
     "semantic_hash": ""
   },
   "cmd/gotreesj/main_test.go": {
-    "mtime": 1786719095.0718155,
+    "mtime": 1786720229.0154793,
     "ast_hash": "b5595a9e558b21ef4deefc8e292396dc",
     "semantic_hash": ""
   },
   "plugin/gotreesj/gotreesj.go": {
-    "mtime": 1786719848.195593,
+    "mtime": 1786720193.6954904,
     "ast_hash": "f4df632e013c0c16bf60aa1eda8a764d",
     "semantic_hash": ""
   },
   "plugin/gotreesj/gotreesj_test.go": {
-    "mtime": 1786719839.8835955,
-    "ast_hash": "060861c219b7ad78a674210fd4276632",
+    "mtime": 1786720432.7274175,
+    "ast_hash": "fd19ddb98fc3d3725b4c47b937d80f2c",
     "semantic_hash": ""
   },
   ".golangci-gotreesj.yml": {
