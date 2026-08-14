@@ -1,14 +1,14 @@
-# Graph Report - gostructfmt (2026-08-15)
+# Graph Report - gostructfmt (2026-08-14)
 
 ## Corpus Check
 
-- 22 files · ~10,363 words
+- 22 files · ~10,019 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 
-- 144 nodes · 264 edges · 12 communities (10 shown, 2 thin omitted)
-- Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.82)
+- 134 nodes · 240 edges · 11 communities (9 shown, 2 thin omitted)
+- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
@@ -22,28 +22,27 @@
 - struct_literal.go
 - Parse
 - command.go
-- reportFormattingIssue
+- Plugin
 - Testing Guidelines
 - run
 - gostructfmt
 - Lint and Format Job
 - github.com/goropikari/gotreesj
 - Factors and evidence
-- runAnalyzer
 - README.md
 
 ## God Nodes (most connected - your core abstractions)
 
 1. `Parse()` - 14 edges
-2. `FormatStructLiterals()` - 14 edges
-3. `File` - 12 edges
-4. `LineRange` - 11 edges
-5. `formatSelectedLiteralSource()` - 9 edges
-6. `addLongCallEdits()` - 9 edges
-7. `selectedLiterals()` - 9 edges
-8. `execute()` - 8 edges
-9. `File` - 8 edges
-10. `FormatStructLiteralsInLines()` - 8 edges
+2. `FormatStructLiterals()` - 13 edges
+3. `File` - 10 edges
+4. `LineRange` - 10 edges
+5. `selectedLiterals()` - 9 edges
+6. `execute()` - 8 edges
+7. `File` - 8 edges
+8. `FormatStructLiteralsInLines()` - 8 edges
+9. `formatSelectedLiteralSource()` - 8 edges
+10. `elidedCompositeLiteralTypes()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 
@@ -66,12 +65,12 @@
 
 - **Repository Test Quality Practices** — testing_aaa_pattern, testing_testify_assertions, testing_deterministic_tests, docs_testing_guidelines_t_run, agents_testing_policy [INFERRED 0.95]
 
-## Communities (12 total, 2 thin omitted)
+## Communities (11 total, 2 thin omitted)
 
 ### Community 0 - "struct_literal.go"
 
-Cohesion: 0.15
-Nodes (34): CallExpr, CompositeLit, Expr, sourceEdit, addElidedArrayElementTypes(), addElidedCompositeLiteralType(), addElidedMapEntryTypes(), addLiteralEdits() (+26 more)
+Cohesion: 0.17
+Nodes (30): CompositeLit, Expr, File, sourceEdit, addElidedArrayElementTypes(), addElidedCompositeLiteralType(), addElidedMapEntryTypes(), addLiteralEdits() (+22 more)
 
 ### Community 1 - "Parse"
 
@@ -83,10 +82,10 @@ Nodes (12): FileSet, File, Parse(), ParseAndPrint(), T, TestFileAccessorsAndMuta
 Cohesion: 0.21
 Nodes (20): ExitError, Command, FileMode, LineRange, atomicWriteFile(), changedGoFiles(), execute(), expandCurrentDirectory() (+12 more)
 
-### Community 3 - "reportFormattingIssue"
+### Community 3 - "Plugin"
 
-Cohesion: 0.24
-Nodes (9): Analyzer, Plugin, Pass, formattingMessage(), File, Node, init(), reportFormattingIssue() (+1 more)
+Cohesion: 0.17
+Nodes (9): Analyzer, Plugin, LinterPlugin, Pass, init(), New(), run(), T (+1 more)
 
 ### Community 4 - "Testing Guidelines"
 
@@ -113,11 +112,6 @@ Nodes (6): Development Checks, Pull Request Requirements, Pull Request Template,
 Cohesion: 0.15
 Nodes (12): Deterministic and idempotent formatting, Factors and evidence, Functional correctness, Goals, Handoff, Interface compatibility, Interpretation rules, Maintainable responsibility boundaries (+4 more)
 
-### Community 10 - "runAnalyzer"
-
-Cohesion: 0.38
-Nodes (6): Diagnostic, LinterPlugin, New(), T, runAnalyzer(), TestRun()
-
 ## Knowledge Gaps
 
 - **21 isolated node(s):** `github.com/goropikari/gotreesj`, `Repository quality state`, `Product boundary`, `Goals`, `Functional correctness` (+16 more)
@@ -128,12 +122,12 @@ Nodes (6): Diagnostic, LinterPlugin, New(), T, runAnalyzer(), TestRun()
 
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Parse()` connect `Parse` to `struct_literal.go`, `command.go`, `reportFormattingIssue`?**
-  _High betweenness centrality (0.209) - this node is a cross-community bridge._
+- **Why does `Parse()` connect `Parse` to `struct_literal.go`, `command.go`, `Plugin`?**
+  _High betweenness centrality (0.203) - this node is a cross-community bridge._
 - **Why does `formatSource()` connect `command.go` to `struct_literal.go`, `Parse`?**
-  _High betweenness centrality (0.134) - this node is a cross-community bridge._
-- **Why does `FormatStructLiteralsInLines()` connect `struct_literal.go` to `Parse`, `command.go`, `reportFormattingIssue`?**
-  _High betweenness centrality (0.097) - this node is a cross-community bridge._
+  _High betweenness centrality (0.137) - this node is a cross-community bridge._
+- **Why does `LineRange` connect `command.go` to `struct_literal.go`?**
+  _High betweenness centrality (0.092) - this node is a cross-community bridge._
 - **Are the 11 inferred relationships involving `Parse()` (e.g. with `.syncSourceFromAST()` and `formatSource()`) actually correct?**
   _`Parse()` has 11 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 3 inferred relationships involving `FormatStructLiterals()` (e.g. with `formatSource()` and `Parse()`) actually correct?**

@@ -35,13 +35,13 @@
     "semantic_hash": ""
   },
   "internal/formatter/struct_literal.go": {
-    "mtime": 1786719764.7836177,
-    "ast_hash": "3d38d63813b03aeb81d1bd15b84d9af0",
+    "mtime": 1786666542.0380213,
+    "ast_hash": "7f4b28effcd0591126f602d37eb272c0",
     "semantic_hash": ""
   },
   "internal/formatter/struct_literal_test.go": {
-    "mtime": 1786719764.8236177,
-    "ast_hash": "1d629a5f720a987d5816190e1d467cd0",
+    "mtime": 1786719094.7318156,
+    "ast_hash": "85edc733483832527a09ae339d4b0f90",
     "semantic_hash": ""
   },
   ".custom-gcl.yml": {
@@ -70,8 +70,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786719717.7636318,
-    "ast_hash": "c9e6e0adc977f5a65363faab38c3b97a",
+    "mtime": 1786719095.5158153,
+    "ast_hash": "835610543e274af07edab21f9742a9fd",
     "semantic_hash": ""
   },
   "TESTING.md": {
@@ -115,18 +115,18 @@
     "semantic_hash": ""
   },
   "plugin/gotreesj/gotreesj.go": {
-    "mtime": 1786719848.195593,
-    "ast_hash": "f4df632e013c0c16bf60aa1eda8a764d",
+    "mtime": 1786719094.8438156,
+    "ast_hash": "9c1d22f047ca8704f3a83ad524cb50a0",
     "semantic_hash": ""
   },
   "plugin/gotreesj/gotreesj_test.go": {
-    "mtime": 1786719839.8835955,
-    "ast_hash": "060861c219b7ad78a674210fd4276632",
+    "mtime": 1786719094.9558153,
+    "ast_hash": "222ee49551e92c134770fdb5c75f610e",
     "semantic_hash": ""
   },
   ".golangci-gotreesj.yml": {
-    "mtime": 1786719717.867632,
-    "ast_hash": "cd1c708457542893703d2a852d6eee1a",
+    "mtime": 1786719095.4038153,
+    "ast_hash": "8c1dba5f80fc3f76d394d0f3d36eca0a",
     "semantic_hash": ""
   }
 }
