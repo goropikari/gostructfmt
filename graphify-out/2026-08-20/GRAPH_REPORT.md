@@ -1,36 +1,29 @@
-# Graph Report - gotreesj (2026-08-20)
+# Graph Report - . (2026-08-18)
 
 ## Corpus Check
 
-- 22 files · ~10,791 words
-- Verdict: corpus is large enough that graph structure adds value.
+- Corpus is ~10,488 words - fits in a single context window. You may not need a graph.
 
 ## Summary
 
-- 138 nodes · 265 edges · 12 communities (10 shown, 2 thin omitted)
+- 136 nodes · 262 edges · 12 communities (10 shown, 2 thin omitted)
 - Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 28 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
-## Graph Freshness
-
-- Built from commit: `f0995281`
-- Run `git rev-parse HEAD` and compare to check if the graph is stale.
-- Run `graphify update .` after code changes (no API cost).
-
 ## Community Hubs (Navigation)
 
-- Quality model
-- command.go
-- Parse
+- Repository Quality Rules
+- CLI Command Pipeline
+- AST Parsing and Tests
 - Linter Plugin Integration
-- File
-- selectedLiterals
-- run
-- struct_literal.go
-- runAnalyzer
-- FormatStructLiterals
-- Coding quality gate
-- github.com/goropikari/gotreesj
+- Struct Literal Formatting
+- Composite Literal Analysis
+- CLI Entry Point
+- Source Edit Application
+- Plugin Diagnostics
+- Struct Type Resolution
+- Quality Gate Metadata
+- Go Module Root
 
 ## God Nodes (most connected - your core abstractions)
 
@@ -69,17 +62,17 @@
 
 ## Communities (12 total, 2 thin omitted)
 
-### Community 0 - "Quality model"
+### Community 0 - "Repository Quality Rules"
 
 Cohesion: 0.08
 Nodes (27): Agent and development instructions, Change size guidance, Required development checks, Custom golangci-lint configuration, Quality model, Repository testing guidelines, Pull request template, CI workflow (+19 more)
 
-### Community 1 - "command.go"
+### Community 1 - "CLI Command Pipeline"
 
-Cohesion: 0.19
-Nodes (22): ExitError, Cmd, Command, FileMode, LineRange, atomicWriteFile(), changedGoFiles(), execute() (+14 more)
+Cohesion: 0.21
+Nodes (20): ExitError, Command, FileMode, LineRange, atomicWriteFile(), changedGoFiles(), execute(), expandCurrentDirectory() (+12 more)
 
-### Community 2 - "Parse"
+### Community 2 - "AST Parsing and Tests"
 
 Cohesion: 0.16
 Nodes (12): FileSet, File, Parse(), ParseAndPrint(), T, TestFileAccessorsAndMutation(), TestFilePrint(), TestParse() (+4 more)
@@ -89,32 +82,32 @@ Nodes (12): FileSet, File, Parse(), ParseAndPrint(), T, TestFileAccessorsAndMuta
 Cohesion: 0.24
 Nodes (9): Analyzer, Plugin, Pass, formattingMessage(), File, Node, init(), reportFormattingIssue() (+1 more)
 
-### Community 4 - "File"
+### Community 4 - "Struct Literal Formatting"
 
 Cohesion: 0.29
 Nodes (10): CallExpr, addLongCallEdits(), formatLiteralSource(), formatSelectedLiteralSource(), FormatStructLiteralsInLines(), File, Node, hasSelectedAncestor() (+2 more)
 
-### Community 5 - "selectedLiterals"
+### Community 5 - "Composite Literal Analysis"
 
 Cohesion: 0.42
 Nodes (10): CompositeLit, Expr, addElidedArrayElementTypes(), addElidedCompositeLiteralType(), addElidedMapEntryTypes(), elidedCompositeLiteralTypes(), isStructLiteralType(), isStructLiteralTypeOrElided() (+2 more)
 
-### Community 6 - "run"
+### Community 6 - "CLI Entry Point"
 
 Cohesion: 0.31
 Nodes (7): Reader, Writer, main(), run(), T, runGitCommand(), TestRun()
 
-### Community 7 - "struct_literal.go"
+### Community 7 - "Source Edit Application"
 
 Cohesion: 0.42
 Nodes (8): sourceEdit, addLiteralEdits(), applySourceEdits(), hasCommaBefore(), skipBlockComment(), skipComment(), skipLineComment(), skipWhitespace()
 
-### Community 8 - "runAnalyzer"
+### Community 8 - "Plugin Diagnostics"
 
 Cohesion: 0.38
 Nodes (6): Diagnostic, LinterPlugin, New(), T, runAnalyzer(), TestRun()
 
-### Community 9 - "FormatStructLiterals"
+### Community 9 - "Struct Type Resolution"
 
 Cohesion: 0.33
 Nodes (6): declaredStructTypes(), FormatStructLiterals(), File, isStructType(), resolveStructType(), TransformStructLiterals()
@@ -129,17 +122,17 @@ Nodes (6): declaredStructTypes(), FormatStructLiterals(), File, isStructType(), 
 
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Parse()` connect `Parse` to `command.go`, `Linter Plugin Integration`, `File`, `FormatStructLiterals`?**
-  _High betweenness centrality (0.236) - this node is a cross-community bridge._
-- **Why does `formatSource()` connect `command.go` to `FormatStructLiterals`, `Parse`, `File`?**
-  _High betweenness centrality (0.165) - this node is a cross-community bridge._
-- **Why does `FormatStructLiteralsInLines()` connect `File` to `command.go`, `Parse`, `Linter Plugin Integration`, `struct_literal.go`?**
-  _High betweenness centrality (0.104) - this node is a cross-community bridge._
+- **Why does `Parse()` connect `AST Parsing and Tests` to `CLI Command Pipeline`, `Linter Plugin Integration`, `Struct Literal Formatting`, `Struct Type Resolution`?**
+  _High betweenness centrality (0.235) - this node is a cross-community bridge._
+- **Why does `formatSource()` connect `CLI Command Pipeline` to `Struct Type Resolution`, `AST Parsing and Tests`, `Struct Literal Formatting`?**
+  _High betweenness centrality (0.150) - this node is a cross-community bridge._
+- **Why does `FormatStructLiteralsInLines()` connect `Struct Literal Formatting` to `CLI Command Pipeline`, `AST Parsing and Tests`, `Linter Plugin Integration`, `Source Edit Application`?**
+  _High betweenness centrality (0.109) - this node is a cross-community bridge._
 - **Are the 11 inferred relationships involving `Parse()` (e.g. with `.syncSourceFromAST()` and `formatSource()`) actually correct?**
   _`Parse()` has 11 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 3 inferred relationships involving `FormatStructLiterals()` (e.g. with `formatSource()` and `Parse()`) actually correct?**
   _`FormatStructLiterals()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `github.com/goropikari/gotreesj`, `Custom golangci-lint configuration`, `Pull request template` to the rest of the system?**
   _8 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Quality model` be split into smaller, more focused modules?**
+- **Should `Repository Quality Rules` be split into smaller, more focused modules?**
   _Cohesion score 0.08262108262108261 - nodes in this community are weakly interconnected._

@@ -20,9 +20,9 @@
     "semantic_hash": "8fd084a921008fb828e1f2ac8e8f6eb3"
   },
   "internal/cli/command.go": {
-    "mtime": 1787233326.2863548,
-    "ast_hash": "c29fdb2cb6a51306feead74a73b1a7f1",
-    "semantic_hash": ""
+    "mtime": 1786720556.0193803,
+    "ast_hash": "a87c8f225bd3a43b7d7a91b5089d27e7",
+    "semantic_hash": "a87c8f225bd3a43b7d7a91b5089d27e7"
   },
   "internal/formatter/parse.go": {
     "mtime": 1786720556.0233803,
@@ -70,9 +70,9 @@
     "semantic_hash": "c7cac1adf77ce4adab7198efafc35e7a"
   },
   "README.md": {
-    "mtime": 1787233275.04637,
-    "ast_hash": "9952e7b06510ca4837371031f64b823a",
-    "semantic_hash": ""
+    "mtime": 1786720743.2313232,
+    "ast_hash": "37754c0eaa69520566e8f0b28a37fc92",
+    "semantic_hash": "37754c0eaa69520566e8f0b28a37fc92"
   },
   "TESTING.md": {
     "mtime": 1785582728.743074,
@@ -110,9 +110,9 @@
     "semantic_hash": "d2354dfae76429167eb709cf07af0b9b"
   },
   "cmd/gotreesj/main_test.go": {
-    "mtime": 1787233213.9743884,
-    "ast_hash": "22ebe3ba5d5224ecbaec82ed64611d56",
-    "semantic_hash": ""
+    "mtime": 1786720556.0153801,
+    "ast_hash": "02d2001e3228e7b9b1eda51e07776729",
+    "semantic_hash": "02d2001e3228e7b9b1eda51e07776729"
   },
   "plugin/gotreesj/gotreesj.go": {
     "mtime": 1786720556.0433803,

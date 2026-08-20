@@ -256,6 +256,55 @@ func TestRun(t *testing.T) {
 		require.Empty(t, output.String())
 		require.Empty(t, errors.String())
 	})
+
+	t.Run("formats staged changes when a revision is specified", func(t *testing.T) {
+		// Arrange
+		directory := t.TempDir()
+		t.Chdir(directory)
+		require.NoError(t, os.WriteFile("changed.go", []byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"old\"}\n"), 0o600))
+		runGitCommand(t, directory, "init")
+		runGitCommand(t, directory, "add", "changed.go")
+		runGitCommand(t, directory, "-c", "user.name=gotreesj", "-c", "user.email=gotreesj@example.invalid", "commit", "-m", "initial")
+		require.NoError(t, os.WriteFile("changed.go", []byte("package example\ntype User struct { Name string }\nvar _ = User{Name: \"old\"}\nvar _ = User{Name: \"new\"}\n"), 0o600))
+		runGitCommand(t, directory, "add", "changed.go")
+
+		var (
+			output bytes.Buffer
+			errors bytes.Buffer
+		)
+
+		// Act
+		status := run([]string{"--diff", "HEAD", "-w"}, bytes.NewBuffer(nil), &output, &errors)
+		formatted, readErr := os.ReadFile("changed.go")
+
+		// Assert
+		require.Equal(t, 0, status)
+		require.NoError(t, readErr)
+		require.Empty(t, output.String())
+		require.Empty(t, errors.String())
+		require.Contains(t, string(formatted), `User{Name: "old"}`)
+		require.Contains(t, string(formatted), "User{\n")
+	})
+
+	t.Run("rejects an invalid diff specification", func(t *testing.T) {
+		// Arrange
+		directory := t.TempDir()
+		t.Chdir(directory)
+		runGitCommand(t, directory, "init")
+
+		var (
+			output bytes.Buffer
+			errors bytes.Buffer
+		)
+
+		// Act
+		status := run([]string{"--diff", "does-not-exist"}, bytes.NewBuffer(nil), &output, &errors)
+
+		// Assert
+		require.Equal(t, 2, status)
+		require.Empty(t, output.String())
+		require.Contains(t, errors.String(), "read git diff")
+	})
 }
 
 func runGitCommand(t *testing.T, directory string, args ...string) {

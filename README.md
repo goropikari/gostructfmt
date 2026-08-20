@@ -46,6 +46,17 @@ in the working tree's Git diff, use:
 gotreesj --diff -w
 ```
 
+To compare against a revision or revision range, pass it after `--diff`:
+
+```sh
+gotreesj --diff HEAD -w
+gotreesj --diff main...feature -w
+```
+
+Without a revision, `--diff` uses the default `git diff` comparison
+(the working tree against the index). With a revision or range, the value is
+passed to `git diff` as its comparison specification.
+
 Hidden directories, `vendor`, `testdata`, and underscore-prefixed directories
 are skipped.
 

@@ -1,0 +1,14 @@
+{
+  "0": "Repository Quality Rules",
+  "1": "CLI Command Pipeline",
+  "2": "AST Parsing and Tests",
+  "3": "Linter Plugin Integration",
+  "4": "Struct Literal Formatting",
+  "5": "Composite Literal Analysis",
+  "6": "CLI Entry Point",
+  "7": "Source Edit Application",
+  "8": "Plugin Diagnostics",
+  "9": "Struct Type Resolution",
+  "10": "Quality Gate Metadata",
+  "11": "Go Module Root"
+}

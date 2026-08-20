@@ -20,12 +20,14 @@ type ExitError struct {
 	Err  error
 }
 
+const workingTreeDiffSpec = "__working_tree__"
+
 func (e *ExitError) Error() string { return e.Err.Error() }
 
 // NewCommand creates the gotreesj command with injectable streams.
 func NewCommand(stdin io.Reader, stdout, stderr io.Writer) *cobra.Command {
 	writeFiles := false
-	diffMode := false
+	diffSpec := ""
 
 	command := &cobra.Command{
 		Use:   "gotreesj [files...]",
@@ -33,8 +35,8 @@ func NewCommand(stdin io.Reader, stdout, stderr io.Writer) *cobra.Command {
 		Long: "Format populated Go struct literals as deterministic, gofmt-compatible " +
 			"multi-line literals. With no files, source is read from standard input. " +
 			"Use -w to update files in place; multiple files and ./... require -w. " +
-			"Use --diff to format only literals overlapping changed lines in the working " +
-			"tree's git diff.",
+			"Use --diff to format only literals overlapping changed lines in a git diff. " +
+			"An optional revision or revision range can be supplied.",
 		Example: `  # Format standard input and print the result
   gotreesj < input.go
 
@@ -47,29 +49,36 @@ func NewCommand(stdin io.Reader, stdout, stderr io.Writer) *cobra.Command {
   # Format all Go files below the current directory in place
   gotreesj -w ./...
 
-  # Format literals overlapping changed lines in the working tree
-  gotreesj --diff -w`,
+	# Format literals overlapping changed lines in the working tree
+	gotreesj --diff -w
+
+	# Format literals changed since HEAD
+	gotreesj --diff HEAD -w
+
+	# Format literals in a commit range
+	gotreesj --diff HEAD^..HEAD -w`,
 		SilenceErrors: true,
 		SilenceUsage:  true,
 		RunE: func(command *cobra.Command, args []string) error {
-			return execute(command, args, stdin, stdout, stderr, writeFiles, diffMode)
+			return execute(command, args, stdin, stdout, stderr, writeFiles, command.Flags().Changed("diff"), diffSpec)
 		},
 	}
 	command.SetOut(stderr)
 	command.SetErr(stderr)
 	command.Flags().BoolVarP(&writeFiles, "write", "w", false, "write result to source files instead of standard output")
-	command.Flags().BoolVar(
-		&diffMode,
+	command.Flags().StringVar(
+		&diffSpec,
 		"diff",
-		false,
-		"format literals overlapping changed lines in the working tree's git diff",
+		"",
+		"format literals overlapping changed lines in git diff; optionally specify a revision or revision range",
 	)
+	command.Flags().Lookup("diff").NoOptDefVal = workingTreeDiffSpec
 
 	return command
 }
 
-func execute(command *cobra.Command, args []string, stdin io.Reader, stdout, stderr io.Writer, writeFiles, diffMode bool) error {
-	filenames, diffRanges, err := resolveFilenames(args, diffMode)
+func execute(command *cobra.Command, args []string, stdin io.Reader, stdout, stderr io.Writer, writeFiles, diffMode bool, diffSpec string) error {
+	filenames, diffRanges, err := resolveFilenames(args, diffMode, diffSpec)
 	if err != nil {
 		return &ExitError{
 			Code: 2,
@@ -127,13 +136,18 @@ func formatFiles(filenames []string, writeFiles bool, stdout, stderr io.Writer, 
 	return nil
 }
 
-func resolveFilenames(args []string, diffMode bool) ([]string, map[string][]formatter.LineRange, error) {
+func resolveFilenames(args []string, diffMode bool, diffSpec string) ([]string, map[string][]formatter.LineRange, error) {
+	if diffMode && diffSpec == workingTreeDiffSpec && len(args) == 1 {
+		diffSpec = args[0]
+		args = nil
+	}
+
 	if diffMode && len(args) > 0 {
 		return nil, nil, fmt.Errorf("--diff cannot be combined with file arguments")
 	}
 
 	if diffMode {
-		return changedGoFiles()
+		return changedGoFiles(diffSpec)
 	}
 
 	filenames, err := expandPackagePatterns(args)
@@ -225,8 +239,8 @@ func expandPackagePatterns(paths []string) ([]string, error) {
 	return expanded, nil
 }
 
-func changedGoFiles() ([]string, map[string][]formatter.LineRange, error) {
-	command := exec.Command("git", "diff", "--unified=0", "--no-color", "--diff-filter=ACMRTUXB", "--", "*.go")
+func changedGoFiles(diffSpec string) ([]string, map[string][]formatter.LineRange, error) {
+	command := gitDiffCommand(diffSpec)
 
 	output, err := command.Output()
 	if err != nil {
@@ -272,6 +286,17 @@ func changedGoFiles() ([]string, map[string][]formatter.LineRange, error) {
 	sort.Strings(files)
 
 	return files, lineRanges, nil
+}
+
+func gitDiffCommand(diffSpec string) *exec.Cmd {
+	arguments := []string{"diff", "--unified=0", "--no-color", "--diff-filter=ACMRTUXB"}
+	if diffSpec != "" && diffSpec != workingTreeDiffSpec {
+		arguments = append(arguments, diffSpec)
+	}
+
+	arguments = append(arguments, "--", "*.go")
+
+	return exec.Command("git", arguments...)
 }
 
 func parseDiffRange(value string) (int, int, error) {

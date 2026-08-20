@@ -1,14 +1,14 @@
 {
-  "0": "struct_literal.go",
-  "1": "Parse",
-  "2": "command.go",
-  "3": "reportFormattingIssue",
-  "4": "Testing Guidelines",
-  "5": "run",
-  "6": "gostructfmt",
-  "7": "Lint and Format Job",
-  "8": "github.com/goropikari/gotreesj",
-  "9": "Factors and evidence",
-  "10": "runAnalyzer",
-  "11": "README.md"
+  "0": "Quality model",
+  "1": "command.go",
+  "2": "Parse",
+  "3": "Linter Plugin Integration",
+  "4": "File",
+  "5": "selectedLiterals",
+  "6": "run",
+  "7": "struct_literal.go",
+  "8": "runAnalyzer",
+  "9": "FormatStructLiterals",
+  "10": "Coding quality gate",
+  "11": "github.com/goropikari/gotreesj"
 }
